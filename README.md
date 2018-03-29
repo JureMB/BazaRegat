@@ -1,1 +1,2 @@
 # testniProjekt
+Jure Močnik Berljavac
