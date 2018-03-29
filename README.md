@@ -1,4 +1,5 @@
-# testniProjekt
-Jure Močnik Berljavac
-Matjaž Puh
-Zala Žnidaršič
+# Baza Regat
+Avtorji:
+- Jure Močnik Berljavac
+- Matjaž Puh
+- Zala Žnidaršič
