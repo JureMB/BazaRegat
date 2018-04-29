@@ -1,0 +1,413 @@
+﻿Pl.	Sail	Sailor	Subgroup	Spl2	From	1	2	3	4	Total
+1	CRO1202	Buba Pulek	 	Yellow	CSC	1	(15)	4	2	7
+2	SLO711	Luka Zabukovec	U12	Blue	JK JADRO KOPER	1	(10)	3	3	7
+3	ITA8776	Alfredo Salerno	 	Blue	Circolo Canottieri RoggerÒ di Lauria	(17)	1	6	2	9
+4	AUT1205	Yannik Hoeger	 	White	WSA	(10)	4	6	1	11
+5	SLO255	Fras Martin	 	Red	JK IZOLA	5	(6)	3	3	11
+6	ITA8953	Barro Margerita	Girl	Red	YC Adriaco	3	(29)	1	8	12
+7	HUN1373	Szabo Roni Oszkar	 	White	AVSE	(49)	2	7	3	12
+8	HUN918	Bendegúz Nagy	 	Yellow	BYC	6	(11)	2	4	12
+9	SRB444	Stefan Yuill	 	White	AJK BEOGRAD	1	(41)	3	9	13
+10	ITA8821	Mattia Cesana	 	White	FRAGLIA VELA RIVA	12	(36)	2	2	16
+11	HUN1379	Alexandar Vladiszavlyev	 	White	Spartacus YC	4	10	2	(46)	16
+12	ITA8924	Tommaso Boccuni	 	Yellow	FRAGLIA VELA RIVA	(14)	9	5	3	17
+13	SUI5	Anja Von Allmen	Girl	White	RCO	3	(104\BFD)	9	6	18
+14	UKR17	Bogdan Rukhlin	 	Blue	Mariupol	11	2	(104\BFD)	7	20
+15	ITA8743	Michele Ini	 	Red	CV BELLANO	11	(28)	1	9	21
+16	ITA9045	Alessio Castellan	 	Yellow	CDV Muggia	10	(25)	1	10	21
+17	ITA8901	Alessandra Grasso	Girl	Red	NIC Catania	2	15	4	(22)	21
+18	SUI1762	Boris Hirsch	 	White	SNG	5	(39)	2	14	21
+19	GER13530	Müller Louisa	Girl	White	Bayerischer Yachtclub	4	(19)	4	13	21
+20	ITA7918	Mattia Santostefano	 	White	SVOC	7	(43)	5	10	22
+21	CRO1213	Antun Tomasevic	 	White	JK Labud	8	8	(16)	7	23
+22	ITA8932	Jan Pernarcic	 	Blue	Jadralni Klub Èupa	(20)	18	5	1	24
+23	SLO1005	Ivan Vakhrushev	 	Blue	Jk Pirat	9	1	14	(32)	24
+24	MON1415	Choquet Mathieu	 	Red	YC MONACO	3	(38)	17	4	24
+25	SLO311	Alenka Valencic	Girl	Red	JK Burja Izola	8	4	12	(37)	24
+26	ITA8952	Milone Erica	Girl	White	YC Adriaco	(23)	5	7	12	24
+27	HUN1148	Nandor Verebely	 	Red	Spartacus YC	7	(29)	11	6	24
+28	ITA3	Antoniazzi Massimiliano	 	Yellow	YC Adriaco	7	(23)	18	1	26
+29	SUI1666	Philipp Roth	 	Yellow	SCC	9	4	14	(16)	27
+30	AUT1255	Paul Kropfitsch	 	Red	KYCK	7	(24)	23	1	31
+31	ITA8688	Gianpiero Pagliaro	 	Blue	NIC Catania	14	4	15	(19)	33
+32	FRA2591	Callum Wyper	 	Blue	SR Antibes	9	14	10	(44)	33
+33	CRO1137	Lea Rakovac	Girl & U12	Red	JK Vega	11	11	11	(17)	33
+34	SUI1775	Zimmerli Luis	 	Red	SCC	2	17	(25)	15	34
+35	CRO1150	Tin Fike	 	Yellow	JD VAL CRIKVENICA	6	7	(22)	21	34
+36	AUT1225	Anton Messeritsch	 	Blue	YCBb	22	(35)	5	8	35
+37	CRO1119	Luka Vukovic	 	Red	JK Labud	15	14	(33)	7	36
+38	ITA8810	Valerio Mugnano	 	Blue	FRAGLIA VELA RIVA	9	(22)	9	18	36
+39	ITA8701	Martino Betta	 	White	FRAGLIA VELA RIVA	2	10	25	(104\DNF)	37
+40	SUI1839	Ludovico Cornaro	 	Yellow	CVLL	21	(28)	11	6	38
+41	FRA2691	Dumont Timothé	 	Yellow	La Pelle Marseille	1	(34)	29	9	39
+42	AUT1341	Maximilian Heidkamp	 	Blue	SCTWV	17	(47)	13	10	40
+43	SLO234	Marina Vrscaj	Girl	White	WSC Èrnomelj	12	17	(18)	11	40
+44	NED3118	Yanne Broers	Girl	Blue	OCN	(18)	11	17	13	41
+45	ITA8665	Simone Bussani	 	Red	SN Pietas Julia	17	(26)	8	18	43
+46	SLO228	Caterina Sedmak	Girl	Yellow	JK IZOLA	(55)	24	1	19	44
+47	UKR101	Oskar Madonich	 	Red	Sergeevka	18	24	(104\BFD)	2	44
+48	SUI1800	Giovanni Masiero	 	Blue	CVLL	(38)	3	30	11	44
+49	HUN1343	Samuel Janos Zolnai	 	Yellow	Spartacus YC	(40)	15	11	18	44
+50	CRO1169	Edo Fike	 	Yellow	JD VAL CRIKVENICA	36	6	3	(40)	45
+51	POL1522	Tymoteusz Wysocki	 	Yellow	Olsztyñski Klub Żeglarski	3	1	42	(47)	46
+52	CRO1218	Max Gjidera	 	Blue	JD VAL CRIKVENICA	(58)	2	22	22	46
+53	SLO758	Svit Dujmovic sterpin	U12	Red	Jk Pirat	27	3	16	(51)	46
+54	SLO87	Gasper Babic	 	White	JK IZOLA	19	9	(39)	18	46
+55	ITA87	Nina Cattai	Girl	Blue	CDV Muggia	6	20	21	(29)	47
+56	AUT1202	Sophie Schmidt	Girl	Yellow	WSA	(22)	7	20	20	47
+57	HUN946	Máté Benyó	 	White	THE-YKA	(34)	9	30	8	47
+58	AUT1053	Florian Kroemer	 	White	KYCK	16	16	(104\BFD)	16	48
+59	SLO411	Toni Bencic	U12	White	Jk Pirat	16	5	(43)	28	49
+60	GER1001	Hannah Lanzinger	Girl	Blue	WVF Wassersportverein  Fraueninsel	(104\BFD)	26	17	6	49
+61	ITA8764	Mael Blin	 	Yellow	SocietÀ Triestina  della Vela	26	(64)	12	11	49
+62	HUN901	Dávid Lackó	 	Blue	BYC	27	(67)	12	12	51
+63	FRA2712	Combet Anna	Girl	Red	La Pelle Marseille	13	22	(40)	16	51
+64	CRO1212	Simon Staric	 	Blue	JK HORIZONT POREÈ	18	25	9	(33)	52
+65	CRO1107	Val Pulic	 	Red	CSC	24	(53)	17	11	52
+66	GER1208	Marko Gomercic	U12	Blue	WSCG	25	3	26	(51)	54
+67	ITA8143	Leonardo Centuori	 	Blue	SN Pietas Julia	(41)	5	35	14	54
+68	POL2044	Wiktor Robaczewski	 	White	SSW MOS ILAWA	12	(65)	38	5	55
+69	SUI1817	Sabina Zuliani	Girl	Red	CVLL	22	(64)	28	5	55
+70	AUT1217	Anna Saletu	Girl	Red	UYCAS	(44)	14	7	34	55
+71	GER13280	Mathias Lenkmann	U12	White	Bayerischer Yachtclub	12	(77)	13	30	55
+72	HUN2005	Levente Borda	 	Yellow	Spartacus YC	28	12	15	(30)	55
+73	ITA8915	Marco Franceschini	U12	Yellow	FRAGLIA VELA RIVA	(51)	5	18	33	56
+74	SUI1681	Emilie Tschanz	Girl	White	GYC	8	(53)	25	23	56
+75	GER1202	Amelie Schmid	Girl	Yellow	CYC	30	13	14	(36)	57
+76	ITA8905	Guido Gresta	 	Blue	NIC Catania	11	6	(48)	41	58
+77	SUI1799	Janik Muller	 	Blue	SCR	(30)	12	19	27	58
+78	HUN1178	Matyas Verebely	 	Blue	Spartacus YC	31	(34)	24	4	59
+79	HUN1313	Olivér Demjén	 	Blue	BYC	46	7	6	(104\BFD)	59
+80	ITA8903	Diego Nasti	 	Blue	NIC Catania	17	8	34	(104\BFD)	59
+81	ITA8201	Filippo Battisti	 	Yellow	CDV Muggia	(39)	39	10	10\RDG	59
+82	FRA27	Lilyan Bretagne	 	Red	SR Antibes	14	12	33	(66)	59
+83	GER13132	Vincenzo Reuter	 	White	MYC	15	18	26	(47)	59
+84	CRO1188	Aurora Palko	Girl	Yellow	JK Delfin	16	17	(40)	26	59
+85	GER13250	Lukas Goyarzu	 	Yellow	WYC	2	45	13	(52)	60
+86	HUN378	Mihály Bodgál	 	White	THY-YKA	15	21	24	(104\DNF)	60
+87	SLO64	Yelyzaveta Levandovska	Girl	Yellow	Jk Pirat	(42)	18	19	23	60
+88	CRO919	Josip Tafra	U12	Red	JK OMIŠ	27	1	33	(35)	61
+89	CRO1165	Luka Hagenauer	 	Red	Yacht club Zagreb	13	(30)	24	24	61
+90	ITA8628	Lorenzo Predari	 	Yellow	Fraglia Vela Malcesine	19	(30)	14	28	61
+91	ITA8675	Andrea Sirtori	 	Red	CV BELLANO	(39)	19	22	20	61
+92	CRO1168	Nora sijan	Girl	White	CSC	21	24	(32)	17	62
+93	ITA8807	Denise Frigerio	Girl	White	LNI Mandello	4	(32)	27	32	63
+94	ITA8917	Alex Demurtas	U12	Yellow	FRAGLIA VELA RIVA	(47)	20	21	22	63
+95	ITA8433	Zeno-Valerio Marchesini	 	Yellow	Fraglia Vela Malcesine	(38)	7	22	35	64
+96	CRO1829	Carla De Carina	Girl	Red	JD VAL CRIKVENICA	(33)	11	20	33	64
+97	ITA8933	Tommaso Comelli	 	Blue	CV BELLANO	4	54	7	(104\DNF)	65
+98	ITA8804	Luca Belloli	 	White	LNI Mandello	33	(104\BFD)	8	24	65
+99	ITA7708	Kim Magnani	 	White	SocietÀ Nautica Laguna	21	21	23	(104\DNF)	65
+100	ITA8861	Giulia Bartolozzi	Girl & U12	White	SocietÀ canottieri Garda SalÒ	29	(51)	18	20	67
+101	POL1614	Iga Wielczyk	Girl	White	SSW MOS ILAWA	21	27	(40)	19	67
+102	HUN1310	Chiara-Lisa Carra	 	Yellow	BYC	26	(71)	35	7	68
+103	GER1230	Finn Meichle	U12	White	Yacht Club Langenargen	(64)	8	31	29	68
+104	SUI1679	Stach Vleeshouwers	 	Blue	RCO	24	28	16	(43)	68
+105	CRO1092	Tea Peteh	Girl	Blue	JK Maestral	23	28	(38)	17	68
+106	FRA269	Alberic De Foresta	U12	Red	YCPR Marseille	29	(74)	28	12	69
+107	SLO944	Maj Petric	U12	Yellow	JK JADRO KOPER	37	(46)	19	13	69
+108	CRO1196	Leon Scheidl	 	White	CSC	13	(55)	6	51	70
+109	CRO1217	Tedi Leonardelli	U12	Red	JK Vega	24	(38)	36	10	70
+110	ITA8961	Luca Fajman	 	Red	SocietÀ Triestina  della Vela	28	19	(60)	23	70
+111	HUN1331	Attila Toth	 	Red	Spartacus YC	32	33	8	(59)	73
+112	ITA8142	Filippo Piacentini	U12	Red	CV BELLANO	(51)	40	12	21	73
+113	GER13202	Luna Von Weidenbach	Girl	Blue	Bayerischer Yachtclub	18	39	(55)	16	73
+114	ITA8523	Emma Mattivi	Girl	Yellow	FRAGLIA VELA RIVA	(41)	13	37	25	75
+115	SUI1761	Dufour Benjamin	Girl	Blue	SNG	14	32	29	(104\BFD)	75
+116	ITA8939	Lorenzo Ghirotti	U12	Blue	Fraglia Vela Malcesine	(104\BFD)	23	21	31	75
+117	ITA8118	Malika Bellomi	Girl	Yellow	FRAGLIA VELA RIVA	(57)	31	8	37	76
+118	ITA8465	Camilla Michelini	Girl	Red	AVAL-CDV GRAVEDONA	24	(56)	10	42	76
+119	GER13463	Gießelmann Moritz	 	Red	Bayerischer Yachtclub	25	32	20	(104\BFD)	77
+120	HUN58	Barnabas Baticz	 	Blue	Spartacus YC	25	(47)	27	25	77
+121	ITA8876	Marco Gambelli	 	White	Club Nautico Senigallia	16	58	(104\BFD)	4	78
+122	CRO1101	Roni Bobovnik	 	Red	Yacht club Zagreb	5	(68)	54	19	78
+123	MON1419	Frederiksen Lucas	 	Blue	YC MONACO	31	42	(104\BFD)	5	78
+124	UKR76	Ivan Antipin	U12	Yellow	NIKOLAEV	22	27	(43)	29	78
+125	ITA8832	Rebecca Geiger	Girl & U12	Red	CDV Muggia	34	(46)	9	36	79
+126	AUT1178	Marlene Rudisch	Girl	White	SCTWV	10	26	(57)	43	79
+127	CRO1072	Jan Komadina	 	White	JK Vega	31	17	(32)	31	79
+128	SLO111	Danei Marusic	 	Red	JK JADRO KOPER	38	(104\DSQ)	15	27	80
+129	SUI1843	Ella Mirzai	Girl	Red	CVLL	15	35	32	(104\DNF)	82
+130	ITA8297	NicolÒ Coslovich	 	Blue	SN Pietas Julia	40	6	(48)	39	85
+131	SLO811	Valentin stravs	U12	Yellow	JK JADRO KOPER	36	(64)	41	8	85
+132	ITA8815	Austoni Francesco	 	White	YC Adriaco	(60)	16	19	50	85
+133	HUN148	Kornélia Kálmán	 	White	BYC	28	(59)	33	25	86
+134	SUI1639	Nina Parodi	 	Blue	CVLL	(80)	31	20	37	88
+135	FRA254	Ricord Louison	 	Blue	YC Cannes	32	(41)	26	30	88
+136	CRO1110	Maj Bisaki	 	Yellow	CSC	(52)	50	34	5	89
+137	FRA2542	Lepiece Eva	Girl	Blue	YCPR Marseille	33	36	(53)	20	89
+138	HUN1326	Bercel Kovalik-Deak	 	White	Balatoni Yacht Club 1912	29	20	41	(104\DNF)	90
+139	UKR2091	Danylo Raichuk	 	Yellow	DNIPRO	10	65	(104\BFD)	17	92
+140	HUN909	Soma Sigmond	 	Red	BYC	20	23	50	(54)	93
+141	POL1114	Szymon Szczech	 	Yellow	SSW MOS ILAWA	(59)	46	23	24	93
+142	HUN1320	Boroka Feher	Girl & U12	Blue	Balaton Yacht Club 1912	63	10	21	(104\DNF)	94
+143	FRA1916	Felix Parton	 	Blue	YC Cannes	(74)	36	43	15	94
+144	SLO750	Dan Belinger	 	Red	Jk Pirat	(104\BFD)	21	23	50	94
+145	HUN1304	Kristof Jeney	U12	Blue	Spartacus YC	36	37	(47)	21	94
+146	FRA2540	Flandorffer Niclas	U12	Blue	YC Cannes	5	(56)	56	34	95
+147	SUI1715	Christian Steiner	 	Blue	SCC	60	26	(104\BFD)	9	95
+148	SUI1716	Alexander De Weck	 	Yellow	SNG	26	42	28	(104\DNF)	96
+149	CRO1211	Luka Fatovic	U12	White	Yacht club Zagreb	44	27	(62)	26	97
+150	MON1416	Verevis Ariadni	Girl	White	YC MONACO	13	(69)	50	35	98
+151	CRO873	Ema Jelenkovic	Girl	White	JK Vega	(48)	33	30	36	99
+152	CRO934	Ema Samarzija	Girl	Blue	JK SVETI NIKOLA	(56)	38	10	53	101
+153	SUI1819	Andrea Arvedi	 	Red	CVLL	44	29	28	(47)	101
+154	SUI1750	Paul Van Der Klink	 	Blue	CNM	(56)	37	37	28	102
+155	ITA8639	Enea Luatti	U12	Red	AVAL-CDV GRAVEDONA	42	30	(48)	30	102
+156	SLO922	Alja Petric	Girl	Blue	JK JADRO KOPER	42	8	(104\BFD)	54	104
+157	ITA8686	Morgana Manti	Girl	Yellow	Centro Velico 3V	(53)	49	13	42	104
+158	FRA2723	Juliette Bourgeois	Girl & U12	Red	SR Antibes	45	(52)	15	44	104
+159	CRO1215	Viktor Maletic	 	Red	JK Maestral	20	(53)	52	32	104
+160	SLO952	Katja Filipic	Girl	Red	JK JADRO KOPER	19	74	(104\BFD)	14	107
+161	POL1827	Ewa Lewandowska	Girl & U12	Blue	KS AZS AWFiS Gdañsk	(56)	46	37	24	107
+162	AUT1231	Lilly Schranzhofer	Girl	White	SCTWV	37	14	57	(104\DNF)	108
+163	ITA8812	Agata Scalmazzi	Girl	White	FRAGLIA VELA RIVA	61	32	(104\BFD)	15	108
+164	SLO377	Mark Rodica	U12	Yellow	JK Burja Izola	48	29	31	(50)	108
+165	CRO1044	Luka Gregovic	U12	Yellow	JD VAL CRIKVENICA	36	(56)	31	41	108
+166	FRA2568	Ortin Hugo	U12	Yellow	AVCR	23	(62)	42	44	109
+167	AUT1150	Jakob Znidaric	 	White	NCA	60	23	(104\BFD)	27	110
+168	ITA8778	Aurora Deiuri	Girl	Yellow	SocietÀ Nautica  Tavoloni	(49)	44	27	39	110
+169	ITA8552	Greta Marzocchi	Girl	White	FV Desenzano	42	16	(69)	53	111
+170	ITA8234	Luigi Ferruggia	 	Blue	Circolo Canottieri RoggerÒ di Lauria	37	(68)	51	23	111
+171	ITA8063	Elena Degrassi	Girl & U12	Red	SocietÀ Triestina  della Vela	43	43	(49)	25	111
+172	SUI1824	Berther Samuel	U12	Yellow	SCC	27	37	47	(51)	111
+173	ITA8797	Tommaso Della Valle	 	Blue	CV BELLANO	34	(59)	42	35	111
+174	GER13559	Ida Gießelmann	Girl & U12	Blue	Bayerischer Yachtclub	23	45	44	(47)	112
+175	CRO1136	Katja Rabak	Girl	Yellow	JK Vega	(52)	41	39	32	112
+176	SUI1840	Nokes Samuel	 	Red	CVVT	40	27	(49)	46	113
+177	ITA8182	Elena Prandi	Girl	White	FRAGLIA VELA RIVA	(72)	33	46	34	113
+178	CRO1220	Tristan Tol	U12	Yellow	CSC	(44)	35	44	34	113
+179	GER1090	Schäfer Mathilda	Girl & U12	Yellow	MYC	41	(44)	34	38	113
+180	HUN1337	Sara Lacko	Girl & U12	White	BYC	(64)	2	58	54	114
+181	CRO1049	Dino Kalac	 	Red	JK Kvarner	26	51	(53)	38	115
+182	ITA8853	Lorenzo Coretti	 	Yellow	LMI GRADO	31	39	45	(104\DNF)	115
+183	GER11100	Leon Dorflinger	 	Red	WSVB-L	61	31	25	(67)	117
+184	MON1417	Lamy François	 	White	YC MONACO	45	22	51	(104\DNF)	118
+185	FRA2695	Max Cheli	U12	Blue	SR Antibes	(57)	49	44	26	119
+186	SUI1723	Jack Mullen	 	Yellow	SNG	47	(73)	29	43	119
+187	SUI1822	Erik Orlandini	 	White	CVLL	(66)	30	52	37	119
+188	SUI1810	Sophie Studer	Girl	Blue	RCO	43	31	(61)	45	119
+189	CRO1064	Bianka Maria Ornik	Girl	Red	JD VAL CRIKVENICA	(72)	22	59	40	121
+190	FRA2385	Alice Vandi	Girl	Red	SR Antibes	(46)	45	46	31	122
+191	CRO103	Vito Fili	U12	Red	JK Vega	39	49	34	(64)	122
+192	SUI1602	Tomas Fiorentino	U12	White	CVLL	29	55	39	(60)	123
+193	ITA8610	Benedetta Valerio	Girl	White	SocietÀ canottieri  Garda SalÒ	37	(58)	45	41	123
+194	ITA8153	Noel Pacaj	 	White	SocietÀ Nautica Tavoloni	35	(63)	56	33	124
+195	GER1271	Maximilian Reger	 	Blue	CYC	51	47	27	(52)	125
+196	SLO666	Jakob Musa Olivieri	 	Blue	JK OLIMPIC IZOLA	46	33	46	(104\DNF)	125
+197	AUT1106	Christoph Murke	 	White	Yachtclub Bregenz	55	16	(104\DNF)	55	126
+198	ITA8146	Marco Alberti	U12	Blue	SocietÀ canottieri  Garda SalÒ	39	(78)	39	48	126
+199	ITA8456	Piero Delneri	U12	White	SVOC	(77)	13	56	58	127
+200	SRB747	Relja Milovanovic	U12	Red	AJK BEOGRAD	19	(63)	60	49	128
+201	FRA2380	Lou Deville	Girl	Yellow	SR Antibes	(104\BFD)	25	58	45	128
+202	SUI1794	Emily Manship	Girl	Yellow	CVLL	53	48	(62)	27	128
+203	ITA8	Augusto Cardellini	U12	White	FRAGLIA VELA RIVA	(68)	50	40	38	128
+204	ITA8635	Giovanni Santi	 	Red	Circolo vela Gargnano	(104\BFD)	66	50	13	129
+205	SUI1841	Robin Imbert	U12	White	SNG	74	25	31	(104\DNF)	130
+206	CRO1173	Antonio Rudelj	 	Blue	Bura	43	(76)	42	46	131
+207	CRO1078	Mija Mocinic	 	Yellow	CSC	35	40	(104\BFD)	58	133
+208	HUN232	Gergely Domonkos	 	Blue	SÉP	49	48	(53)	36	133
+209	CRO1037	Roko cepic-Zokic	U12	Red	JK OMIŠ	(64)	18	53	63	134
+210	POL1325	Gronek Hanna	Girl	Red	YC Koszalin	(70)	20	61	53	134
+211	SUI1748	Deryckere Audrey	Girl	Red	SNG	45	60	(63)	29	134
+212	ITA6590	Luca Palazzi	 	Red	SVOC	(75)	43	47	45	135
+213	ITA8954	Schiavon Eugenia	Girl	White	YC Adriaco	(65)	61	16	59	136
+214	HUN1311	Benedek Barna Heder	U12	Yellow	Spartacus YC	38	37	61	(63)	136
+215	CRO1082	Kristijan Pavlovic	 	Red	CSC	35	41	(80)	61	137
+216	SLO395	Benjamin Aganovic	 	Yellow	JK Burja Izola	(57)	48	36	53	137
+217	CRO944	Manola Miletic	Girl & U12	Yellow	JK Kvarner	50	(57)	41	46	137
+218	SLO677	Klemen Filipcic	 	White	JK OLIMPIC IZOLA	46	42	(49)	49	137
+219	ITA8310	Margherita Bonifaccio	Girl	Blue	CV BELLANO	50	52	36	(104\DSQ)	138
+220	MON1414	Plana Maxime	 	Red	YC MONACO	(66)	66	45	28	139
+221	HUN375	Réka Nagy	Girl	Red	THE-YKA	(58)	47	35	57	139
+222	ITA7313	Flavia Maltagliati	Girl & U12	White	Centro Velico 3V	(104\DNF)	42	57	40	139
+223	SRB8181	Viktor Batizic	U12	White	NC PALILULA	25	(80)	71	44	140
+224	ITA8469	Luca Salvago	U12	Red	CV BELLANO	28	(71)	51	62	141
+225	GER13552	Riley Woydich	U12	White	CYC	30	(77)	63	48	141
+226	BUL988	Mariyan Shangov	U12	Blue	YC Port Bourgas	59	44	(70)	38	141
+227	ITA8084	Achille Ciavatta	U12	Blue	LNI Mandello	20	72	50	(104\DNF)	142
+228	AUT1848	Lea Schranzhofer	Girl	Blue	SCTWV	54	40	48	(64)	142
+229	ITA8801	Mia Benamati	Girl & U12	Yellow	Fraglia Vela Malcesine	(68)	15	62	66	143
+230	SRB446	Filip Yuill	U12	Red	AJK BEOGRAD	80	12	52	(104\DNF)	144
+231	ITA8025	Aurora Ambroz	Girl	Yellow	Jadralni Klub Èupa	35	67	43	(104\DNF)	145
+232	ITA7428	Riccardo Villa	 	White	AVAL-CDV GRAVEDONA	53	(74)	35	57	145
+233	ITA8682	Giorgio Palmieri	 	Red	SocietÀ Nautica  Tavoloni	56	(67)	65	26	147
+234	SLO511	Anton Rejec	U12	White	JK JADRO KOPER	32	63	54	(104\DNF)	149
+235	FRA229	Yannic Flandorffer	 	Yellow	YC Cannes	32	(104\BFD)	104\BFD	15	151
+236	AUT1256	Schwarz Jonathan	 	Yellow	YKA	65	50	36	(104\DNF)	151
+237	SRB224	Aleksandra Vujosevic	Girl	Yellow	AJK BEOGRAD	52	55	44	(104\DNF)	151
+238	ITA9033	Noam Lusa	U12	White	SocietÀ Triestina  della Vela	77	13	63	(104\DNF)	153
+239	SLO525	Jure Barl	 	Red	JK LJUBLJANA	80	9	65	(104\DNF)	154
+240	SUI1798	Christina Muller	Girl	Blue	SCR	(63)	61	37	56	154
+241	SLO631	Peter Koprivec	 	White	JK OLIMPIC IZOLA	54	(75)	55	45	154
+242	ITA6697	Luca Pasanisi	 	Yellow	Centro Velico 3V	64	65	26	(104\DNF)	155
+243	HUN238	Romeo Jandl	U12	Yellow	SÉP	52	48	55	(57)	155
+244	FRA2547	Soren Bernillon	U12	White	SR Antibes	58	69	29	(104\DNF)	156
+245	HUN704	Soma Kis-Szölgyémi	U12	Yellow	Kereked Vitorlás Klub	(67)	62	46	48	156
+246	ITA7641	PiernicolÒ Da Broi	U12	Yellow	Jadralni Klub Èupa	(65)	64	64	31	159
+247	ITA7601	Studer Federico	U12	Yellow	Circolo Canottieri Palermo	65	71	24	(104\DNF)	160
+248	FRA2371	Emma Picot	Girl	Yellow	ASPTT Marseille	53	55	52	(104\DNF)	160
+249	POL1763	Julek Podwalski	 	White	SSW MOS ILAWA	62	19	80	(104\DNF)	161
+250	ITA7387	NoÈ Magnani	U12	Red	SocietÀ Nautica  Laguna	70	36	55	(104\DNF)	161
+251	HUN1322	Hanna Bodnar	Girl & U12	Red	BYC	43	52	66	(68)	161
+252	HUN714	Boróka Lacza	Girl	Blue	Kereked Vitorlás Klub	59	52	(72)	50	161
+253	HUN950	András Csöregh	U12	Yellow	THE-YKA	70	34	59	(104\DNF)	163
+254	GER13608	Gericke Severin	U12	White	YCaT	6	54	(104\BFD)	104\DSQ	164
+255	ITA7845	Jan Meletti	U12	Red	Fraglia Vela Malcesine	55	62	(104\DNF)	48	165
+256	SUI1460	Oldani Louis	 	White	YCZ	41	(75)	104\DNE	22	167
+257	SLO956	Sven Panger	 	Blue	JK JADRO KOPER	62	73	32	(104\DNF)	167
+258	GER13238	Bastian Weber	U12	Yellow	YCaT	(63)	60	47	60	167
+259	ITA8115	Elena Podavini	Girl & U12	Blue	SocietÀ canottieri  Garda SalÒ	34	(104\BFD)	30	104\DNF	168
+260	SUI1682	Philip Kleisner	 	Yellow	SCMd	55	(76)	54	59	168
+261	SUI1757	Tibor Devaud	 	Red	SNG	(69)	63	67	39	169
+262	CRO1073	Eugen Kulic Golja	 	Blue	JK Kvarner	62	67	(71)	40	169
+263	HUN1111	Bence Farkas	 	Yellow	KYK VSE	(71)	54	60	55	169
+264	ITA9032	Alessandro Valentinis	U12	Yellow	SocietÀ Triestina della Vela	73	38	59	(104\DNF)	170
+265	SRB898	Strahinja Simic	 	White	AJK BEOGRAD	59	(72)	56	56	171
+266	ITA83	Manfredi Marioni	U12	White	Centro Velico 3V	(104\BFD)	3	65	104\DNF	172
+267	GER13176	Lia Weber	Girl	Red	YCaT	61	70	41	(104\DNF)	172
+268	ITA8805	Lorenzo Giacinti	 	Blue	LNI Mandello	30	80	63	(104\DNF)	173
+269	ITA7869	Sara Calici	Girl	White	SN Pietas Julia	(67)	66	65	42	173
+270	SLO372	Lukas-Jan Redek	U12	Red	JK Burja Izola	49	21	(104\DNF)	104\DNF	174
+271	SLO821	Lucka Bedene	Girl & U12	Yellow	JK LJUBLJANA	85	87	4	(104\DNF)	176
+272	GER1011	Xaver Schwarz	U12	Red	CYC	47	61	68	(104\DNF)	176
+273	ITA8793	Filippo Rebecchi	 	Blue	LMI TRIESTE	48	70	58	(104\DNF)	176
+274	ITA8021	Giorgio Busato	U12	Blue	Centro Velico 3V	66	50	(75)	60	176
+275	HUN111	Levente Fehérvári	 	Blue	KYK VSE	(68)	60	68	49	177
+276	HUN1146	Emília Juhász	Girl	Yellow	Kereked Vitorlás Klub	(76)	54	68	56	178
+277	ITA6639	Carlo Arnaboldi	 	White	AVAL-CDV GRAVEDONA	60	(77)	67	52	179
+278	ITA6982	Alessandro Ceccone	 	White	SocietÀ Nautica Tavoloni	69	44	67	(104\DNF)	180
+279	ITA8902	Saverio Tosto	 	Red	NIC Catania	47	61	72	(104\DNF)	180
+280	HUN221	Abdai Réka	Girl	Red	SÉP	70	(75)	60	52	182
+281	ITA6780	Guglielmo Martin Boatto	 	Blue	SN Pietas Julia	50	69	64	(104\DNF)	183
+282	SLO911	Lana Vidmar	Girl	Blue	JK JADRO KOPER	51	(75)	75	57	183
+283	ITA8394	Pietro Veronesi	U12	Yellow	Centro Velico 3V	(71)	58	64	61	183
+284	HUN419	Herbert Kovács	U12	Red	KYK VSE	72	40	72	(104\DNF)	184
+285	GER13391	Bötsch Constantin	U12	White	Bayerischer Yachtclub	86	34	66	(104\DNF)	186
+286	CRO1029	Nika Udovicic	Girl	Red	JD VAL CRIKVENICA	78	49	59	(104\DNF)	186
+287	SLO512	Teo Gerzelj	U12	Blue	Jk Pirat	75	62	49	(104\DNF)	186
+288	SRB401	Nada Vujosevic	Girl & U12	Blue	NC PALILULA	62	53	71	(104\DNF)	186
+289	ITA1	Tommaso Geiger	 	Red	CDV Muggia	63	66	57	(104\DNF)	186
+290	ITA8458	Aida Cocchiara	Girl	Yellow	Club Nautico Gela	33	73	81	(104\DNF)	187
+291	CRO1024	Mark Maglica	U12	White	JK GALEB   Kostrena	79	(104\BFD)	51	61	191
+292	SLO951	Val-Mario Colarich	U12	Red	JK JADRO KOPER	57	78	(104\BFD)	56	191
+293	SLO188	ziga Cepak	U12	Red	Jk Pirat	79	35	79	(104\DNF)	193
+294	ITA8011	Pietro Caminiti	 	White	Centro Velico 3V	(104\BFD)	51	38	104\DNF	193
+295	AUT1271	Lisa Rudigier	Girl	Blue	YKA	50	81	(83)	63	194
+296	ITA8307	Giulia Carminati	Girl & U12	Red	Jadralni Klub Èupa	(77)	59	75	60	194
+297	SLO524	Matevz Bedene	 	White	JK LJUBLJANA	69	81	45	(104\DNF)	195
+298	ITA5243	Paola Celic	Girl	Yellow	JK Vega	(78)	68	62	65	195
+299	ITA8281	Beatrice De Santo	Girl & U12	Red	SN Pietas Julia	54	(104\BFD)	38	104\DNF	196
+300	ITA8738	Antoniazzi Gabriele	U12	Blue	YC Adriaco	79	45	72	(104\DNF)	196
+301	CRO1140	Vedran Celic	U12	Yellow	JK Vega	(76)	76	66	54	196
+302	ITA7557	Pietro Bernocchi	U12	Yellow	CV BELLANO	45	83	69	(104\DNF)	197
+303	ITA8789	Guliano Trobia	U12	Red	NIC Catania	40	(104\DNF)	104\DNF	55	199
+304	SLO189	Elisa Sedmak	Girl	Blue	JK IZOLA	68	72	(104\BFD)	61	201
+305	ITA7375	Tommaso Basilico	U12	Red	LNI Mandello	82	43	77	(104\DNF)	202
+306	ITA8082	Giacomo Martini	 	Yellow	LNI Mandello	73	72	58	(104\DNF)	203
+307	CRO1055	Loris Berljavac	 	Yellow	JK HORIZONT POREÈ	58	70	76	(104\DNF)	204
+308	CRO1025	Jakov Lazinica	U12	Blue	JK GALEB  Kostrena	81	(86)	70	55	206
+309	ITA7830	Lorenzo Centuori	U12	Blue	SN Pietas Julia	67	65	74	(104\DNF)	206
+310	SLO955	Zala Vidmar	Girl & U12	Blue	JK JADRO KOPER	67	73	67	(104\DNF)	207
+311	CRO1130	Jakov Mocinic	U12	Red	CSC	73	57	78	(104\DNF)	208
+312	CRO110	Lenka Smiljanic	Girl	White	AJK BEOGRAD	72	60	76	(104\DNF)	208
+313	HUN1338	Peter Szaplonczay	 	Yellow	Balatoni Yacht Club 1912	69	70	69	(104\DNF)	208
+314	CRO1146	Andrea Sponza	 	White	JK Maestral	66	82	61	(104\DNF)	209
+315	ITA8736	Filippo Frasson	 	Blue	SVOC	54	(104\DNF)	54	104\DNF	212
+316	ITA6945	Matteo Lesa	U12	Blue	SocietÀ Triestina della Vela	(83)	76	77	59	212
+317	AUT1004	Katharina Kropfitsch	Girl & U12	Yellow	KYCK	81	83	(104\DNF)	49	213
+318	CRO868	Mara Samarzija	Girl & U12	Yellow	JK SVETI NIKOLA	48	(104\DNF)	104\DNF	62	214
+319	FRA2716	Benoit Apolline	Girl	Red	La Pelle Marseille	8	(104\BFD)	104\BFD	104\DSQ	216
+320	CRO1022	Arsen Krzyk	U12	White	JK GALEB   Kostrena	83	56	79	(104\DNF)	218
+321	HUN1336	Balazs Szaplonczay	U12	Red	Balatoni Yacht Club 1912	75	78	(82)	65	218
+322	ITA7355	Benussi Marta	Girl & U12	Yellow	YC Adriaco	76	74	68	(104\DNF)	218
+323	SLO912	Liam Al-Dilami	U12	Blue	JK JADRO KOPER	78	57	85	(104\DNF)	220
+324	ITA8698	Lucia Brambilla	Girl & U12	Blue	LNI Mandello	71	79	70	(104\DNF)	220
+325	POL1872	Marcin Staniewicz	 	White	YC Koszalin	71	79	71	(104\DNF)	221
+326	CRO120	Lucija skopac	Girl	Yellow	JK Uljanik	(104\DNF)	104\DNF	104\DNF	14	222
+327	ITA8191	Gabriele Crovella	 	Yellow	SN Pietas Julia	61	59	(104\DSQ)	104\DNF	224
+328	ITA8988	Emma Ritossa	Girl	Yellow	SocietÀ Triestina della Vela	75	83	66	(104\DNF)	224
+329	SRB414	Luka Vukasinovic	 	White	NC PALILULA	82	69	73	(104\DNF)	224
+330	ITA8083	Imogene Sicaro	Girl & U12	Red	LNI Mandello	77	84	64	(104\DNF)	225
+331	SLO527	Aljaz zibert	 	Blue	JK LJUBLJANA	78	80	70	(104\DNF)	228
+332	CRO1152	Noa sajatovic	Girl	White	JK Uljanik	(104\DNF)	104\DNF	104\DNF	21	229
+333	CRO1117	Alex Mecava	U12	Blue	CSC	76	81	74	(104\DNF)	231
+334	SLO443	Dante-Manolo Drozina	U12	Red	JK POCODEBON	82	77	73	(104\DNF)	232
+335	ITA7473	Giovanni Marchese	 	Yellow	SVOC	73	57	(104\BFD)	104\DNF	234
+336	SRB1171	Veljko Ljubojevic	U12	Yellow	NC PALILULA	79	82	73	(104\DNF)	234
+337	CRO1104	Marcelina Filipovic	Girl	White	Bura	(104\DNF)	58	73	104\DNF	235
+338	CRO1080	Edi Jurman	U12	White	CSC	84	79	76	(104\DNF)	239
+339	ITA6311	Samuele TrovÒ	 	Yellow	SVOC	83	82	75	(104\DNF)	240
+340	SLO587	Domen Hostnik	 	White	JK LJUBLJANA	84	78	78	(104\DNF)	240
+341	CRO1035	Nika Fornazar	Girl & U12	Red	JK HORIZONT POREÈ	87	51	(104\DNF)	104\DNF	242
+342	ITA5264	Alessio Santostefano	U12	Blue	SVOC	74	68	(104\BFD)	104\DNF	246
+343	ITA8549	Ian Sunseri	 	White	SN Pietas Julia	(104\DNF)	104\DNF	104\DNF	39	247
+344	CRO74	Mare Grskovic	Girl	Red	JK SVETI NIKOLA	(104\DNF)	104\DNF	104\DNF	41	249
+345	ITA7374	Matilda Lo Pinto	Girl & U12	White	LNI Mandello	(104\DNF)	71	74	104\DNF	249
+346	ITA8900	Tommaso De Fontes	U12	Blue	NIC Catania	(104\DNF)	104\DNF	104\DNF	42	250
+347	CRO1099	Iva Rokvic	Girl & U12	Red	JK Uljanik	(104\DNF)	104\DNF	104\DNF	43	251
+348	SLO958	David Ratosa	U12	Yellow	JK JADRO KOPER	74	(104\DNF)	78	104\DNF	256
+349	ITA8466	Masserano Giovanna	Girl & U12	White	YC Adriaco	81	(104\BFD)	74	104\DNF	259
+350	AUT1250	David Rohde	U12	Blue	Yachtclub Hard	(104\DNF)	104\DNF	104\DNF	58	266T
+350	CRO1153	Noa Goricki	Girl	Red	JK Uljanik	(104\DNF)	104\DNF	104\DNF	58	266T
+352	CRO078	Ema Grabar	Girl & U12	Red	CSC	(104\DNF)	84	81	104\DNF	269
+353	CRO1154	Lena Krivic	Girl & U12	Blue	JK Uljanik	(104\DNF)	104\DNF	104\DNF	62	270
+354	ITA9005	Alberto Incarbona	U12	Yellow	LN Trapani	(104\DNF)	104\DNF	104\DNF	64	272
+355	AUT1176	Schwarz Jakob	U12	Blue	YKA	(104\DNF)	104\DNF	104\DNF	65	273
+356	CRO598	Nikola Juric	U12	Red	JK SVETI NIKOLA	(104\DNF)	104\DNF	104\DNF	69	277
+357	CRO1216	Luka Lorencin	U12	Blue	CSC	(104\DNF)	104\BFD	69	104\DNF	277
+358	SLO368	Marko Balaban	U12	Blue	JK Burja Izola	88	85	(104\DNF)	104\DNF	277
+359	CRO1065	Mateo Draguzet	 	Red	CSC	(104\DNF)	104\DNF	76	104\DNF	284
+360	ITA4928	Anastasia Mutti	Girl & U12	White	SN Pietas Julia	(104\DNF)	104\DNF	77	104\DNF	285
+361	CRO187	Ria Covic	Girl & U12	Yellow	Bura	(104\DNF)	104\DNF	84	104\DNF	292
+362	ITA8391	Marianna Ruggiano	U12	White	Centro Velico 3V	89	(104\DNF)	104\DNF	104\DNF	297
+363	ITA6959	Itzel Blin	Girl & U12	Yellow	SocietÀ Triestina  della Vela	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	ITA8742	Pietro Cunegatti	U12	White	AVAL-CDV GRAVEDONA	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	SUI1664	Léonie Baudet	Girl	Yellow	SNG	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO17	Mark Sandri	U12	Blue	CSC	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	ITA6724	Samuele Patorniti	 	Red	Club del mare Diano Marina	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	SLO526	Nina Gabrenja	Girl & U12	White	JK LJUBLJANA	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	SLO93	Roza Sabadin	Girl & U12	Red	Jk Pirat	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO959	Ana Petricic	Girl	Red	Jaht Klub Croatia	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO950	Karlo Domancic	U12	Blue	JK ZVIR	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	AUT1041	Maximilian Wiedergut	U12	Yellow	KYCK	(104\DNS)	104\DNF	104\DNF	104\DNF	312T
+364	CRO936	Eni Vidulic	Girl	White	JK JUGO	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO933	Marin Krmpotic	U12	Blue	JK OPATIJA	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO928	Rikardo Juretic	U12	Red	JK OPATIJA	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO927	Veronika Lavrenko	Girl & U12	Yellow	JK HISTRIA	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1105	Lukrecia sodan	U12	White	Bura	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO920	Pave Botica	 	White	JK Uljanik	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1102	Danica Vucetic	U12	Blue	JK ZVIR	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO924	Dorotea Spisic	Girl	Yellow	JK JUGO	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO92	Varvara Lavrenko	Girl & U12	Red	JK HISTRIA	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	SRB777	Andrej Bozoki	U12	Blue	JK ZEMUN	(104\DNF)	104\DNF	104\DNF	104\BFD	312T
+364	CRO1098	Roko Kuzmanovic	 	White	JK Uljanik	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1210	Toni Bilen	U12	Blue	Jaht Klub Croatia	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1084	Glen Deiters	 	Yellow	JK ZVIR	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO881	Luka Pahljina	U12	White	JK Uljanik	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1071	Alessia Juricic	Girl & U12	Red	JK Kvarner	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1181	Tajana Filipas	Girl	Yellow	JK JUGO	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	SLO523	Jean-Marie Drozina	U12	White	JK POCODEBON	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1051	Filip Smokovic	U12	Blue	JK Kvarner	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	SLO393	Enya Agnello	Girl & U12	Blue	JK Burja Izola	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1042	Andrea Batelic	U12	White	JK Kvarner	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO818	Jakov Kiralj	 	Yellow	JK JUGO	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO799	Vito Franjic	U12	White	JK Uljanik	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO772	Nina Marusic	Girl & U12	Red	JK ZVIR	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO770	Nikola Karkoviæ	U12	Blue	JK ZVIR	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1151	Grigor Pettener	U12	Yellow	JK Uljanik	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1023	Nika sustic	Girl & U12	Red	JK GALEB Kostrena	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	SLO669	Matej Bertok	 	White	JK OLIMPIC IZOLA	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1014	Tim Faflja	 	Yellow	JK HORIZONT POREÈ	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1010	Patrik Spisic	U12	Red	JK JUGO	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1004	Jessica Konc	Girl & U12	Blue	JK OPATIJA	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO10	Oliver Bilic	U12	Blue	JK HORIZONT POREÈ	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO1	Roman Mohorovic	U12	Red	JK Vega	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO725	Filip Luic	 	White	JK Uljanik	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO723	Karla Blaskovic	Girl & U12	Yellow	JK Uljanik	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO6479	Ivano Kaic	U12	Yellow	JK Uljanik	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO600	Mare Uroda Plevko	Girl & U12	White	JK SVETI NIKOLA	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	SLO1212	Daniel Cante	 	Yellow	JK IZOLA	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO2021	Luka Kamber	U12	Blue	JK GALEB   Kostrena	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	CRO2007	Deni Mocinic	U12	Red	JK Uljanik	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
+364	ITA7614	Elena Madesani	Girl & U12	Red	Club del mare Diano Marina	(104\DNF)	104\DNF	104\DNF	104\DNF	312T
