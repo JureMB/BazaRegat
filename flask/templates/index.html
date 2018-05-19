@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}BazaRegat{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Naslovna stran BazeRegat!</h1>
+</div>
+<p>Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
+Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
+Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
+Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
+Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
+Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
+</p>
+<div class="row">
+  <div class="col-sm-4">
+      <div class="panel panel-default">
+          <div class="panel-body">
+              <a href="{{ url_for('regate') }}" class="btn btn-primary btn-block">Regate</a>
+              <img class="img-responsive hidden-xs" src="{{ url_for('static', filename = 'image1.jpg') }}">
+              <p class="text-center">text text text text text text text text text</p>
+
+          </div>
+      </div>
+  </div>
+  <div class="col-sm-4">
+      <div class="panel panel-default">
+          <div class="panel-body">
+              <a href="{{ url_for('jadralci') }}" class="btn btn-primary btn-block">Jadralci</a>
+              <img class="img-responsive hidden-xs" src="{{ url_for('static', filename = 'image1.jpg') }}">
+              <p class="text-center">text text text text text text text text text</p>
+
+          </div>
+      </div>
+  </div>
+  <div class="col-sm-4">
+      <div class="panel panel-default">
+          <div class="panel-body">
+              <a href="{{ url_for('lestvica') }}" class="btn btn-primary btn-block">Lestvica</a>
+              <img class="img-responsive hidden-xs" src="{{ url_for('static', filename = 'image1.jpg') }}">
+              <p class="text-center">text text text text text text text text text</p>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+{% endblock %}
