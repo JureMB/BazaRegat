@@ -1,170 +1,170 @@
-LUKA ZABUKOVEC 	SLO711	M 	JK JADRO KOPER
-FILIPPO BATTISTI 	ITA8699	M 	
-DANIEL CANTE 	SLO211	M 	JK IZOLA
-KATHARINA SCHWACHOFER 	GER1023	F 	
-MATE BENYO 	HUN12946	M 	THE­YKA HUNGARY
-LUCIJA ŠKOPAC 	CRO1077	F 	CLIVO SAILING CLUB
-EMANUEL SKOÈIBUŠIÆ 	CRO1065	M 	CLIVO SAILING CLUB
-BENDEGUZ NAGY 	HUN918	M 	BALATONFUREDI YACHT CLUB
-BORDA LEVENTE 	HUN2005	M 	SPARTACUS OPTIMISTIMIST TEAM
-GAŠPER STRAHOVNIK 	SLO64	M 	JK PIRAT PORTOROŽ
-MATE JENEY 	HUN1	M 	SPARTACUS OPTIMISTIMIST TEAM
-ATTILA BANYAI 	HUN1327	M 	BYC
-ROKO STIPANOVIÆ 	CRO1147	M 	CLIVO SAILING CLUB
-IVAN VAHRUŠEV 	SLO1005	M 	JK PIRAT PORTOROŽ
-ALJA PETRIÈ 	SLO922	F 	JK JADRO KOPER
-RONI OSZKAR	HUN703	M	SPARTACUS OPTIMISTIMIST TEAM
-MARTIN FRAS 	SLO187	M 	JK IZOLA
-BALINT BAGONYI 	HUN378	M 	THE­YKA HUNGARY
-LUKAS WEHRENBERG 	CZE681	M 	
-ŠPELA HAJDINJAK 	SLO399	F 	JK BURJA IZOLA
-JOHANNA SCHMIDT 	AUT1080	F 	SCTWV
-NORA ŠIJAN 	CRO1168	F 	CLIVO SAILING CLUB
-ATTILA TOTH 	HUN1331	M 	SPARTACUS OPTIMISTIMIST TEAM
-PETER PAPP 	HUN230	M 	SEP HUNGARY
-ALENKA VALENÈIÈ 	SLO311	F 	JK BURJA IZOLA
-LEON SCHEIDL 	CRO1196	M 	CLIVO SAILING CLUB
-LORENZO FONDA 	ITA8765	M 	
-CATERINA SEDMAK 	SLO228	F 	JK IZOLA
-KATJA FILIPIÈ 	SLO952	F 	JK JADRO KOPER
-DAN BELINGER 	SLO750	M 	JK PIRAT PORTOROŽ
-MAJ BISAKI 	CRO1092	M 	JK HISTRIA UMAG
-OLIVER DEMJEN 	HUN1313	M 	BALATONFUREDI YACHT CLUB
-KRISTOF JENEY 	HUN1304	M 	SPARTACUS OPTIMISTIMIST TEAM
-REBECCA GEIGER 	ITA1	F 	
-TONI BENÈIÈ 	SLO411	M 	JK PIRAT PORTOROŽ
-DORA GOMERCIC 	GER13582	F 	WASSERSPORT­CLUB GIFHORN
-JAN KOMADINA 	CRO1072	M 	JK VEGA
-SAMUEL ZOLNAI 	HUN1343	M 	SPARTACUS OPTIMISTIMIST TEAM
-JAKOB GOLUBIÈ 	SLO1002	M 	JK PIRAT PORTOROŽ
-CELESTINA SABADIN 	SLO93	F 	JK PIRAT PORTOROŽ
-TEDI LEONARDELLI 	CRO1032	M 	JK VEGA
-MAJ PETRIÈ 	SLO944	M 	JK JADRO KOPER
-LIZA LEVANDOVSKA 	SLO1035	F 	JK PIRAT PORTOROŽ
-BARNA HEDER	HUN1311	M 	SPARTACUS OPTIMISTIMIST TEAM
-BENEDEK SZUCS 	HUN1332	M 	THE­YKA HUNGARY
-LISA VUCETTI 	ITA7621	F 	SOCIETA VELICA BARCOLA GRIGNAN
-ENRICO COSLOVICH 	ITA581	M 	
-JANKA LITKEY 	HUN12943	M 	THE­YKA HUNGARY
-AURORA PALKO 	CRO1188	F 	JK DELFIN
-LILLY SCHRANZHOFER 	AUT1231	F 	SCTWV
-DANIEL BAGONYI	HUN910	M 	THE­YKA HUNGARY
-VALENTIN ŠTRAVS 	SLO811	M 	JK JADRO KOPER
-BUBA PULEK 	CRO1202	M 	CLIVO SAILING CLUB
-ANDREA NORDIO 	ITA8386	M 	SOCIETA VELICA BARCOLA GRIGNAN
-MARKO GOMERCIC 	GER12646	M 	WASSERSPORT­CLUB GIFHORN
-GAŠPER BABIÈ 	SLO87	M 	JK IZOLA
-SZABOLCS IZSAK 	HUN707	M 	KEREKED VITORLAS KLUB
-VEDRAN ÈELIÆ 	CRO1140	M 	JK VEGA
-MATILDE PARLADORI 	ITA7803	F 	SOCIETA VELICA BARCOLA GRIGNAN
-LUCA DE VIDOVICH	ITA8385	M 	SOCIETA VELICA BARCOLA GRIGNAN
-TARIN PEÈAR 	SLO913	F 	JK JADRO KOPER
-MATTEO GERMANI 	ITA8778	M 	
-TEA PETEH 	CRO10	F 	JK HISTRIA UMAG
-LUCA PERMEGIANI 	ITA8337	M 	
-RICARDO GEISSLER 	GER13580	M 	WASSERSPORT­CLUB GIFHORN
-AKOS FODOR 	HUN1377	M 	BALATONFUREDI YACHT CLUB
-LEA RAKOVAC 	CRO1137	F 	JK HISTRIA UMAG
-TAMAS RUTAI 	HUN12944	M 	THE­YKA HUNGARY
-VAL MARIO	SLO951	M 	JK JADRO KOPER
-MIJA MOÈINIÆ 	CRO1078	F 	CLIVO SAILING CLUB
-SEBASTIAN TUL 	ITA8722	M 	
-BUDA BORBAS 	HUN1347	M 	BALATONFUREDI YACHT CLUB
-KOMAROMY BENEDEK 	HUN1811	M 	SPARTACUS OPTIMISTIMIST TEAM
-MARK RODICA 	SLO377	M 	JK BURJA IZOLA
-ELISA SEDMAK 	SLO189	F 	JK IZOLA
-LEA SCHRANZHOFER 	AUT1848	F 	SCTWV
-JAKOB MUSA OLIVIERI	SLO666	M 	JK OLIMPIC IZOLA
-ANNA VUCETTI 	ITA8852	F 	SOCIETA VELICA BARCOLA GRIGNAN
-NICCOLO SANGERMANO 	ITA8384	M 	SOCIETA VELICA BARCOLA GRIGNAN
-YANNIK HOEGER 	AUT1205	M 	SU­YCS
-JERNEJ FLANDJA 	SLO678	M 	JK OLIMPIC IZOLA
-CARLO VERZEGNASSI 	ITA8308	M 	SOCIETA VELICA BARCOLA GRIGNAN
-DOMINIK RABAK­VUKIÆ 	CRO1114	M 	JK HISTRIA UMAG
-MAXIMILIAN HEIDKAMP 	MLT202	M 	SCTWV
-BENJAMIN AGANOVIÈ 	SLO395	M 	JK BURJA IZOLA
-SOMA KIS­SZOLUMEMI 	HUN704	M 	KEREKED VITORLAS KLUB
-BALAZS MAJOROS 	HUN376	M 	THE­YKA HUNGARY
-MARINA VRŠÈAJ 	SLO234	F 	WSC ÈRNOMELJ
-KLEMEN FILIPÈIÈ 	SLO654	M 	JK OLIMPIC IZOLA
-DAVID LACKO 	HUN901	M 	BALATONFUREDI YACHT CLUB
-BEATRICE SIGNORELLI 	ITA7908	F 	SOCIETA VELICA BARCOLA GRIGNAN
-CHIARA CARRA 	HUN1310	F 	BALATONFUREDI YACHT CLUB
-KORNELIA KALMAN 	HUN148	F 	BALATONFUREDI YACHT CLUB
-MATEJ BERTOK 	SLO669	M 	JK OLIMPIC IZOLA
-LUCA KIS­SZOLUMEMI 	HUN714	F 	KEREKED VITORLAS KLUB
-ROMEO JANDL 	HUN238	M 	SEP HUNGARY
-KRISTIJAN PAVLOVIÆ 	CRO107	M 	CLIVO SAILING CLUB
-REKA NAGY 	HUN374	F 	THE­YKA HUNGARY
-LANA VIDMAR 	SLO911	F 	JK JADRO KOPER
-JONATHAN SCHWARZ 	AUT1256	M 	SCTWV
-PATRIK BUBNIÈ DILICA	SLO368	M 	JK BURJA IZOLA
-JURE BARL 	SLO525	M 	JK LJUBLJANA
-SVIT DUJMOVIÈ­ŠTERPIN 	SLO758	M 	JK PIRAT PORTOROŽ
-LISA RUDIGIER 	AUT1271	F 	
-STEFANO BATTISTIN 	ITA7241	M 	
-VITTORIO BONIFACIO 	ITA7926	M 	SOCIETA VELICA BARCOLA GRIGNAN
-SIMON VUK 	SLO887	M 	SD PIRAN
-PETER KOPRIVEC 	SLO631	M 	JK OLIMPIC IZOLA
-DANIELA DERMAN 	ITA7835	F 	SOCIETA VELICA BARCOLA GRIGNAN
-MAJ ŠIRCA 	SLO91	M 	JK  JADRO KOPER
-MATEJ SKOÈIBUŠIÆ 	CRO1116	M 	CLIVO SAILING CLUB
-PAOLA ÈELIÆ 	CRO1139	F 	JK VEGA
-ANTON REJEC 	SLO511	M 	JK JADRO KOPER
-VID MAGISTER 	SLO2112	M 	JK PIRAT PORTOROŽ
-MARKO FELDA 	ITA6642	M 	
-KATJA RABAK 	CRO109	F 	JK VEGA
-GERGELY DOMONKOS 	HUN232	M 	SEP HUNGARY
-EMA JELENKOVIÆ 	CRO884	F 	JK VEGA
-DAVID RATOŠA 	SLO999	M 	JK JADRO KOPER
-ANA PLANINŠIÈ 	SLO846	F 	SD PIRAN
-ROKO SCHMIDT 	CRO1136	M 	JK VEGA
-JAKOB ZNIDARIC 	AUT1150	M 	NCA
-NOAM LUSA COSTAMA	SLO1001	M 	JK PIRAT PORTOROŽ
-DOMEN HOSTNIK 	SLO587	M 	JK LJUBLJANA
-TIMOTEJ ADRIAN CERIN	SLO376	M 	JK BURJA IZOLA
-ELENA BATTISTI 	ITA8383	F 	
-SARA DOMENIK 	SLO375	F 	JK BURJA IZOLA
-CRISTIAN GIRANI 	ITA7355	M 	
-ALJAŽ ŽIBERT 	SLO522	M 	JK LJUBLJANA
-LIAM AL DILAMI	SLO912	M 	JK JADRO KOPER
-LUÈKA BEDENE 	SLO524	F 	JK LJUBLJANA
-NIKA BAKIÈ SPEZIA	SLO849	F 	
-TOMMASO GEIGER 	ITA12	M 	
-MATEVŽ BEDENE 	SLO521	M 	JK LJUBLJANA
-JAKOB SCHWARZ 	AUT2008	M 	SCTWV
-SVEN PANGER 	SLO956	M 	JK JADRO KOPER
-ZALA VIDMAR 	SLO955	F 	JK JADRO KOPER
-GAJA KOLARIÈ 	SLO821	F 	JK LJUBLJANA
-JAKOV MOÈINIÆ 	CRO1130	M 	CLIVO SAILING CLUB
-NEJC GABRENJA 	SLO523	M 	JK LJUBLJANA
-ALIJANA BAJEC 	SLO843	F 	SD PIRAN
-DANTE MANOLO DROŽINA	SLO847	M 	SD PIRAN
-MARCO FABI 	ITA8499	M 	
-TEO GERŽELJ 	SLO981	M 	JK PIRAT PORTOROŽ
-ANA VITASOVIÆ 	CRO973	F 	JK VEGA
-AJDA ŠMAJDEK 	SLO69	F 	JK LJUBLJANA
-ARNE BAJRAMOVIÈ 	SLO338	M 	JK BURJA IZOLA
-TAI SIMONOVICH 	SLO1802	M 	JK PIRAT PORTOROŽ
-ANEJA ŠMAJDEK 	SLO855	F 	JK LJUBLJANA
-VERONIKA LAVRENKO 	CRO927	F 	JK HISTRIA UMAG
-OLIVER SZOKODY 	HUN375	M 	THE­YKA HUNGARY
-KRIS PERUZIN 	SLO372	M 	JK BURJA IZOLA
-MATEVŽ PEJOVIÆ 	SLO96	M 	JK LJUBLJANA
-ŽIGA CEPAK 	SLO188	M 	JK PIRAT PORTOROŽ
-GABRIELE ANTONIAZZI 	ITA8	M 	YACHT CLUB ADRIACO 
-ALEX SOVDAT DE'FAVELI	SLO356	M 	JK BURJA IZOLA
-JAKOB PEJOVIÆ 	SLO6	M 	JK LJUBLJANA
-DANEI MARUŠIÈ 	SLO111	M 	JK JADRO KOPER
-LUANA PRAPER 	SLO984	F 	JK JADRO KOPER
-TRISTAN TOL 	CRO1117	M 	CLIVO SAILING CLUB
-MARKO BALABAN 	SLO379	M 	JK BURJA IZOLA
-ALLEGRA LUSA COSTAMA	SLO59	F 	JK PIRAT PORTOROŽ
-MILLA CAMPAJOLA 	ITA7501	F 	YACHT CLUB ADRIACO 
-ANNA PAGNINI 	ITA8494	F 	YACHT CLUB ADRIACO 
-ERICA MILONE 	ITA8184	F 	YACHT CLUB ADRIACO 
-FRANCESCO AUSTONI 	ITA8815	M 	YACHT CLUB ADRIACO 
-MARGERITA BARRO 	ITA8728	F 	YACHT CLUB ADRIACO 
-EUGENIA SCHIAVON 	ITA8367	F 	YACHT CLUB ADRIACO 
-MASSIMILIANO ANTONIAZZI 	ITA8730	M 	YACHT CLUB ADRIACO 
-JEAN­MARIF DROŽINA 	SLO845	M 	SD PIRAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LUKA ZABUKOVEC 	','	SLO711	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO711');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	FILIPPO BATTISTI 	','	ITA8699	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8699');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DANIEL CANTE 	','	SLO211	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO211');"			JK IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	KATHARINA SCHWACHOFER 	','	GER1023	','	F 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'GER1023');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MATE BENYO 	','	HUN12946	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN12946');"			THE­YKA HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LUCIJA ŠKOPAC 	','	CRO1077	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1077');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	EMANUEL SKOÈIBUŠIÆ 	','	CRO1065	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1065');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	BENDEGUZ NAGY 	','	HUN918	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN918');"			BALATONFUREDI YACHT CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	BORDA LEVENTE 	','	HUN2005	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN2005');"			SPARTACUS OPTIMISTIMIST TEAM
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	GAŠPER STRAHOVNIK 	','	SLO64	','	M 	',	2002	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO64');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MATE JENEY 	','	HUN1	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1');"			SPARTACUS OPTIMISTIMIST TEAM
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ATTILA BANYAI 	','	HUN1327	','	M 	',	2002	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1327');"			BYC
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ROKO STIPANOVIÆ 	','	CRO1147	','	M 	',	2002	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1147');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	IVAN VAHRUŠEV 	','	SLO1005	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO1005');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ALJA PETRIÈ 	','	SLO922	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO922');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	RONI OSZKAR	','	HUN703	','	M	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN703');"			SPARTACUS OPTIMISTIMIST TEAM
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MARTIN FRAS 	','	SLO187	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO187');"			JK IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	BALINT BAGONYI 	','	HUN378	','	M 	',	2002	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN378');"			THE­YKA HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LUKAS WEHRENBERG 	','	CZE681	','	M 	',	2002	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CZE681');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ŠPELA HAJDINJAK 	','	SLO399	','	F 	',	2002	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO399');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JOHANNA SCHMIDT 	','	AUT1080	','	F 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'AUT1080');"			SCTWV
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	NORA ŠIJAN 	','	CRO1168	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1168');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ATTILA TOTH 	','	HUN1331	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1331');"			SPARTACUS OPTIMISTIMIST TEAM
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	PETER PAPP 	','	HUN230	','	M 	',	2002	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN230');"			SEP HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ALENKA VALENÈIÈ 	','	SLO311	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO311');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LEON SCHEIDL 	','	CRO1196	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1196');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LORENZO FONDA 	','	ITA8765	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8765');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	CATERINA SEDMAK 	','	SLO228	','	F 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO228');"			JK IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	KATJA FILIPIÈ 	','	SLO952	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO952');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DAN BELINGER 	','	SLO750	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO750');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MAJ BISAKI 	','	CRO1092	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1092');"			JK HISTRIA UMAG
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	OLIVER DEMJEN 	','	HUN1313	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1313');"			BALATONFUREDI YACHT CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	KRISTOF JENEY 	','	HUN1304	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1304');"			SPARTACUS OPTIMISTIMIST TEAM
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	REBECCA GEIGER 	','	ITA1	','	F 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA1');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	TONI BENÈIÈ 	','	SLO411	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO411');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DORA GOMERCIC 	','	GER13582	','	F 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'GER13582');"			WASSERSPORT­CLUB GIFHORN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JAN KOMADINA 	','	CRO1072	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1072');"			JK VEGA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	SAMUEL ZOLNAI 	','	HUN1343	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1343');"			SPARTACUS OPTIMISTIMIST TEAM
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JAKOB GOLUBIÈ 	','	SLO1002	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO1002');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	CELESTINA SABADIN 	','	SLO93	','	F 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO93');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	TEDI LEONARDELLI 	','	CRO1032	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1032');"			JK VEGA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MAJ PETRIÈ 	','	SLO944	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO944');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LIZA LEVANDOVSKA 	','	SLO1035	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO1035');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	BARNA HEDER	','	HUN1311	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1311');"			SPARTACUS OPTIMISTIMIST TEAM
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	BENEDEK SZUCS 	','	HUN1332	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1332');"			THE­YKA HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LISA VUCETTI 	','	ITA7621	','	F 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA7621');"			SOCIETA VELICA BARCOLA GRIGNAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ENRICO COSLOVICH 	','	ITA581	','	M 	',	2008	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA581');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JANKA LITKEY 	','	HUN12943	','	M 	',	2002	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN12943');"			THE­YKA HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	AURORA PALKO 	','	CRO1188	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1188');"			JK DELFIN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LILLY SCHRANZHOFER 	','	AUT1231	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'AUT1231');"			SCTWV
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DANIEL BAGONYI	','	HUN910	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN910');"			THE­YKA HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	VALENTIN ŠTRAVS 	','	SLO811	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO811');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	BUBA PULEK 	','	CRO1202	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1202');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ANDREA NORDIO 	','	ITA8386	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8386');"			SOCIETA VELICA BARCOLA GRIGNAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MARKO GOMERCIC 	','	GER12646	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'GER12646');"			WASSERSPORT­CLUB GIFHORN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	GAŠPER BABIÈ 	','	SLO87	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO87');"			JK IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	SZABOLCS IZSAK 	','	HUN707	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN707');"			KEREKED VITORLAS KLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	VEDRAN ÈELIÆ 	','	CRO1140	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1140');"			JK VEGA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MATILDE PARLADORI 	','	ITA7803	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA7803');"			SOCIETA VELICA BARCOLA GRIGNAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LUCA DE VIDOVICH	','	ITA8385	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8385');"			SOCIETA VELICA BARCOLA GRIGNAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	TARIN PEÈAR 	','	SLO913	','	F 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO913');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MATTEO GERMANI 	','	ITA8778	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8778');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	TEA PETEH 	','	CRO10	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO10');"			JK HISTRIA UMAG
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LUCA PERMEGIANI 	','	ITA8337	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8337');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	RICARDO GEISSLER 	','	GER13580	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'GER13580');"			WASSERSPORT­CLUB GIFHORN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	AKOS FODOR 	','	HUN1377	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1377');"			BALATONFUREDI YACHT CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LEA RAKOVAC 	','	CRO1137	','	F 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1137');"			JK HISTRIA UMAG
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	TAMAS RUTAI 	','	HUN12944	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN12944');"			THE­YKA HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	VAL MARIO	','	SLO951	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO951');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MIJA MOÈINIÆ 	','	CRO1078	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1078');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	SEBASTIAN TUL 	','	ITA8722	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8722');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	BUDA BORBAS 	','	HUN1347	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1347');"			BALATONFUREDI YACHT CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	KOMAROMY BENEDEK 	','	HUN1811	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1811');"			SPARTACUS OPTIMISTIMIST TEAM
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MARK RODICA 	','	SLO377	','	M 	',	2008	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO377');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ELISA SEDMAK 	','	SLO189	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO189');"			JK IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LEA SCHRANZHOFER 	','	AUT1848	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'AUT1848');"			SCTWV
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JAKOB MUSA OLIVIERI	','	SLO666	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO666');"			JK OLIMPIC IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ANNA VUCETTI 	','	ITA8852	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8852');"			SOCIETA VELICA BARCOLA GRIGNAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	NICCOLO SANGERMANO 	','	ITA8384	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8384');"			SOCIETA VELICA BARCOLA GRIGNAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	YANNIK HOEGER 	','	AUT1205	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'AUT1205');"			SU­YCS
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JERNEJ FLANDJA 	','	SLO678	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO678');"			JK OLIMPIC IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	CARLO VERZEGNASSI 	','	ITA8308	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8308');"			SOCIETA VELICA BARCOLA GRIGNAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DOMINIK RABAK­VUKIÆ 	','	CRO1114	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1114');"			JK HISTRIA UMAG
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MAXIMILIAN HEIDKAMP 	','	MLT202	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'MLT202');"			SCTWV
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	BENJAMIN AGANOVIÈ 	','	SLO395	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO395');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	SOMA KIS­SZOLUMEMI 	','	HUN704	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN704');"			KEREKED VITORLAS KLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	BALAZS MAJOROS 	','	HUN376	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN376');"			THE­YKA HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MARINA VRŠÈAJ 	','	SLO234	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO234');"			WSC ?RNOMELJ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	KLEMEN FILIPÈIÈ 	','	SLO654	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO654');"			JK OLIMPIC IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DAVID LACKO 	','	HUN901	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN901');"			BALATONFUREDI YACHT CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	BEATRICE SIGNORELLI 	','	ITA7908	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA7908');"			SOCIETA VELICA BARCOLA GRIGNAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	CHIARA CARRA 	','	HUN1310	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN1310');"			BALATONFUREDI YACHT CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	KORNELIA KALMAN 	','	HUN148	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN148');"			BALATONFUREDI YACHT CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MATEJ BERTOK 	','	SLO669	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO669');"			JK OLIMPIC IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LUCA KIS­SZOLUMEMI 	','	HUN714	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN714');"			KEREKED VITORLAS KLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ROMEO JANDL 	','	HUN238	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN238');"			SEP HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	KRISTIJAN PAVLOVIÆ 	','	CRO107	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO107');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	REKA NAGY 	','	HUN374	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN374');"			THE­YKA HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LANA VIDMAR 	','	SLO911	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO911');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JONATHAN SCHWARZ 	','	AUT1256	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'AUT1256');"			SCTWV
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	PATRIK BUBNIÈ DILICA	','	SLO368	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO368');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JURE BARL 	','	SLO525	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO525');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	SVIT DUJMOVIÈ­ŠTERPIN 	','	SLO758	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO758');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LISA RUDIGIER 	','	AUT1271	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'AUT1271');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	STEFANO BATTISTIN 	','	ITA7241	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA7241');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	VITTORIO BONIFACIO 	','	ITA7926	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA7926');"			SOCIETA VELICA BARCOLA GRIGNAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	SIMON VUK 	','	SLO887	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO887');"			SD PIRAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	PETER KOPRIVEC 	','	SLO631	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO631');"			JK OLIMPIC IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DANIELA DERMAN 	','	ITA7835	','	F 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA7835');"			SOCIETA VELICA BARCOLA GRIGNAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MAJ ŠIRCA 	','	SLO91	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO91');"			JK  JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MATEJ SKOÈIBUŠIÆ 	','	CRO1116	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1116');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	PAOLA ÈELIÆ 	','	CRO1139	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1139');"			JK VEGA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ANTON REJEC 	','	SLO511	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO511');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	VID MAGISTER 	','	SLO2112	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO2112');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MARKO FELDA 	','	ITA6642	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA6642');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	KATJA RABAK 	','	CRO109	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO109');"			JK VEGA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	GERGELY DOMONKOS 	','	HUN232	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN232');"			SEP HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	EMA JELENKOVIÆ 	','	CRO884	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO884');"			JK VEGA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DAVID RATOŠA 	','	SLO999	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO999');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ANA PLANINŠIÈ 	','	SLO846	','	F 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO846');"			SD PIRAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ROKO SCHMIDT 	','	CRO1136	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1136');"			JK VEGA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JAKOB ZNIDARIC 	','	AUT1150	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'AUT1150');"			NCA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	NOAM LUSA COSTAMA	','	SLO1001	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO1001');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DOMEN HOSTNIK 	','	SLO587	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO587');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	TIMOTEJ ADRIAN CERIN	','	SLO376	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO376');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ELENA BATTISTI 	','	ITA8383	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8383');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	SARA DOMENIK 	','	SLO375	','	F 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO375');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	CRISTIAN GIRANI 	','	ITA7355	','	M 	',	2008	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA7355');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ALJAŽ ŽIBERT 	','	SLO522	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO522');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LIAM AL DILAMI	','	SLO912	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO912');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LUÈKA BEDENE 	','	SLO524	','	F 	',	2008	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO524');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	NIKA BAKIÈ SPEZIA	','	SLO849	','	F 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO849');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	TOMMASO GEIGER 	','	ITA12	','	M 	',	2009	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA12');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MATEVŽ BEDENE 	','	SLO521	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO521');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JAKOB SCHWARZ 	','	AUT2008	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'AUT2008');"			SCTWV
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	SVEN PANGER 	','	SLO956	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO956');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ZALA VIDMAR 	','	SLO955	','	F 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO955');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	GAJA KOLARIÈ 	','	SLO821	','	F 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO821');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JAKOV MOÈINIÆ 	','	CRO1130	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1130');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	NEJC GABRENJA 	','	SLO523	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO523');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ALIJANA BAJEC 	','	SLO843	','	F 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO843');"			SD PIRAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DANTE MANOLO DROŽINA	','	SLO847	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO847');"			SD PIRAN
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MARCO FABI 	','	ITA8499	','	M 	',	2008	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8499');"			
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	TEO GERŽELJ 	','	SLO981	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO981');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ANA VITASOVIÆ 	','	CRO973	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO973');"			JK VEGA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	AJDA ŠMAJDEK 	','	SLO69	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO69');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ARNE BAJRAMOVIÈ 	','	SLO338	','	M 	',	2007	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO338');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	TAI SIMONOVICH 	','	SLO1802	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO1802');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ANEJA ŠMAJDEK 	','	SLO855	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO855');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	VERONIKA LAVRENKO 	','	CRO927	','	F 	',	2009	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO927');"			JK HISTRIA UMAG
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	OLIVER SZOKODY 	','	HUN375	','	M 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'HUN375');"			THE­YKA HUNGARY
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	KRIS PERUZIN 	','	SLO372	','	M 	',	2008	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO372');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MATEVŽ PEJOVIÆ 	','	SLO96	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO96');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ŽIGA CEPAK 	','	SLO188	','	M 	',	2008	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO188');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	GABRIELE ANTONIAZZI 	','	ITA8	','	M 	',	2008	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8');"			YACHT CLUB ADRIACO 
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ALEX SOVDAT DEFAVELI	','	SLO356	','	M 	',	2008	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO356');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JAKOB PEJOVIÆ 	','	SLO6	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO6');"			JK LJUBLJANA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	DANEI MARUŠIÈ 	','	SLO111	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO111');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	LUANA PRAPER 	','	SLO984	','	F 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO984');"			JK JADRO KOPER
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	TRISTAN TOL 	','	CRO1117	','	M 	',	2006	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'CRO1117');"			CLIVO SAILING CLUB
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MARKO BALABAN 	','	SLO379	','	M 	',	2009	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO379');"			JK BURJA IZOLA
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ALLEGRA LUSA COSTAMA	','	SLO59	','	F 	',	2009	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO59');"			JK PIRAT PORTOROŽ
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MILLA CAMPAJOLA 	','	ITA7501	','	F 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA7501');"			YACHT CLUB ADRIACO 
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ANNA PAGNINI 	','	ITA8494	','	F 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8494');"			YACHT CLUB ADRIACO 
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	ERICA MILONE 	','	ITA8184	','	F 	',	2003	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8184');"			YACHT CLUB ADRIACO 
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	FRANCESCO AUSTONI 	','	ITA8815	','	M 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8815');"			YACHT CLUB ADRIACO 
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MARGERITA BARRO 	','	ITA8728	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8728');"			YACHT CLUB ADRIACO 
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	EUGENIA SCHIAVON 	','	ITA8367	','	F 	',	2004	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8367');"			YACHT CLUB ADRIACO 
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	MASSIMILIANO ANTONIAZZI 	','	ITA8730	','	M 	',	2005	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'ITA8730');"			YACHT CLUB ADRIACO 
+INSERT INTO tekmovalec(ime,sailno,spol,leto_rojstva) SELECT '	JEAN­MARIF DROŽINA 	','	SLO845	','	M 	',	2009	" WHERE NOT EXISTS (SELECT sailno FROM tekmovalec WHERE sailno = 'SLO845');"			SD PIRAN
