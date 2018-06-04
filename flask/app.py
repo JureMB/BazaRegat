@@ -97,23 +97,26 @@ def regate_view(regata_id):
     for element in cur: # to je redundant!
         title = element[1]
         isKriterijska = element[2]
-        startDate_temp = str(element[3])
-        startDate = ''
-        for char in startDate_temp:
-            if char == '-': startDate+='.'
-            else: startDate += char
-        endDate_temp = str(element[4])
-        endDate = ''
-        for char in endDate_temp:
-            if char == '-':
-                endDate += '.'
-            else:
-                endDate += char
+        startDate = '{}.{}.{}'.format(element[3].day, element[3].month, element[3].year)
+        endDate = '{}.{}.{}'.format(element[4].day, element[4].month, element[4].year)
         koeficient = element[5]
         klub = element[6]
 
+    cur.execute("SELECT *, (CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END + "
+                "CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END + CASE WHEN tretji~E'^\\d+$' "
+                "THEN tretji::integer ELSE 104 END + CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) - "
+                "greatest(CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END, CASE WHEN drugi~E'^\\d+$' THEN "
+                "drugi::integer ELSE 104 END, CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END, CASE WHEN "
+                "četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS net, (CASE WHEN prvi~E'^\\d+$' "
+                "THEN prvi::integer ELSE 104 END + CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE "
+                "104 END + CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END + "
+                "CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS tot FROM delni1 "
+                "ORDER BY net ASC, tot ASC;")
+    for element in cur:
+        print(element)
+
     print(title)
-    return render_template('regate_view.html', title=title, klub=klub, startDate=startDate, endDate=endDate)
+    return render_template('test.html', title=title, klub=klub, startDate=startDate, endDate=endDate)
 
 
 @app.route('/jadralci')
@@ -123,6 +126,8 @@ def jadralci():
 @app.route('/lestvica')
 def lestvica():
     return render_template('lestvica.html')
+@app.route('/test')
+def test():return render_template('regate_view.html')
 
 
 ############################################
