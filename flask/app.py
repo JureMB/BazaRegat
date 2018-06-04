@@ -26,7 +26,8 @@ conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT) # onemo
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
 
-def intToStr(list): #iz int 1 dobit ("1", "1")
+def intToStr(list):
+    """ iz int 1 dobit ("1", "1") """
     string_list = []
     for number in list:
         string_list.append((str(number), str(number)))
@@ -102,16 +103,7 @@ def regate_view(regata_id):
         koeficient = element[5]
         klub = element[6]
 
-    cur.execute("SELECT *, (CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END + "
-                "CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END + CASE WHEN tretji~E'^\\d+$' "
-                "THEN tretji::integer ELSE 104 END + CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) - "
-                "greatest(CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END, CASE WHEN drugi~E'^\\d+$' THEN "
-                "drugi::integer ELSE 104 END, CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END, CASE WHEN "
-                "četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS net, (CASE WHEN prvi~E'^\\d+$' "
-                "THEN prvi::integer ELSE 104 END + CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE "
-                "104 END + CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END + "
-                "CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS tot FROM delni1 "
-                "ORDER BY net ASC, tot ASC;")
+    cur.execute("SELECT * FROM rezultati_nikola")
     for element in cur:
         print(element)
 
@@ -132,4 +124,4 @@ def test():return render_template('regate_view.html')
 
 ############################################
 # Program
-if __name__ == '__main__': app.run(debug=True,host='0.0.0.0', port=5000)
+if __name__ == '__main__': app.run(debug=True)
