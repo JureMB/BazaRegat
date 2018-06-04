@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title}}{% endblock %}
+{% block head %}
+  {{ super() }}
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative;
+  }
+  .affix {
+      top: 20px;
+      z-index: 9999 !important;
+  }
+  {#div.col-sm-9 div {#}
+  {#    height: 250px;#}
+  {#    font-size: 28px;#}
+  }
+
+  {##}
+  {#@media screen and (max-width: 810px) {#}
+  {#  #section1, #section2, #section3, #section41, #section42  {#}
+  {#      margin-left: 150px;#}
+  {#  }#}
+  {#}#}
+  </style>
+{% endblock %}
+{% block content %}
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
+<div class="container-fluid">
+  <h1>{{ title}}</h1>
+  <h3>{{ startDate}} - {{ endDate }}</h3>
+  <p>V spodnjih tabelah so predstavljeni rezultati regate {{ title }}.
+      Prva tabela vsebuje izračun skupnega rezultata za vse plove.</p>
+  <p>Rezultati posameznih plovov pa se nahajajo spodaj</p>
+</div>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <div id="section1">
+                <div class = "panel panel-default">
+                    <div class = "panel-heading">
+                        <h3 class = "panel-title">Rezultati - vsi plovi</h3>
+                    </div>
+
+                    <div class = "panel-body">
+                        Skupni rezultati vseh plovov na regati {{ title }}.
+                    </div>
+                    <table class = "table">
+                        <tr>
+                            <th>Mesto</th>
+                            <th>Tekmovalec </th>
+                            <th>Točke </th>
+                        </tr>
+                        {% for element in data_regata %}
+                        <tr>
+                            <td>{{ element.place|e }}</td>
+                            <td>{{ element.name|e }}</td>
+                            <td>{{ element.points|e }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+
+                </div>
+            </div>
+            <div id="section2">
+                <div class = "panel panel-default">
+                <div class = "panel-heading">Panel Rezultati - 1. plov</div>
+
+                <table class = "table">
+                       <tr>
+                            <th>Mesto</th>
+                            <th>Tekmovalec </th>
+                            <th>Točke </th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Matjaž Puh</td>
+                            <td>100</td>
+                        </tr>
+                </table>
+
+                </div>
+                </div>
+
+        </div>
+    <nav class="col-sm-3 hidden-sm" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="250">
+        <li><a href="#section1">Regata</a></li>
+        <li><a href="#section2">1. Plov</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</div>
+
+</body>
+{% endblock %}

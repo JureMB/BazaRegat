@@ -1,3 +1,4 @@
+{% import "bootstrap/wtf.html" as wtf %}
 {% extends "base.html" %}
 
 {% block title %}Regate{% endblock %}
@@ -6,8 +7,8 @@
 <div class="page-header">
     <h1>Regate</h1>
 </div>
-<p>Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
-Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
-Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
+<p>Na spodnjem polju izberite želeno regato in izbiro potrdite s gumbom "Izberi".
+
 </p>
+{{ wtf.quick_form(form, form_type=form_type) }}
 {% endblock %}
