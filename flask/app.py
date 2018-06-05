@@ -129,9 +129,7 @@ def regate_view(regata_id):
         # print(element)
         data_regata.append(Regata(i, element[0],element[1],element[2],element[3],element[4],element[5],element[6],element[7],element[8],element[9]))
         i+=1
-    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
-                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 1 ORDER BY tocke DESC ")
+    cur.execute("SELECT * FROM rezultati_nikola_1plov")
     data_plov1=[]
     i=1
     for element in cur:
@@ -139,9 +137,7 @@ def regate_view(regata_id):
         data_plov1.append(Plov(i, element[0],element[1],element[2],element[3],element[4]))
         i+=1
 
-    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
-                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 2 ORDER BY tocke DESC ")
+        cur.execute("SELECT * FROM rezultati_nikola_2plov")
     data_plov2 = []
     i = 1
     for element in cur:
@@ -149,9 +145,7 @@ def regate_view(regata_id):
         data_plov2.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
         i += 1
 
-    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
-                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 3 ORDER BY tocke DESC ")
+        cur.execute("SELECT * FROM rezultati_nikola3plov")
     data_plov3 = []
     i = 1
     for element in cur:
@@ -159,16 +153,14 @@ def regate_view(regata_id):
         data_plov3.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
         i += 1
 
-    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
-                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 4 ORDER BY tocke DESC ")
+    cur.execute("SELECT * FROM rezultati_nikola_4plov")
     data_plov4 = []
     i = 1
     for element in cur:
         # print(element)
         data_plov4.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
         i += 1
-    return render_template('test.html', title=title, klub=klub, startDate=startDate,
+    return render_template('regate_view.html', title=title, klub=klub, startDate=startDate,
                            endDate=endDate, data_regata=data_regata, data_plov1=data_plov1,
                            data_plov2=data_plov2, data_plov3=data_plov3, data_plov4=data_plov4)
 
@@ -180,8 +172,7 @@ def jadralci():
 @app.route('/lestvica')
 def lestvica():
     return render_template('lestvica.html')
-@app.route('/test')
-def test():return render_template('regate_view.html')
+
 
 
 ############################################
