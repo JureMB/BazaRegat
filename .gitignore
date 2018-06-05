@@ -16,3 +16,5 @@ auth.R
 Thumbs.db
 .idea/
 flask/venv
+
+flask/chosen_v1/

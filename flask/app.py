@@ -129,7 +129,9 @@ def regate_view(regata_id):
         # print(element)
         data_regata.append(Regata(i, element[0],element[1],element[2],element[3],element[4],element[5],element[6],element[7],element[8],element[9]))
         i+=1
-    cur.execute("SELECT * FROM rezultati_nikola_1plov")
+    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
+                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 1 ORDER BY tocke DESC ")
     data_plov1=[]
     i=1
     for element in cur:
@@ -137,7 +139,9 @@ def regate_view(regata_id):
         data_plov1.append(Plov(i, element[0],element[1],element[2],element[3],element[4]))
         i+=1
 
-        cur.execute("SELECT * FROM rezultati_nikola_2plov")
+    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
+                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 2 ORDER BY tocke DESC ")
     data_plov2 = []
     i = 1
     for element in cur:
@@ -145,7 +149,9 @@ def regate_view(regata_id):
         data_plov2.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
         i += 1
 
-        cur.execute("SELECT * FROM rezultati_nikola3plov")
+    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
+                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 3 ORDER BY tocke DESC ")
     data_plov3 = []
     i = 1
     for element in cur:
@@ -153,7 +159,9 @@ def regate_view(regata_id):
         data_plov3.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
         i += 1
 
-    cur.execute("SELECT * FROM rezultati_nikola_4plov")
+    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
+                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 4 ORDER BY tocke DESC ")
     data_plov4 = []
     i = 1
     for element in cur:
