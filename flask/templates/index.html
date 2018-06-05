@@ -4,14 +4,9 @@
 
 {% block page_content %}
 <div class="page-header">
-    <h1>Naslovna stran BazeRegat!</h1>
+    <h1>Optibaza</h1>
 </div>
-<p>Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
-Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
-Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
-Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
-Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
-Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
+<p>Podatkovna baza regat za mladinski jadralni razred Optimist.
 </p>
 <div class="row">
   <div class="col-sm-4">
@@ -19,7 +14,7 @@ Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
           <div class="panel-body">
               <a href="{{ url_for('regate') }}" class="btn btn-primary btn-block">Regate</a>
               <img class="img-responsive hidden-xs" src="{{ url_for('static', filename = 'image_regate.png') }}">
-              <p class="text-center">Rezultati posameznih regat.</p>
+              <p class="text-center">Rezultati po regatah.</p>
 
           </div>
       </div>
@@ -29,7 +24,7 @@ Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
           <div class="panel-body">
               <a href="{{ url_for('jadralci') }}" class="btn btn-primary btn-block">Jadralci</a>
               <img class="img-responsive hidden-xs" src="{{ url_for('static', filename = 'image_tekmovalci.png') }}">
-              <p class="text-center">Rezultati tekmovalca.</p>
+              <p class="text-center">Rezultati po tekmovalcu.</p>
 
           </div>
       </div>
@@ -39,7 +34,7 @@ Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo Besedilo.
           <div class="panel-body">
               <a href="{{ url_for('lestvica') }}" class="btn btn-primary btn-block">Lestvica</a>
               <img class="img-responsive hidden-xs" src="{{ url_for('static', filename = 'image_lestvica.png') }}">
-              <p class="text-center">Trenutna lestvica.</p>
+              <p class="text-center">Kriterijska lestvica.</p>
           </div>
       </div>
 
