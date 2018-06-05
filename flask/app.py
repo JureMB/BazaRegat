@@ -3,8 +3,6 @@
 
 from flask import Flask, render_template,  session, redirect, url_for
 from flask_bootstrap import Bootstrap
-# from flask_moment import Moment
-# from flask_script import Manager
 from flask_wtf import FlaskForm
 from wtforms import SelectMultipleField, SelectField, SubmitField
 from wtforms.validators import DataRequired
@@ -41,7 +39,6 @@ class RegateForm(FlaskForm):
         years.append(date[0].year)
     years=sorted(set(years))
     years=intToStr(years)
-    print(years)
     select_years = SelectField('leto',choices=years, validators=[DataRequired()])
     # regate=[] # podatki iz baze
     # select_regata = SelectField('regata', choices=regate, validators=[DataRequired()])
@@ -53,9 +50,32 @@ class ZacasniForm(FlaskForm):
     for regata in cur:
         zacasna = str(regata[0]) + ' ' + str(regata[1].day) + '.' + str(regata[1].month) + '.' + str(regata[1].year)
         regate.append((str(regata[2]), zacasna))
-    print(regate)
     select_regata = SelectField('regata', choices=regate, validators=[DataRequired()])
     submit = SubmitField('Izberi')
+
+class Regata(object):
+    def __init__(self,mesto, salino, ime, spol, leto_rojstva, prvi, drugi, tretji, cetrti, net, tot):
+        self.mesto=mesto
+        self.salino=salino
+        self.ime=ime
+        self.spol=spol
+        self.leto_rojstva=leto_rojstva
+        self.prvi=prvi
+        self.drugi=drugi
+        self.tretji=tretji
+        self.cetrti=cetrti
+        self.net=net
+        self.tot=tot
+
+class Plov(object):
+    def __init__(self, mesto, salino, ime, spol, leto_rojstva, tocke):
+        self.mesto=mesto
+        self.salino=salino
+        self.ime=ime
+        self.spol=spol
+        self.leto_rojstva=leto_rojstva
+        self.tocke=tocke
+
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -76,7 +96,6 @@ def regate():
     form = ZacasniForm()
     if form.validate_on_submit():
         regata_id = form.select_regata.data
-        print(regata_id)
         # regata_no_spaces =""
         # for char in regata:
         #     if (char == " " or char == "."):
@@ -112,11 +131,54 @@ def regate_view(regata_id):
                 "104 END + CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END + "
                 "CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS tot FROM delni1 "
                 "ORDER BY net ASC, tot ASC;")
+    data_regata = []
+    i=1
     for element in cur:
-        print(element)
+        # print(element)
+        data_regata.append(Regata(i, element[0],element[1],element[2],element[3],element[4],element[5],element[6],element[7],element[8],element[9]))
+        i+=1
+    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
+                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 1 ORDER BY tocke DESC ")
+    data_plov1=[]
+    i=1
+    for element in cur:
+        # print(element)
+        data_plov1.append(Plov(i, element[0],element[1],element[2],element[3],element[4]))
+        i+=1
 
-    print(title)
-    return render_template('test.html', title=title, klub=klub, startDate=startDate, endDate=endDate)
+    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
+                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 2 ORDER BY tocke DESC ")
+    data_plov2 = []
+    i = 1
+    for element in cur:
+        # print(element)
+        data_plov2.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
+        i += 1
+
+    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
+                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 3 ORDER BY tocke DESC ")
+    data_plov3 = []
+    i = 1
+    for element in cur:
+        # print(element)
+        data_plov3.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
+        i += 1
+
+    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
+                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 4 ORDER BY tocke DESC ")
+    data_plov4 = []
+    i = 1
+    for element in cur:
+        # print(element)
+        data_plov4.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
+        i += 1
+    return render_template('test.html', title=title, klub=klub, startDate=startDate,
+                           endDate=endDate, data_regata=data_regata, data_plov1=data_plov1,
+                           data_plov2=data_plov2, data_plov3=data_plov3, data_plov4=data_plov4)
 
 
 @app.route('/jadralci')

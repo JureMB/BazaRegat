@@ -57,14 +57,32 @@
                     <table class = "table">
                         <tr>
                             <th>Mesto</th>
-                            <th>Tekmovalec </th>
-                            <th>Točke </th>
+                            <th>Salino </th>
+                            <th>Ime </th>
+                            <th>Spol </th>
+                            <th>Leto rojstva </th>
+                            <th>Prvi plov </th>
+                            <th>Drugi plov </th>
+                            <th>Tretji plov </th>
+                            <th>Četrti plov </th>
+                            <th>Neto točke</th>
+                            <th>Skupne točke </th>
+
+
                         </tr>
                         {% for element in data_regata %}
                         <tr>
-                            <td>{{ element.place|e }}</td>
-                            <td>{{ element.name|e }}</td>
-                            <td>{{ element.points|e }}</td>
+                            <td>{{ element.mesto|e }}</td>
+                            <td>{{ element.salino|e }}</td>
+                            <td>{{ element.ime|e }}</td>
+                            <td>{{ element.spol|e }}</td>
+                            <td>{{ element.leto_rojstva|e }}</td>
+                            <td>{{ element.prvi|e }}</td>
+                            <td>{{ element.drugi|e }}</td>
+                            <td>{{ element.tretji|e }}</td>
+                            <td>{{ element.cetrti|e }}</td>
+                            <td>{{ element.net|e }}</td>
+                            <td>{{ element.tot|e }}</td>
                         </tr>
                         {% endfor %}
                     </table>
@@ -73,20 +91,112 @@
             </div>
             <div id="section2">
                 <div class = "panel panel-default">
-                <div class = "panel-heading">Panel Rezultati - 1. plov</div>
+                <div class = "panel-heading">Rezultati - 1. plov</div>
 
                 <table class = "table">
                        <tr>
                             <th>Mesto</th>
-                            <th>Tekmovalec </th>
-                            <th>Točke </th>
+                            <th>Salino </th>
+                            <th>Ime </th>
+                            <th>Spol </th>
+                            <th>Leto rojstva </th>
+                            <th>Točke plov </th>
                         </tr>
 
+                        {% for element in data_plov1 %}
                         <tr>
-                            <td>1</td>
-                            <td>Matjaž Puh</td>
-                            <td>100</td>
+                            <td>{{ element.mesto|e }}</td>
+                            <td>{{ element.salino|e }}</td>
+                            <td>{{ element.ime|e }}</td>
+                            <td>{{ element.spol|e }}</td>
+                            <td>{{ element.leto_rojstva|e }}</td>
+                            <td>{{ element.tocke|e }}</td>
                         </tr>
+                        {% endfor %}
+                </table>
+
+                </div>
+                </div>
+            <div id="section3">
+                <div class = "panel panel-default">
+                <div class = "panel-heading"> Rezultati - 2. plov</div>
+
+                <table class = "table">
+                       <tr>
+                            <th>Mesto</th>
+                            <th>Salino </th>
+                            <th>Ime </th>
+                            <th>Spol </th>
+                            <th>Leto rojstva </th>
+                            <th>Točke plov </th>
+                        </tr>
+
+                        {% for element in data_plov2 %}
+                        <tr>
+                            <td>{{ element.mesto|e }}</td>
+                            <td>{{ element.salino|e }}</td>
+                            <td>{{ element.ime|e }}</td>
+                            <td>{{ element.spol|e }}</td>
+                            <td>{{ element.leto_rojstva|e }}</td>
+                            <td>{{ element.tocke|e }}</td>
+                        </tr>
+                        {% endfor %}
+                </table>
+
+                </div>
+                </div>
+            <div id="section4">
+                <div class = "panel panel-default">
+                <div class = "panel-heading">Rezultati - 3. plov</div>
+
+                <table class = "table">
+                       <tr>
+                            <th>Mesto</th>
+                            <th>Salino </th>
+                            <th>Ime </th>
+                            <th>Spol </th>
+                            <th>Leto rojstva </th>
+                            <th>Točke plov </th>
+                        </tr>
+
+                        {% for element in data_plov3 %}
+                        <tr>
+                            <td>{{ element.mesto|e }}</td>
+                            <td>{{ element.salino|e }}</td>
+                            <td>{{ element.ime|e }}</td>
+                            <td>{{ element.spol|e }}</td>
+                            <td>{{ element.leto_rojstva|e }}</td>
+                            <td>{{ element.tocke|e }}</td>
+                        </tr>
+                        {% endfor %}
+                </table>
+
+                </div>
+                </div>
+            <div id="section5">
+                <div class = "panel panel-default">
+                <div class = "panel-heading">Rezultati - 4. plov</div>
+
+                <table class = "table">
+                       <tr>
+                            <th>Mesto</th>
+                            <th>Salino </th>
+                            <th>Ime </th>
+                            <th>Spol </th>
+                            <th>Leto rojstva </th>
+                            <th>Točke plov </th>
+                        </tr>
+
+                        {% for element in data_plov4 %}
+                        <tr>
+                            <td>{{ element.mesto|e }}</td>
+                            <td>{{ element.salino|e }}</td>
+                            <td>{{ element.ime|e }}</td>
+                            <td>{{ element.spol|e }}</td>
+                            <td>{{ element.leto_rojstva|e }}</td>
+                            <td>{{ element.tocke|e }}</td>
+                        </tr>
+                        {% endfor %}
                 </table>
 
                 </div>
@@ -94,9 +204,12 @@
 
         </div>
     <nav class="col-sm-3 hidden-sm" id="myScrollspy">
-      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="250">
-        <li><a href="#section1">Regata</a></li>
-        <li><a href="#section2">1. Plov</a></li>
+          <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="250">
+                <li><a href="#section1">Regata</a></li>
+                <li><a href="#section2">1. Plov</a></li>
+                <li><a href="#section3">2. Plov</a></li>
+                <li><a href="#section4">3. Plov</a></li>
+                <li><a href="#section5">4. Plov</a></li>
 
       </ul>
     </nav>
