@@ -113,60 +113,60 @@ def regate():
 @app.route('/regate/<regata_id>')
 def regate_view(regata_id):
     id = int(regata_id)
-    cur.execute("SELECT * FROM regata WHERE idregata = {}".format(id))
+    cur.execute("SELECT *, (SELECT ime FROM KLUB WHERE idklub = klub_idklub) FROM regata WHERE idregata = {}".format(id))
     for element in cur: # to je redundant!
         title = element[1]
         isKriterijska = element[2]
         startDate = '{}.{}.{}'.format(element[3].day, element[3].month, element[3].year)
         endDate = '{}.{}.{}'.format(element[4].day, element[4].month, element[4].year)
         koeficient = element[5]
-        klub = element[6]
+        klub = element[7]
 
     cur.execute("SELECT * FROM rezultati_nikola")
     data_regata=[]
     i=1
     for element in cur:
         # print(element)
-        data_regata.append(Regata(i, element[0],element[1],element[2],element[3],element[4],element[5],element[6],element[7],element[8],element[9]))
+        data_regata.append(Regata(i, element[0],element[1].title(),element[2],element[3],element[4],element[5],element[6],element[7],element[8],element[9]))
         i+=1
     cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
                 " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 1 ORDER BY tocke DESC ")
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 1 ORDER BY tocke ASC ")
     data_plov1=[]
     i=1
     for element in cur:
         # print(element)
-        data_plov1.append(Plov(i, element[0],element[1],element[2],element[3],element[4]))
+        data_plov1.append(Plov(i, element[0],element[1].title(),element[2],element[3],element[4]))
         i+=1
 
     cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
                 " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 2 ORDER BY tocke DESC ")
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 2 ORDER BY tocke ASC ")
     data_plov2 = []
     i = 1
     for element in cur:
         # print(element)
-        data_plov2.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
+        data_plov2.append(Plov(i, element[0], element[1].title(), element[2], element[3], element[4]))
         i += 1
 
     cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
                 " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 3 ORDER BY tocke DESC ")
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 3 ORDER BY tocke ASC ")
     data_plov3 = []
     i = 1
     for element in cur:
         # print(element)
-        data_plov3.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
+        data_plov3.append(Plov(i, element[0], element[1].title(), element[2], element[3], element[4]))
         i += 1
 
     cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
                 " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 4 ORDER BY tocke DESC ")
+                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 4 ORDER BY tocke ASC ")
     data_plov4 = []
     i = 1
     for element in cur:
         # print(element)
-        data_plov4.append(Plov(i, element[0], element[1], element[2], element[3], element[4]))
+        data_plov4.append(Plov(i, element[0], element[1].title(), element[2], element[3], element[4]))
         i += 1
     return render_template('regate_view.html', title=title, klub=klub, startDate=startDate,
                            endDate=endDate, data_regata=data_regata, data_plov1=data_plov1,
@@ -185,4 +185,5 @@ def lestvica():
 
 ############################################
 # Program
-if __name__ == '__main__': app.run(debug=True,host='0.0.0.0', port=5000)
+#if __name__ == '__main__': app.run(debug=True,host='0.0.0.0', port=5000)
+if __name__ == '__main__': app.run(debug=True, port=5000)
