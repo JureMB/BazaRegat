@@ -18,7 +18,7 @@ JOIN rezultati_nikola_4plov ON rezultati_nikola_1plov.sailno = rezultati_nikola_
 -- delni2 je view z dodanim stolpcem klubov, tukaj je PRIMER, kako narediti JOIN z novo tabelo (SELECT), ki jo definiraš znotraj stavka, 
 -- v bistvu sem klubi_plovi tabeli dodala še sailno in vse skupaj združila v en stavek, da ne rabimo novega viewa zanjo
 CREATE VIEW delni2 AS
-SELECT rezultati_nikola_1plov.sailno, rezultati_nikola_1plov.ime, rezultati_nikola_1plov.spol, rezultati_nikola_1plov.leto_rojstva, rezultati_nikola_1plov.tocke_plov AS prvi, rezultati_nikola_2plov.tocke_plov AS drugi, rezultati_nikola_3plov.tocke_plov AS tretji, rezultati_nikola_4plov.tocke_plov AS četrti, klubi_plovi2.ime_kluba from rezultati_nikola_1plov
+SELECT rezultati_nikola_1plov.sailno, rezultati_nikola_1plov.ime, rezultati_nikola_1plov.spol, rezultati_nikola_1plov.leto_rojstva, klubi_plovi2.ime_kluba, rezultati_nikola_1plov.tocke_plov AS prvi, rezultati_nikola_2plov.tocke_plov AS drugi, rezultati_nikola_3plov.tocke_plov AS tretji, rezultati_nikola_4plov.tocke_plov AS četrti from rezultati_nikola_1plov
 JOIN (SELECT klub.ime AS ime_kluba, idtekmovalec, plov_idplov, sailno FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec)
  AS klubi_plovi2 ON klubi_plovi2.sailno = rezultati_nikola_1plov.sailno
 JOIN rezultati_nikola_2plov ON rezultati_nikola_1plov.sailno = rezultati_nikola_2plov.sailno
@@ -27,6 +27,6 @@ JOIN rezultati_nikola_4plov ON rezultati_nikola_1plov.sailno = rezultati_nikola_
 
 
 -- za generacijo rezultatov
-SELECT *, (CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END + CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END + CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END + CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) - greatest(CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END, CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END, CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END, CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS net, (CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END + CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END + CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END + CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS tot FROM delni1
+SELECT DISTINCT *, (CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END + CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END + CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END + CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) - greatest(CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END, CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END, CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END, CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS net, (CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END + CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END + CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END + CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS tot FROM delni2
 ORDER BY net ASC, tot ASC; 
 

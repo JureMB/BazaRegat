@@ -53,13 +53,14 @@
                     <div class = "panel-body">
                         Skupni rezultati ragate {{ title }}.
                     </div>
-                    <table class = "table">
+                    <table class = "table" >
                         <tr>
                             <th>Mesto</th>
-                            <th>Salino </th>
+                            <th>Št. jadra </th>
                             <th>Ime </th>
                             <th>Spol </th>
                             <th>Leto rojstva </th>
+                            <th>Klub </th>
                             <th>Prvi plov </th>
                             <th>Drugi plov </th>
                             <th>Tretji plov </th>
@@ -76,6 +77,7 @@
                             <td>{{ element.ime|e }}</td>
                             <td>{{ element.spol|e }}</td>
                             <td>{{ element.leto_rojstva|e }}</td>
+                            <td>{{ element.klub|e }} </td>
                             <td>{{ element.prvi|e }}</td>
                             <td>{{ element.drugi|e }}</td>
                             <td>{{ element.tretji|e }}</td>
@@ -95,10 +97,11 @@
                 <table class = "table">
                        <tr>
                             <th>Mesto</th>
-                            <th>Salino </th>
+                            <th>Št. jadra </th>
                             <th>Ime </th>
                             <th>Spol </th>
                             <th>Leto rojstva </th>
+                            <th>Klub </th>
                             <th>Točke plov </th>
                         </tr>
 
@@ -109,6 +112,7 @@
                             <td>{{ element.ime|e }}</td>
                             <td>{{ element.spol|e }}</td>
                             <td>{{ element.leto_rojstva|e }}</td>
+                            <td>{{ element.klub|e }} </td>
                             <td>{{ element.tocke|e }}</td>
                         </tr>
                         {% endfor %}
@@ -123,10 +127,11 @@
                 <table class = "table">
                        <tr>
                             <th>Mesto</th>
-                            <th>Salino </th>
+                            <th>Št. jadra </th>
                             <th>Ime </th>
                             <th>Spol </th>
                             <th>Leto rojstva </th>
+                            <th>Klub </th>
                             <th>Točke plov </th>
                         </tr>
 
@@ -137,6 +142,7 @@
                             <td>{{ element.ime|e }}</td>
                             <td>{{ element.spol|e }}</td>
                             <td>{{ element.leto_rojstva|e }}</td>
+                            <td>{{ element.klub|e }} </td>
                             <td>{{ element.tocke|e }}</td>
                         </tr>
                         {% endfor %}
@@ -151,10 +157,11 @@
                 <table class = "table">
                        <tr>
                             <th>Mesto</th>
-                            <th>Salino </th>
+                            <th>Št. jadra </th>
                             <th>Ime </th>
                             <th>Spol </th>
                             <th>Leto rojstva </th>
+                            <th>Klub </th>
                             <th>Točke plov </th>
                         </tr>
 
@@ -165,6 +172,7 @@
                             <td>{{ element.ime|e }}</td>
                             <td>{{ element.spol|e }}</td>
                             <td>{{ element.leto_rojstva|e }}</td>
+                            <td>{{ element.klub|e }} </td>
                             <td>{{ element.tocke|e }}</td>
                         </tr>
                         {% endfor %}
@@ -179,10 +187,11 @@
                 <table class = "table">
                        <tr>
                             <th>Mesto</th>
-                            <th>Salino </th>
+                            <th>Št. jadra </th>
                             <th>Ime </th>
                             <th>Spol </th>
                             <th>Leto rojstva </th>
+                            <th>Klub </th>
                             <th>Točke plov </th>
                         </tr>
 
@@ -193,6 +202,7 @@
                             <td>{{ element.ime|e }}</td>
                             <td>{{ element.spol|e }}</td>
                             <td>{{ element.leto_rojstva|e }}</td>
+                            <td>{{ element.klub|e }} </td>
                             <td>{{ element.tocke|e }}</td>
                         </tr>
                         {% endfor %}

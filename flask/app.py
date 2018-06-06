@@ -55,12 +55,13 @@ class ZacasniForm(FlaskForm):
     submit = SubmitField('Izberi')
 
 class Regata(object):
-    def __init__(self,mesto, salino, ime, spol, leto_rojstva, prvi, drugi, tretji, cetrti, net, tot):
+    def __init__(self,mesto, salino, ime, spol, leto_rojstva, klub, prvi, drugi, tretji, cetrti, net, tot):
         self.mesto=mesto
         self.salino=salino
         self.ime=ime
         self.spol=spol
         self.leto_rojstva=leto_rojstva
+        self.klub = klub
         self.prvi=prvi
         self.drugi=drugi
         self.tretji=tretji
@@ -69,12 +70,13 @@ class Regata(object):
         self.tot=tot
 
 class Plov(object):
-    def __init__(self, mesto, salino, ime, spol, leto_rojstva, tocke):
+    def __init__(self, mesto, salino, ime, spol, leto_rojstva, klub, tocke):
         self.mesto=mesto
         self.salino=salino
         self.ime=ime
         self.spol=spol
         self.leto_rojstva=leto_rojstva
+        self.klub = klub
         self.tocke=tocke
 
 
@@ -127,46 +129,39 @@ def regate_view(regata_id):
     i=1
     for element in cur:
         # print(element)
-        data_regata.append(Regata(i, element[0],element[1].title(),element[2],element[3],element[4],element[5],element[6],element[7],element[8],element[9]))
+        data_regata.append(Regata(i, element[0],element[1].title(),element[2],element[3],element[4],element[5],
+                                  element[6],element[7],element[8],element[9], element[10]))
         i+=1
-    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
-                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 1 ORDER BY tocke ASC ")
+    cur.execute("SELECT * FROM rezultati_nikola_1plov")
     data_plov1=[]
     i=1
     for element in cur:
         # print(element)
-        data_plov1.append(Plov(i, element[0],element[1].title(),element[2],element[3],element[4]))
+        data_plov1.append(Plov(i, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
         i+=1
 
-    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
-                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 2 ORDER BY tocke ASC ")
+    cur.execute("SELECT * FROM rezultati_nikola_2plov")
     data_plov2 = []
     i = 1
     for element in cur:
         # print(element)
-        data_plov2.append(Plov(i, element[0], element[1].title(), element[2], element[3], element[4]))
+        data_plov2.append(Plov(i, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
         i += 1
 
-    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
-                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 3 ORDER BY tocke ASC ")
+    cur.execute("SELECT * FROM rezultati_nikola_3plov")
     data_plov3 = []
     i = 1
     for element in cur:
         # print(element)
-        data_plov3.append(Plov(i, element[0], element[1].title(), element[2], element[3], element[4]))
+        data_plov3.append(Plov(i, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
         i += 1
 
-    cur.execute("SELECT sailno, ime, spol, leto_rojstva, COALESCE(tocke::text, posebnosti) AS"
-                " tocke_plov FROM tocke_plovi JOIN tekmovalec ON"
-                " tekmovalec_idtekmovalec = idtekmovalec WHERE plov_idplov = 4 ORDER BY tocke ASC ")
+    cur.execute("SELECT * FROM rezultati_nikola_4plov")
     data_plov4 = []
     i = 1
     for element in cur:
         # print(element)
-        data_plov4.append(Plov(i, element[0], element[1].title(), element[2], element[3], element[4]))
+        data_plov4.append(Plov(i, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
         i += 1
     return render_template('regate_view.html', title=title, klub=klub, startDate=startDate,
                            endDate=endDate, data_regata=data_regata, data_plov1=data_plov1,
