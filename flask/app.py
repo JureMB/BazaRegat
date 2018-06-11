@@ -174,9 +174,14 @@ def jadralci():
 
 @app.route('/lestvica')
 def lestvica():
-    return render_template('lestvica.html')
-
-
+    cur.execute("SELECT * FROM rezultati_nikola")
+    data = []
+    i = 1
+    for element in cur:
+        data.append(Regata(i, element[0], element[1].title(), element[2], element[3], element[4], element[5],
+                                  element[6], element[7], element[8], element[9], element[10]))
+        i += 1
+    return render_template('lestvica.html', data=data)
 
 ############################################
 # Program
