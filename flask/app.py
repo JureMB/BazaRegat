@@ -31,7 +31,7 @@ def intToStr(list):
         string_list.append((str(number), str(number)))
     return string_list
 
-years=[('2017', '2017'), ('2018', '2018')]
+# years=[('2017', '2017'), ('2018', '2018')]
 
 class RegateForm(FlaskForm):
     cur.execute("SELECT zacetek FROM regata")
@@ -182,7 +182,9 @@ def lestvica():
                                   element[6], element[7], element[8], element[9], element[10]))
         i += 1
     return render_template('lestvica.html', data=data)
-
+@app.route('/test')
+def test():
+    return render_template('test.html')
 ############################################
 # Program
 #if __name__ == '__main__': app.run(debug=True,host='0.0.0.0', port=5000)

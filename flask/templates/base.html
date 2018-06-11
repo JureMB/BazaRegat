@@ -7,10 +7,10 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 {% endblock %}
 
-{% block styles %}
-{{super()}}
-<link rel="stylesheet" href="{{url_for('.static', filename='css/navbar-fixed-top.css')}}">
-{% endblock %}
+{#{% block styles %}#}
+{#{{super()}}#}
+{#<link rel="stylesheet" href="{{url_for('.static', filename='css/navbar-fixed-top.css')}}">#}
+{#{% endblock %}#}
 
 {% block head %}
 {{ super() }}
@@ -52,6 +52,9 @@ body{
 
 .my-primary-text:focus, .my-primary-text:hover{
   color: #a4522d ;
+}
+.my-primary-heading{
+  color: #fd7243 ;
 }
 
 {#.navbar-brand {#}
