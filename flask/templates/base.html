@@ -1,16 +1,6 @@
 {% extends "bootstrap/base.html" %}
 
 {% block title %}BazaRegat{% endblock %}
-{% block script %}
-{{super()}}
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-{% endblock %}
-
-{#{% block styles %}#}
-{#{{super()}}#}
-{#<link rel="stylesheet" href="{{url_for('.static', filename='css/navbar-fixed-top.css')}}">#}
-{#{% endblock %}#}
 
 {% block head %}
 {{ super() }}
@@ -56,14 +46,6 @@ body{
 .my-primary-heading{
   color: #fd7243 ;
 }
-
-{#.navbar-brand {#}
-{#  color: lightYellow ;#}
-{#}#}
-{##}
-{#.navbar-brand:hover{#}
-{#  color: yellow;#}
-{#}#}
 
 #footer {
    position:absolute;

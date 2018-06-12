@@ -8,8 +8,6 @@
 {#  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
 {#  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#}
 {#  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
   body {
       position: relative;
@@ -56,14 +54,17 @@
 </nav>
 {% endblock %}
 
+{% block body_attribs %}
+data-spy="scroll" data-target=".navbar" data-offset="50"
+{% endblock %}
+
 {% block page_content %}
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <div class="row ">
     <div class="col-xs-12 ">
         <div class="panel panel-info visible-xs">
             <div class="panel-heading "><h4 class="panel-title hidden-sm-up">Namig</h4></div>
-            <div class="panel-body">Za hitrejše dostopanje do rezultatov za posamezne plove razširite zgornji navigacijski meni in izberite želeni plov.</div>
+            <div class="panel-body">Za hitrejše dostopanje do rezultatov za posamezne plove razširite zgornji navigacijski meni in izberite želeni plov. Tam je na voljo tudi možnost iskanja po spodnjih tabelah.</div>
         </div>
     </div>
 </div>
@@ -163,16 +164,18 @@
   <p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
   <p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
 </div>
-
-<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
-</body>
 {% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+{% endblock%}
