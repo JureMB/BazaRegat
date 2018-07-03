@@ -13,7 +13,7 @@ WHERE tocke_plovi.plov_idplov = {1}
 ORDER BY tocke;
 
 CREATE TEMPORARY TABLE delni2 AS
-SELECT plov_1.sailno, plov_1.ime, plov_1.spol, plov_1.leto_rojstva, klubi_plovi2.ime_kluba, plov_1.tocke_plov, 
+SELECT DISTINCT plov_1.sailno, plov_1.ime, plov_1.spol, plov_1.leto_rojstva, klubi_plovi2.ime_kluba, plov_1.tocke_plov, 
 -- zanka po plovih od 2. naprej
 plov_{1}.tocke_plov,
 -- 
