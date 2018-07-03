@@ -105,18 +105,9 @@ data-spy="scroll" data-target=".navbar" data-offset="50"
             <tbody id="myTable">
             {% for element in data_regata %}
                 <tr>
-                    <td>{{ element.mesto|e }}</td>
-                    <td>{{ element.salino|e }}</td>
-                    <td>{{ element.ime|e }}</td>
-                    <td>{{ element.spol|e }}</td>
-                    <td>{{ element.leto_rojstva|e }}</td>
-                    <td>{{ element.klub|e }} </td>
-                    <td>{{ element.prvi|e }}</td>
-                    <td>{{ element.drugi|e }}</td>
-                    <td>{{ element.tretji|e }}</td>
-                    <td>{{ element.cetrti|e }}</td>
-                    <td>{{ element.net|e }}</td>
-                    <td>{{ element.tot|e }}</td>
+                    {% for elementek in element %}
+                    <td>{{ elementek}}</td>
+                    {% endfor %}
                 </tr>
             {% endfor %}
             </tbody>

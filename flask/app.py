@@ -134,22 +134,17 @@ def regate_view(regata_id):
         nPlovov+=1
         idPlovi.append(element[0])
 
-    cur.execute("SELECT * FROM rezultati_nikola")
-    data_regata=[]
-    i=1
-    for element in cur:
-        # print(element)
-        data_regata.append(Regata(i, element[0],element[1].title(),element[2],element[3],element[4],element[5],
-                                  element[6],element[7],element[8],element[9], element[10]))
-        i+=1
-
     data_plovi = []
     cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
                 " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
                 " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
                 " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
 
+    str = "CREATE TEMPORARY TABLE delni2 AS SELECT DISTINCT plov_1.sailno, plov_1.ime," \
+          " plov_1.spol, plov_1.leto_rojstva, klubi_plovi2.ime_kluba, plov_1.tocke_plov AS tocke_plov1"
     for i in range(nPlovov):
+
+        if (i+1)>=2: str+=", plov_{0}.tocke_plov AS tocke_plov{0} ".format(i+1)
         cur.execute("CREATE TEMPORARY TABLE plov_{0} AS SELECT sailno, ime, spol, leto_rojstva, ime_kluba,"
                     " COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi JOIN tekmovalec"
                     " ON tekmovalec_idtekmovalec = idtekmovalec JOIN klubi_plovi ON"
@@ -159,11 +154,59 @@ def regate_view(regata_id):
         data_plov=[]
         j=1
         for element in cur:
-            print(element)
+            # print(element)
             data_plov.append(Plov(j, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
             j+=1
         data_plovi.append(data_plov)
+    uvrsceni = []
+    for i in range(nPlovov):
+        cur.execute("SELECT count(DISTINCT tocke_plov)+1 FROM plov_{0} WHERE tocke_plov~E'^\\d+$'".format(i+1))
+        for element in cur: # SAMO 1 popravi!
+            print('uvrsceni: ', element)
+            uvrsceni.append(element[0])
 
+    str2=r"SELECT DISTINCT *, ( 0"
+    for i in range(nPlovov):
+        print(uvrsceni)
+        str2+=r"+ CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END".format(i+1, uvrsceni[i])
+
+    str2+=r") - greatest("
+
+    for i in range(nPlovov):
+        str2 += r"CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END,".format(i+1, uvrsceni[i])
+
+    str2 += r"0) AS net, ( 0"
+
+    for i in range(nPlovov):
+        str2 += r"+ CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END".format(i+1, uvrsceni[i])
+
+    str2 += r") AS tot FROM delni2 ORDER BY net ASC, tot ASC"
+
+    for i in range(nPlovov):
+        str2 += r", tocke_plov{} ASC".format(i+1)
+    str2 += r";"
+
+    print("str2 =", str2)
+    str+="from plov_1 JOIN (SELECT klub.ime AS ime_kluba," \
+         " idtekmovalec, plov_idplov, sailno FROM klub JOIN clanstvo" \
+         " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec" \
+         " ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec" \
+         " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec" \
+         " = tekmovalec.idtekmovalec) AS klubi_plovi2 ON klubi_plovi2.sailno" \
+         " = plov_1.sailno "
+
+    for i in range(nPlovov):
+        if (i + 1) >= 2: str += "JOIN plov_{0} ON plov_1.sailno = plov_{0}.sailno ".format(i + 1)
+    str+="; " + str2
+    cur.execute(str)
+    data_regata = []
+    i = 1
+    for element in cur:
+        print(element)
+        data_regata.append([i, element[0], element[1].title(), element[2], element[3], element[4], element[5], element[6]])
+        for j in range(nPlovov):
+            data_regata[-1].append(element[7+j])
+        i += 1
 
     # cur.execute("SELECT * FROM rezultati_nikola_2plov")
     # data_plov2 = []
@@ -188,6 +231,11 @@ def regate_view(regata_id):
     #     # print(element)
     #     data_plov4.append(Plov(i, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
     #     i += 1
+    global conn
+    global cur
+    conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
+    conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT) # onemogocimo transakcije
+    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     return render_template('regate_view.html', title=title, klub=klub, startDate=startDate,
                            endDate=endDate, nPlovov = [i+1 for i in range(nPlovov)] ,data_regata=data_regata, data_plovi = data_plovi)
 
