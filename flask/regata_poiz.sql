@@ -28,6 +28,38 @@ JOIN plov_{1} ON plov_1.sailno = plov_{1}.sailno
 -- število točk, ki jih dobijo neuvrščeni (za vsak plov posebej)
 SELECT count(DISTINCT tocke_plov)+1 FROM plov_{0} WHERE tocke_plov~E'^\\d+$'
 
--- za generacijo rezultatov
-SELECT DISTINCT *, (CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END + CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END + CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END + CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) - greatest(CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END, CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END, CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END, CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS net, (CASE WHEN prvi~E'^\\d+$' THEN prvi::integer ELSE 104 END + CASE WHEN drugi~E'^\\d+$' THEN drugi::integer ELSE 104 END + CASE WHEN tretji~E'^\\d+$' THEN tretji::integer ELSE 104 END + CASE WHEN četrti~E'^\\d+$' THEN četrti::integer ELSE 104 END) AS tot FROM delni2
-ORDER BY net ASC, tot ASC;
+-- 0 -> indeks plova, 1 -> število točk, ki jih dobijo neuvrščeni
+SELECT DISTINCT *, ( 0
+-- zanka po vseh plovih
++ CASE WHEN plov_{0}.tocke_plov~E'^\\d+$' THEN plov_{0}.tocke_plov::integer ELSE {1} END
+--
+) - greatest(
+-- zanka po vseh plovih
+CASE WHEN plov_{0}.tocke_plov~E'^\\d+$' THEN plov_{0}.tocke_plov::integer ELSE {1} END,
+--
+0) AS net, ( 0
+-- zanka po vseh plovih
++ CASE WHEN plov_{0}.tocke_plov~E'^\\d+$' THEN plov_{0}.tocke_plov::integer ELSE {1} END
+--
+) AS tot FROM delni2
+ORDER BY net ASC, tot ASC
+-- zanka po vseh plovih
+, plov_{0}.tocke_plov ASC
+--
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
