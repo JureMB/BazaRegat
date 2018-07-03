@@ -3,22 +3,21 @@
 {% block title %}Optibaza{% endblock %}
 
 {% block page_content %}
-
 <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-6"><img class="img-responsive" src="{{ url_for('static', filename = 'logo_full.png') }}"></div>
     <div class="col-sm-3"></div>
 </div>
-    <p></p>
-    <h4 class="text-center">Podatkovna baza regat za mladinski jadralni razred Optimist.</h4>
-    <div class="row">
+<p></p>
+<h4 class="text-center">Podatkovna baza regat za mladinski jadralni razred Optimist.</h4>
+<div class="row">
     <div class="col-xs-12" style="height:50px;"></div>
-    </div>
+</div>
 <div class="row">
   <div class="col-sm-4">
       <div class="panel panel-my-primary">
           <div  class="panel-heading">
-            <h3 class="panel-title">Regate</h3>
+              <h3 class="panel-title">Regate</h3>
           </div>
           <div class="panel-body">
               <img class="img-responsive hidden-xs" src="{{ url_for('static', filename = 'image_regate.png') }}">
@@ -26,30 +25,27 @@
               <p>Tu lahko dostopate do rezultatov posameznih regat in po njih iščete.</p>
               <a href="{{ url_for('regate') }}" class="btn my-primary btn-block">Izberi</a>
 {#              <p class="text-center">Rezultati po regatah.</p>#}
-
           </div>
       </div>
   </div>
   <div class="col-sm-4">
       <div class="panel panel-my-primary">
           <div  class="panel-heading">
-            <h3 class="panel-title">Jadralci</h3>
+              <h3 class="panel-title">Jadralci</h3>
           </div>
           <div class="panel-body">
               <img class="img-responsive hidden-xs" src="{{ url_for('static', filename = 'image_tekmovalci.png') }}">
               <p></p>
               <p>Tu lahko dostopate do rezultatov vseh regat za posamezne tekmovalce.</p>
               <a href="{{ url_for('jadralci') }}" class="btn my-primary btn-block">Izberi</a>
-
 {#              <p class="text-center">Rezultati po tekmovalcu.</p>#}
-
           </div>
       </div>
   </div>
   <div class="col-sm-4">
       <div class="panel panel-my-primary">
           <div  class="panel-heading">
-            <h3 class="panel-title">Lestvica</h3>
+              <h3 class="panel-title">Lestvica</h3>
           </div>
           <div class="panel-body">
               <img class="img-responsive hidden-xs" src="{{ url_for('static', filename = 'image_lestvica.png') }}">
@@ -59,7 +55,6 @@
 {#              <p class="text-center">Kriterijska lestvica.</p>#}
           </div>
       </div>
-
   </div>
 </div>
 

@@ -5,7 +5,7 @@ SELECT klub.ime AS ime_kluba, idtekmovalec, plov_idplov FROM klub JOIN clanstvo 
 SELECT count(*) FROM plov WHERE regata_idregata = {}
 
 -- tukaj bo zanka po vseh plovih
-CREATE TEMPORARY TABLE plov_1 AS
+CREATE TEMPORARY TABLE plov_{0} AS
 SELECT sailno, ime, spol, leto_rojstva, ime_kluba, COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi
 JOIN tekmovalec ON tekmovalec_idtekmovalec = idtekmovalec
 JOIN klubi_plovi ON klubi_plovi.idtekmovalec = tekmovalec.idtekmovalec AND klubi_plovi.plov_idplov = {1}

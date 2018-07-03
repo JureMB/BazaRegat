@@ -13,45 +13,47 @@
       position: relative;
   }
   #section1 {padding-top:50px;color: black; }
-  #section2 {padding-top:50px;color: black; }
-  #section3 {padding-top:50px;color: black; }
+  {% for nPlov in nPlovov %}
+  #section{{ (nPlov + 1)|string }} {padding-top:50px;color: black; }
+  {% endfor %}
   </style>
 {% endblock %}
 
 {% block navbar %}
     <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-      </button>
-      <a href="{{ url_for('index') }}" class="navbar-left"><img style="max-width:85px" src="{{ url_for('static', filename = 'logo_medium.png') }}"></a>
-    </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="{{ url_for('regate') }}">Regate</a></li>
-          <li><a href="{{ url_for('jadralci') }}">Jadralci</a></li>
-          <li><a href="{{ url_for('lestvica') }}">Lestvica</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#section1"><p class="my-primary-text">Skupni rezultati</p></a></li>
-            <li><a href="#section2"><p class="my-primary-text">1. plov</p></a></li>
-            <li><a href="#section3"><p class="my-primary-text">2. plov</p></a></li>
-                <form class="navbar-form navbar-left">
-      <div class="form-group">
-        <input type="text" class="form-control" id="myInput" placeholder="Iskanje po tebelah">
-      </div>
-    </form>
-{#            <li><input class="form-control" id="myInput" type="text" placeholder="Iskanje po tebelah.."></li>#}
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Vpis</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="{{ url_for('index') }}" class="navbar-left"><img style="max-width:85px" src="{{ url_for('static', filename = 'logo_medium.png') }}"></a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url_for('regate') }}">Regate</a></li>
+                        <li><a href="{{ url_for('jadralci') }}">Jadralci</a></li>
+                        <li><a href="{{ url_for('lestvica') }}">Lestvica</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#section1"><p class="my-primary-text">Skupni rezultati</p></a></li>
+                        {% for nPlov in nPlovov %}
+                        <li><a href="#section{{ (nPlov + 1)|string }}"><p class="my-primary-text">{{ nPlov|string }}. plov</p></a></li>
+                        {% endfor %}
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="myInput" placeholder="Iskanje po tebelah">
+                            </div>
+                        </form>
+                        {#            <li><input class="form-control" id="myInput" type="text" placeholder="Iskanje po tebelah.."></li>#}
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Vpis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
 {% endblock %}
 
 {% block body_attribs %}
@@ -70,100 +72,96 @@ data-spy="scroll" data-target=".navbar" data-offset="50"
 </div>
 
 <div class="container-fluid">
-  <h1>{{ title}}</h1>
-  <h3 class="my-primary-heading">{{ klub }}</h3>
-  <p>{{ startDate}} - {{ endDate }}</p>
+    <h1>{{ title}}</h1>
+    <h3 class="my-primary-heading">{{ klub }}</h3>
+    <p>{{ startDate}} - {{ endDate }}</p>
 
 </div>
 <div id="section1" class="container-fluid">
-  <h1>Rezultati končni</h1>
-  <div class="panel panel-my-primary">
-  <!-- Default panel contents -->
-  <div class="panel-heading"><h4 class="panel-title">Rezultati - končni</h4></div>
-  <div class="panel-body">Skupni rezultati ragate {{ title }}.</div>
+    <h1>Rezultati končni</h1>
+    <div class="panel panel-my-primary">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><h4 class="panel-title">Rezultati - končni</h4></div>
+    <div class="panel-body">Skupni rezultati ragate {{ title }}.</div>
+        <!-- Table -->
+        <div class="table-responsive">
+            <table class = "table"
+            <thead>
+            <tr>
+                <th>Mesto</th>
+                <th>Št. jadra </th>
+                <th>Ime </th>
+                <th>Spol </th>
+                <th>Leto rojstva </th>
+                <th>Klub </th>
+                <th>Prvi plov </th>
+                <th>Drugi plov </th>
+                <th>Tretji plov </th>
+                <th>Četrti plov </th>
+                <th>Neto točke</th>
+                <th>Skupne točke </th>
+            </tr>
+            </thead>
+            <tbody id="myTable">
+            {% for element in data_regata %}
+                <tr>
+                    <td>{{ element.mesto|e }}</td>
+                    <td>{{ element.salino|e }}</td>
+                    <td>{{ element.ime|e }}</td>
+                    <td>{{ element.spol|e }}</td>
+                    <td>{{ element.leto_rojstva|e }}</td>
+                    <td>{{ element.klub|e }} </td>
+                    <td>{{ element.prvi|e }}</td>
+                    <td>{{ element.drugi|e }}</td>
+                    <td>{{ element.tretji|e }}</td>
+                    <td>{{ element.cetrti|e }}</td>
+                    <td>{{ element.net|e }}</td>
+                    <td>{{ element.tot|e }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% for nPlov in nPlovov %}
+<div id="section{{ (nPlov + 1)|string }}" class="container-fluid">
+    <h1>Rezultati {{ nPlov|string }}. plov</h1>
+    <div class="panel panel-my-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Rezultati - {{ nPlov|string }}. plov</div>
   <!-- Table -->
-  <div class="table-responsive">
-    <table class = "table" >
-                        <thead>
-                        <tr>
-                            <th>Mesto</th>
-                            <th>Št. jadra </th>
-                            <th>Ime </th>
-                            <th>Spol </th>
-                            <th>Leto rojstva </th>
-                            <th>Klub </th>
-                            <th>Prvi plov </th>
-                            <th>Drugi plov </th>
-                            <th>Tretji plov </th>
-                            <th>Četrti plov </th>
-                            <th>Neto točke</th>
-                            <th>Skupne točke </th>
-                        </tr>
-                        </thead>
-                        <tbody id="myTable">
-                        {% for element in data_regata %}
-                        <tr>
-                            <td>{{ element.mesto|e }}</td>
-                            <td>{{ element.salino|e }}</td>
-                            <td>{{ element.ime|e }}</td>
-                            <td>{{ element.spol|e }}</td>
-                            <td>{{ element.leto_rojstva|e }}</td>
-                            <td>{{ element.klub|e }} </td>
-                            <td>{{ element.prvi|e }}</td>
-                            <td>{{ element.drugi|e }}</td>
-                            <td>{{ element.tretji|e }}</td>
-                            <td>{{ element.cetrti|e }}</td>
-                            <td>{{ element.net|e }}</td>
-                            <td>{{ element.tot|e }}</td>
-                        </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
-  </div>
+        <div class="table-responsive">
+            <table class = "table">
+                <thead>
+                <tr>
+                    <th>Mesto</th>
+                    <th>Št. jadra </th>
+                    <th>Ime </th>
+                    <th>Spol </th>
+                    <th>Leto rojstva </th>
+                    <th>Klub </th>
+                    <th>Točke plov </th>
+                </tr>
+                </thead>
+                <tbody id="myTable">
+                {% for element in data_plovi[nPlov - 1] %}
+                    <tr>
+                        <td>{{ element.mesto|e }}</td>
+                        <td>{{ element.salino|e }}</td>
+                        <td>{{ element.ime|e }}</td>
+                        <td>{{ element.spol|e }}</td>
+                        <td>{{ element.leto_rojstva|e }}</td>
+                        <td>{{ element.klub|e }} </td>
+                        <td>{{ element.tocke|e }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-</div>
-<div id="section2" class="container-fluid">
-  <h1>Rezultati 1. plov</h1>
-  <div class="panel panel-my-primary">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Rezultati - 1. plov</div>
-
-  <!-- Table -->
-  <div class="table-responsive">
-    <table class = "table">
-                       <thead>
-                       <tr>
-                            <th>Mesto</th>
-                            <th>Št. jadra </th>
-                            <th>Ime </th>
-                            <th>Spol </th>
-                            <th>Leto rojstva </th>
-                            <th>Klub </th>
-                            <th>Točke plov </th>
-                        </tr>
-                       </thead>
-                        <tbody id="myTable">
-                        {% for element in data_plov1 %}
-                        <tr>
-                            <td>{{ element.mesto|e }}</td>
-                            <td>{{ element.salino|e }}</td>
-                            <td>{{ element.ime|e }}</td>
-                            <td>{{ element.spol|e }}</td>
-                            <td>{{ element.leto_rojstva|e }}</td>
-                            <td>{{ element.klub|e }} </td>
-                            <td>{{ element.tocke|e }}</td>
-                        </tr>
-                        {% endfor %}
-                        </tbody>
-                </table>
-  </div>
-</div>
-</div>
-<div id="section3" class="container-fluid">
-  <h1>Section 3</h1>
-  <p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
-  <p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
-</div>
+{% endfor %}
 {% endblock %}
 
 {% block scripts %}
