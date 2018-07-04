@@ -33,6 +33,57 @@ def intToStr(list):
 
 # years=[('2017', '2017'), ('2018', '2018')]
 
+def poizvedba1(nPlovov):
+    str = "CREATE TEMPORARY TABLE delni2 AS SELECT DISTINCT plov_1.sailno, plov_1.ime," \
+          " plov_1.spol, plov_1.leto_rojstva, klubi_plovi2.ime_kluba, plov_1.tocke_plov AS tocke_plov1"
+    for i in range(nPlovov):
+        if (i+1)>=2: str+=", plov_{0}.tocke_plov AS tocke_plov{0} ".format(i+1)
+    str+="from plov_1 JOIN (SELECT klub.ime AS ime_kluba," \
+         " idtekmovalec, plov_idplov, sailno FROM klub JOIN clanstvo" \
+         " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec" \
+         " ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec" \
+         " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec" \
+         " = tekmovalec.idtekmovalec) AS klubi_plovi2 ON klubi_plovi2.sailno" \
+         " = plov_1.sailno "
+    for i in range(nPlovov):
+        if (i + 1) >= 2: str += "JOIN plov_{0} ON plov_1.sailno = plov_{0}.sailno ".format(i + 1)
+    str+="; " + poizvedba2(nPlovov)
+    print("str: ", str)
+    return str
+
+def poizvedba2(nPlovov):
+    uvrsceni_data = uvrsceni(nPlovov)
+    str2 = r"SELECT DISTINCT *, ( 0"
+    for i in range(nPlovov):
+        str2 += r"+ CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END".format(i + 1, uvrsceni_data[i])
+    str2 += r") - greatest("
+
+    for i in range(nPlovov):
+        str2 += r"CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END,".format(i + 1,
+                                                                                                      uvrsceni_data[i])
+
+    str2 += r"0) AS net, ( 0"
+
+    for i in range(nPlovov):
+        str2 += r"+ CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END".format(i + 1,
+                                                                                                       uvrsceni_data[i])
+
+    str2 += r") AS tot FROM delni2 ORDER BY net ASC, tot ASC"
+
+    for i in range(nPlovov):
+        str2 += r", tocke_plov{} ASC".format(i + 1)
+    str2 += r";"
+    return str2
+
+def uvrsceni(nPlovov):
+    uvrsceni = []
+    for i in range(nPlovov):
+        cur.execute(r"SELECT count(DISTINCT tocke_plov)+1 FROM plov_{0} WHERE tocke_plov~E'^\\d+$'".format(i + 1))
+        for element in cur:  # SAMO 1 popravi!
+            print('uvrsceni: ', element)
+            uvrsceni.append(element[0])
+    return uvrsceni
+
 class RegateForm(FlaskForm):
     cur.execute("SELECT zacetek FROM regata")
     years = []
@@ -140,11 +191,8 @@ def regate_view(regata_id):
                 " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
                 " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
 
-    str = "CREATE TEMPORARY TABLE delni2 AS SELECT DISTINCT plov_1.sailno, plov_1.ime," \
-          " plov_1.spol, plov_1.leto_rojstva, klubi_plovi2.ime_kluba, plov_1.tocke_plov AS tocke_plov1"
-    for i in range(nPlovov):
 
-        if (i+1)>=2: str+=", plov_{0}.tocke_plov AS tocke_plov{0} ".format(i+1)
+    for i in range(nPlovov):
         cur.execute("CREATE TEMPORARY TABLE plov_{0} AS SELECT sailno, ime, spol, leto_rojstva, ime_kluba,"
                     " COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi JOIN tekmovalec"
                     " ON tekmovalec_idtekmovalec = idtekmovalec JOIN klubi_plovi ON"
@@ -158,47 +206,7 @@ def regate_view(regata_id):
             data_plov.append(Plov(j, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
             j+=1
         data_plovi.append(data_plov)
-    uvrsceni = []
-    for i in range(nPlovov):
-        cur.execute("SELECT count(DISTINCT tocke_plov)+1 FROM plov_{0} WHERE tocke_plov~E'^\\d+$'".format(i+1))
-        for element in cur: # SAMO 1 popravi!
-            print('uvrsceni: ', element)
-            uvrsceni.append(element[0])
-
-    str2=r"SELECT DISTINCT *, ( 0"
-    for i in range(nPlovov):
-        print(uvrsceni)
-        str2+=r"+ CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END".format(i+1, uvrsceni[i])
-
-    str2+=r") - greatest("
-
-    for i in range(nPlovov):
-        str2 += r"CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END,".format(i+1, uvrsceni[i])
-
-    str2 += r"0) AS net, ( 0"
-
-    for i in range(nPlovov):
-        str2 += r"+ CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END".format(i+1, uvrsceni[i])
-
-    str2 += r") AS tot FROM delni2 ORDER BY net ASC, tot ASC"
-
-    for i in range(nPlovov):
-        str2 += r", tocke_plov{} ASC".format(i+1)
-    str2 += r";"
-
-    print("str2 =", str2)
-    str+="from plov_1 JOIN (SELECT klub.ime AS ime_kluba," \
-         " idtekmovalec, plov_idplov, sailno FROM klub JOIN clanstvo" \
-         " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec" \
-         " ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec" \
-         " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec" \
-         " = tekmovalec.idtekmovalec) AS klubi_plovi2 ON klubi_plovi2.sailno" \
-         " = plov_1.sailno "
-
-    for i in range(nPlovov):
-        if (i + 1) >= 2: str += "JOIN plov_{0} ON plov_1.sailno = plov_{0}.sailno ".format(i + 1)
-    str+="; " + str2
-    cur.execute(str)
+    cur.execute(poizvedba1(nPlovov))
     data_regata = []
     i = 1
     for element in cur:
