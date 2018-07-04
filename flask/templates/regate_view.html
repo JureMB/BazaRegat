@@ -84,7 +84,7 @@ data-spy="scroll" data-target=".navbar" data-offset="50"
     <div class="panel-body">Skupni rezultati ragate {{ title }}.</div>
         <!-- Table -->
         <div class="table-responsive">
-            <table class = "table"
+            <table class = "table">
             <thead>
             <tr>
                 <th>Mesto</th>
@@ -93,10 +93,9 @@ data-spy="scroll" data-target=".navbar" data-offset="50"
                 <th>Spol </th>
                 <th>Leto rojstva </th>
                 <th>Klub </th>
-                <th>Prvi plov </th>
-                <th>Drugi plov </th>
-                <th>Tretji plov </th>
-                <th>Četrti plov </th>
+                {% for nPlov in nPlovov %}
+                <th>{{ nPlov|string }}. plov</th>
+                {% endfor %}
                 <th>Neto točke</th>
                 <th>Skupne točke </th>
             </tr>
