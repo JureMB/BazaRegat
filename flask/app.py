@@ -157,19 +157,19 @@ def sort_tekmovalci(data):
 def tocke(koef, zadnji, prvi, tocke):
     return koef*(50 +50*(zadnji-tocke)/(zadnji-prvi))
 
-class RegateForm(FlaskForm):
-    cur.execute("SELECT zacetek FROM regata")
-    years = []
-    for date in cur:
-        years.append(date[0].year)
-    years=sorted(set(years))
-    years=intToStr(years)
-    select_years = SelectField('leto',choices=years, validators=[DataRequired()])
-    # regate=[] # podatki iz baze
-    # select_regata = SelectField('regata', choices=regate, validators=[DataRequired()])
-    submit = SubmitField('Izberi')
+# class RegateForm(FlaskForm):
+#     cur.execute("SELECT zacetek FROM regata")
+#     years = []
+#     for date in cur:
+#         years.append(date[0].year)
+#     years=sorted(set(years))
+#     years=intToStr(years)
+#     select_years = SelectField('leto',choices=years, validators=[DataRequired()])
+#     # regate=[] # podatki iz baze
+#     # select_regata = SelectField('regata', choices=regate, validators=[DataRequired()])
+#     submit = SubmitField('Izberi')
 
-class ZacasniForm(FlaskForm):
+class RegateForm(FlaskForm):
     cur.execute("SELECT ime, zacetek, idregata FROM regata")
     regate=[]
     for regata in cur:
@@ -178,23 +178,9 @@ class ZacasniForm(FlaskForm):
     select_regata = SelectField('regata', choices=regate, validators=[DataRequired()])
     submit = SubmitField('Izberi')
 
-class JadralecForm:
+class JadralecForm(FlaskForm):
     insert_jadralec = StringField('Vnesite ime jadralca', validators=[DataRequired()])
     submit = SubmitField('Išči')
-# class Regata(object):
-#     def __init__(self,mesto, salino, ime, spol, leto_rojstva, klub, prvi, drugi, tretji, cetrti, net, tot):
-#         self.mesto=mesto
-#         self.salino=salino
-#         self.ime=ime
-#         self.spol=spol
-#         self.leto_rojstva=leto_rojstva
-#         self.klub = klub
-#         self.prvi=prvi
-#         self.drugi=drugi
-#         self.tretji=tretji
-#         self.cetrti=cetrti
-#         self.net=net
-#         self.tot=tot
 
 class Plov(object):
     def __init__(self, mesto, salino, ime, spol, leto_rojstva, klub, tocke):
@@ -223,7 +209,7 @@ def index():
 
 @app.route('/regate', methods=['GET', 'POST'])
 def regate():
-    form = ZacasniForm()
+    form = RegateForm()
     if form.validate_on_submit():
         regata_id = form.select_regata.data
         # regata_no_spaces =""
@@ -295,11 +281,15 @@ def regate_view(regata_id):
 
 @app.route('/jadralci', methods=['GET', 'POST'])
 def jadralci():
+    jadralec_name = None
     form = JadralecForm()
     if form.validate_on_submit():
         jadralec_name = form.insert_jadralec.data
-        session['jadralec_name'] = jadralec_name
-        return redirect(url_for('jadralci_view', jadralec_name=session.get('jadralci_name')))
+        cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(jadralec_name))
+        for element in cur:
+            jadralec_id = element[0]
+        session['jadralec_id'] = jadralec_id
+        return redirect(url_for('jadralci_view', jadralec_id=session.get('jadralec_id')))
     return render_template('jadralci.html', form=form, form_type="inline")
 
 @app.route('/jadralci/<jadralec_id>')
@@ -358,9 +348,6 @@ def lestvica():
         data_final.append([i+1]+data_sorted[i])
     return render_template('lestvica.html', data=data_final)
 
-@app.route('/test')
-def test():
-    return render_template('test.html')
 ############################################
 # Program
 #if __name__ == '__main__': app.run(debug=True,host='0.0.0.0', port=5000)
