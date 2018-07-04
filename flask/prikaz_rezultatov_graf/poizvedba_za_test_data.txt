@@ -1,0 +1,3 @@
+SELECT tekmovalec.ime, tekmovalec.sailno, tocke_plovi.tekmovalec_idtekmovalec, tocke_plovi.plov_idplov, tocke_plovi.tocke FROM tocke_plovi 
+INNER JOIN tekmovalec ON tekmovalec.idtekmovalec = tocke_plovi.tekmovalec_idtekmovalec
+WHERE tocke_plovi.tekmovalec_idtekmovalec = 1219;
