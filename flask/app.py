@@ -315,51 +315,9 @@ def jadralci_view(jadralec_id):
         leto_rojstva = element[3]
         klub = element[4]
 
-    id_regate=[]
-    cur.execute("SELECT idregata FROM regata")
-    for elment in cur:
-        id_regate.append(elment[0])
-    data = {}
-    # print("id regate prau", id_regate)
-    for id_reg in id_regate:
-        # ------------------------------------------------------------------------------------------
-        cur.execute("SELECT idplov FROM plov WHERE regata_idregata = {}".format(id_reg))
-        nPlovov = 0
-        idPlovi = []
-        for element in cur:
-            nPlovov += 1
-            idPlovi.append(element[0])
-
-        data_plovi = []
-        cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
-                    " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
-                    " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
-                    " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
-        for i in range(nPlovov):
-            cur.execute("CREATE TEMPORARY TABLE plov_{0} AS SELECT sailno, ime, spol, leto_rojstva, ime_kluba,"
-                        " COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi JOIN tekmovalec"
-                        " ON tekmovalec_idtekmovalec = idtekmovalec JOIN klubi_plovi ON"
-                        " klubi_plovi.idtekmovalec = tekmovalec.idtekmovalec AND klubi_plovi.plov_idplov = {1}"
-                        " WHERE tocke_plovi.plov_idplov = {1} ORDER BY tocke;"
-                        "SELECT * FROM plov_{0};".format(i + 1, idPlovi[i]))
-
-        cur.execute(poizvedba1(nPlovov))
-        data_regata = []
-        i = 1
-        for element in cur:
-            data_regata.append(
-                [i, element[0], element[1].title(), element[2], element[3], element[4], element[5], element[6]])
-            for j in range(nPlovov):
-                data_regata[-1].append(element[7 + j])
-            i += 1
-        data[id_reg] = data_regata
-        # konec
-        global conn
-        global cur
-        conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
-        conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)  # onemogocimo transakcije
-        cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    tekmovalci_dict = sort_tekmovalci(data)
+    tekmovalci_dict = all_data()
+    print("tekmovalci data", tekmovalci_dict)
+    data=[] # tabela ki se jo na koncu prikaže na strani
     return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva, data= data)
 
 @app.route('/lestvica')
