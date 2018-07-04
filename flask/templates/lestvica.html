@@ -8,8 +8,6 @@
 </div>
 
 <div class="container-fluid">
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
     <div class="panel panel-my-primary">
         <!-- Default panel contents -->
         <div class="panel-heading"><h4 class="panel-title">Lestvica</h4></div>
@@ -19,34 +17,22 @@
             <table class = "table" >
                 <tr>
                     <th>Mesto</th>
-                    <th>Št. jadra </th>
+{#                    <th>Št. jadra </th>#}
                     <th>Ime </th>
                     <th>Spol </th>
                     <th>Leto rojstva </th>
                     <th>Klub </th>
-                    <th>Prvi plov </th>
-                    <th>Drugi plov </th>
-                    <th>Tretji plov </th>
-                    <th>Četrti plov </th>
-                    <th>Neto točke</th>
                     <th>Skupne točke </th>
                 </tr>
+                <tbody id="myTable">
                 {% for element in data %}
-                <tr>
-                    <td>{{ element.mesto|e }}</td>
-                    <td>{{ element.salino|e }}</td>
-                    <td>{{ element.ime|e }}</td>
-                    <td>{{ element.spol|e }}</td>
-                    <td>{{ element.leto_rojstva|e }}</td>
-                    <td>{{ element.klub|e }} </td>
-                    <td>{{ element.prvi|e }}</td>
-                    <td>{{ element.drugi|e }}</td>
-                    <td>{{ element.tretji|e }}</td>
-                    <td>{{ element.cetrti|e }}</td>
-                    <td>{{ element.net|e }}</td>
-                    <td>{{ element.tot|e }}</td>
-                </tr>
+                    <tr>
+                        {% for elementek in element %}
+                            <td>{{ elementek}}</td>
+                        {% endfor %}
+                    </tr>
                 {% endfor %}
+                </tbody>
             </table>
         </div>
     </div>

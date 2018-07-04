@@ -108,7 +108,6 @@ def all_data():
             nPlovov += 1
             idPlovi.append(element[0])
 
-        data_plovi = []
         cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
                     " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
                     " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
@@ -137,20 +136,18 @@ def all_data():
         conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
         conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)  # onemogocimo transakcije
         cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-        return sort_tekmovalci(data)
+    return sort_tekmovalci(data)
 
 def sort_tekmovalci(data):
     "pomožna funkcija ki vrne končno obliko opisano pri funkciji all_data()"
-    print("dala")
     tekmovalci_dict={}
     for (id_reg, data_regata) in data.items():
         cur.execute("SELECT koeficient FROM regata WHERE  idregata = {}".format(id_reg))
         for element in cur: # to je redundant!
             koef_regate = element[0]
         tocke_prvega = data_regata[0][-2]
-        print("tocke_prvega", tocke_prvega)
+
         tocke_zadnjega = data_regata[-1][-2]
-        print("tocke_zadnjega:", tocke_zadnjega)
         for list in data_regata:
             zacasna = tekmovalci_dict.get(list[1], []) # id je jadro!!!
             zacasna.append([list[1], id_reg, list[0], list[-2], koef_regate, tocke_prvega, tocke_zadnjega]) #TU SE LAHKO DODa se podatke plovov! #jadro id regate, mesto tekmovalca, točke tekmovalca, ...
@@ -323,6 +320,7 @@ def jadralci_view(jadralec_id):
     for elment in cur:
         id_regate.append(elment[0])
     data = {}
+    # print("id regate prau", id_regate)
     for id_reg in id_regate:
         # ------------------------------------------------------------------------------------------
         cur.execute("SELECT idplov FROM plov WHERE regata_idregata = {}".format(id_reg))
@@ -361,24 +359,19 @@ def jadralci_view(jadralec_id):
         conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
         conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)  # onemogocimo transakcije
         cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    # print(data)
     tekmovalci_dict = sort_tekmovalci(data)
-    print(tekmovalci_dict)
     return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva, data= data)
 
 @app.route('/lestvica')
 def lestvica():
     tekmovalci_dict = all_data()
-    print("tekmovalci dict", tekmovalci_dict)
     data=[]
     slovenci=[]
     for jadro in tekmovalci_dict:
         if jadro[:3] == "SLO":
             slovenci.append(tekmovalci_dict[jadro])
-    print("slovenci",slovenci)
     for jadralec in slovenci:
         sailno = jadralec[0][0]
-        # print("sailno=",sailno)
         cur.execute("SELECT sailno, tekmovalec.ime, spol, leto_rojstva, klub.ime AS ime_kluba FROM klub JOIN clanstvo"
                     " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = "
                     "tekmovalec.idtekmovalec WHERE sailno = '{}'".format(sailno))
@@ -394,18 +387,19 @@ def lestvica():
             koef=regata[4]
             prvi=regata[5]
             zadnji=regata[6]
-            # print(pike, koef, prvi, zadnji)
             # zacasna.append(tocke(koef, zadnji, prvi, tocke))
             vsota+=tocke(koef, zadnji, prvi, pike)
-            print("vsota=", vsota)
-        zacasna.append(vsota)
+        zacasna.append(round(vsota,2))
         data.append(zacasna)
-        print("zacasna", zacasna)
 
     # uredi po vrstici v seznamu
     data.sort(key=lambda x: x[-1])
-    print(data)
-    return render_template('lestvica.html', data=data)
+    data_sorted= list(reversed(data))
+    data_final=[]
+    for i in range(len(data_sorted)):
+        data_final.append([i+1]+data_sorted[i])
+    print(data_final)
+    return render_template('lestvica.html', data=data_final)
 
 @app.route('/test')
 def test():
