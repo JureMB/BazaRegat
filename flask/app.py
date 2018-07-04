@@ -316,7 +316,7 @@ def jadralci_view(jadralec_id):
         klub = element[4]
 
     tekmovalci_dict = all_data()
-    print("tekmovalci data", tekmovalci_dict)
+    print("tekmovalci_dict: ", tekmovalci_dict)
     data=[] # tabela ki se jo na koncu prikaže na strani
     return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva, data= data)
 
@@ -356,7 +356,6 @@ def lestvica():
     data_final=[]
     for i in range(len(data_sorted)):
         data_final.append([i+1]+data_sorted[i])
-    print(data_final)
     return render_template('lestvica.html', data=data_final)
 
 @app.route('/test')
