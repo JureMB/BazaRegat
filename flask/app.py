@@ -200,6 +200,11 @@ def page_not_found(e):
 
 @app.errorhandler(500)
 def internal_server_error(e):
+    global conn
+    global cur
+    conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
+    conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)  # onemogocimo transakcije
+    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     return render_template('500.html'), 500
 
 
