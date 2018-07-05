@@ -1,4 +1,9 @@
-CREATE TEMPORARY TABLE klubi_plovi AS
+GRANT CONNECT ON DATABASE sem2018_matjazp TO javnost;
+GRANT TEMPORARY ON DATABASE sem2018_matjazp TO javnost;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO javnost;
+
+
+CREATE VIEW klubi_plovi AS
 SELECT klub.ime AS ime_kluba, idtekmovalec, plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec
 
 -- število plovov
