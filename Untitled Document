@@ -1,0 +1,28 @@
+@app.route('/jadralci/<jadralec_id>')
+def jadralci_view(jadralec_id):
+    id = int(jadralec_id)
+    cur.execute("SELECT sailno, tekmovalec.ime, spol, leto_rojstva, klub.ime AS ime_kluba FROM klub JOIN clanstvo"
+                " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = "
+                "tekmovalec.idtekmovalec WHERE tekmovalec_idtekmovalec = {}".format(id))
+    for element in cur:  # to je redundant!
+        sail_no = element[0]
+        ime = element[1]
+        spol = element[2]
+        leto_rojstva = element[3]
+        klub = element[4]
+
+    tekmovalci_dict = all_data()
+    rezultati_tekmovalec = tekmovalci_dict[sail_no]
+    cur.execute("SELECT idregata, ime FROM regata")
+    regate_dict = {}
+    for element in cur:
+        regate_dict[element[0]]=element[1]
+    rezultat = []
+    for element in rezultati_tekmovalec:
+        rezultat.append([regate_dict[element[1]],element[2],element[3]])
+
+    #print("rezultati_tekmovalec: ", rezultat)
+    #print("tekmovalci_dict: ", tekmovalci_dict)
+    data=[] # tabela ki se jo na koncu prikaže na strani
+    return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva,rezultat=rezultat )
+
