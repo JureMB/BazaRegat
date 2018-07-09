@@ -14,21 +14,104 @@
 </div>
 
 <div class="container-fluid">
-    <h1>{{ ime}}</h1>
-    <h3 class="my-primary-heading">{{ sail_no }}</h3>
-    <p>{{ klub }}</p>
-    <p>{{ spol }}</p>
-    <p>{{ leto_rojstva }}</p>
+    <h1>Rezultati jadralca po regatah: {{ ime}}</h1>
+    <h3 class="my-primary-heading"> Št. jadra: {{ sail_no }}</h3>
+    <p>Klub: {{ klub }} </p>
+    <p>Spol: {{ spol }}</p>
+    <p>Leto rojstva: {{ leto_rojstva }}</p>
 
 </div>
 <div id="section1" class="container-fluid">
     <div class="row">
-        <div class="col-xs-4">
+    <div class="col-md-6">
+  <h1></h1><!-- bar chart canvas element --><canvas id="chart" width="600" height="400"></canvas>
+<script>
+var mychart = document.getElementById("chart").getContext("2d");
+
+new Chart(mychart, {
+   type: 'bar',
+   data: {
+      labels: [{% for item in labels %}
+                    "{{item}}",
+               {% endfor %}],
+      datasets: [{
+         label: "Doseženo mesto na regati",
+         data: [{% for item in values %}
+                    {{item}},
+                {% endfor %}],
+         backgroundColor: 'rgba(151,187,205,0.2)',
+         borderColor: 'rgba(151,187,205,1)',
+         pointBackgroundColor: 'rgba(151,187,205,1)'
+      }]
+   },
+   options: {
+      legend: { display: false },
+      title: {
+          display: true,
+          text: 'Mesto tekmovalca na udeleženih regatah'
+      },
+      scales: {
+         yAxes: [{
+            ticks: {
+               beginAtZero: true,
+               stepSize: 10
+            }
+         }]
+      }
+   }
+});
+
+
+</script>
+    </div>
+     <div class="col-md-6">
+ <h1> </h1><!-- bar chart canvas element --><canvas id="chart2" width="600" height="400"></canvas>
+
+  <script>
+var mychart = document.getElementById("chart2").getContext("2d");
+
+new Chart(mychart, {
+   type: 'bar',
+   data: {
+      labels: [{% for item in labels %}
+                    "{{item}}",
+               {% endfor %}],
+      datasets: [{
+         label: "Dosežene točke na regati",
+         data: [{% for item in values2 %}
+                    {{item}},
+                {% endfor %}],
+         backgroundColor: 'rgba(151,187,205,0.2)',
+         borderColor: 'rgba(151,187,205,1)',
+         pointBackgroundColor: 'rgba(151,187,205,1)'
+      }]
+   },
+   options: {
+      legend: { display: false },
+      title: {
+          display: true,
+          text: 'Točke tekmovalca na udeleženih regatah'
+      },
+      scales: {
+         yAxes: [{
+            ticks: {
+               beginAtZero: true,
+               stepSize: 20
+            }
+         }]
+      }
+   }
+});
+
+
+</script>
+    </div>
+        <div class="col-xs-6">
             <h1>Rezultati končni</h1>
             <div class="panel panel-my-primary">
             <!-- Default panel contents -->
             <div class="panel-heading"><h4 class="panel-title">Rezultati - končni</h4></div>
-            <div class="panel-body">Skupni rezultati ragate {{ title }}.</div>
+            <div class="panel-body">Skupni rezultati regate {{ title }}.</div>
                 <!-- Table -->
                 <div class="table-responsive">
                     <table class = "table">
@@ -61,11 +144,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-8">
+        <div class="col-xs-6">
             <img class="img-responsive" src="{{ url_for('static', filename = 'image_tekmovalci.png') }}">
         </div>
     </div>
 </div>
+
+
 {% for nPlov in nPlovov %}
 <div id="section{{ (nPlov + 1)|string }}" class="container-fluid">
     <h1>Rezultati {{ nPlov|string }}. plov</h1>

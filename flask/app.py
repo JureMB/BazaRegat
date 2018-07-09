@@ -6,7 +6,7 @@ from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import SelectMultipleField, SelectField, SubmitField, StringField
 from wtforms.validators import DataRequired
-import auth
+import auth_public
 import psycopg2, psycopg2.extensions, psycopg2.extras
 
 psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo problemov s šumniki
@@ -19,7 +19,7 @@ bootstrap = Bootstrap(app)
 # manager = Manager(app)
 # moment = Moment(app)
 
-conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
+conn = psycopg2.connect(database=auth_public.db, host=auth_public.host, user=auth_public.user, password=auth_public.password)
 conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT) # onemogocimo transakcije
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
@@ -108,10 +108,10 @@ def all_data():
             nPlovov += 1
             idPlovi.append(element[0])
 
-        cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
-                    " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
-                    " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
-                    " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
+        # cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
+        #             " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
+        #             " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
+        #             " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
         for i in range(nPlovov):
             cur.execute("CREATE TEMPORARY TABLE plov_{0} AS SELECT sailno, ime, spol, leto_rojstva, ime_kluba,"
                         " COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi JOIN tekmovalec"
@@ -133,7 +133,7 @@ def all_data():
         # konec
         global conn
         global cur
-        conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
+        conn = psycopg2.connect(database=auth_public.db, host=auth_public.host, user=auth_public.user, password=auth_public.password)
         conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)  # onemogocimo transakcije
         cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     return sort_tekmovalci(data)
@@ -250,10 +250,10 @@ def regate_view(regata_id):
         idPlovi.append(element[0])
 
     data_plovi = []
-    cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
-                " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
-                " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
-                " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
+    # cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
+    #             " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
+    #             " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
+    #             " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
     for i in range(nPlovov):
         cur.execute("CREATE TEMPORARY TABLE plov_{0} AS SELECT sailno, ime, spol, leto_rojstva, ime_kluba,"
                     " COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi JOIN tekmovalec"
@@ -278,7 +278,7 @@ def regate_view(regata_id):
 
     global conn
     global cur
-    conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
+    conn = psycopg2.connect(database=auth_public.db, host=auth_public.host, user=auth_public.user, password=auth_public.password)
     conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT) # onemogocimo transakcije
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     return render_template('regate_view.html', title=title, klub=klub, startDate=startDate,
@@ -311,9 +311,25 @@ def jadralci_view(jadralec_id):
         klub = element[4]
 
     tekmovalci_dict = all_data()
-    print("tekmovalci_dict: ", tekmovalci_dict)
+    rezultati_tekmovalec = tekmovalci_dict[sail_no]
+    cur.execute("SELECT idregata, ime FROM regata")
+    regate_dict = {}
+    for element in cur:
+        regate_dict[element[0]]=element[1]
+    rezultat = []
+    values=[]
+    labels=[]
+    values2=[]
+    for element in rezultati_tekmovalec:
+        values.append(element[2])
+        values2.append(element[3])
+        labels.append(regate_dict[element[1]])
+        rezultat.append([regate_dict[element[1]],element[2],element[3]])
+
+    #print("rezultati_tekmovalec: ", rezultat)
+    #print("tekmovalci_dict: ", tekmovalci_dict)
     data=[] # tabela ki se jo na koncu prikaže na strani
-    return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva, data= data)
+    return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva,labels=labels, values =values,values2=values2 )
 
 @app.route('/lestvica')
 def lestvica():
@@ -356,4 +372,4 @@ def lestvica():
 ############################################
 # Program
 #if __name__ == '__main__': app.run(debug=True,host='0.0.0.0', port=5000)
-if __name__ == '__main__': app.run(debug=True, port=5000)
+if __name__ == '__main__': app.run(debug=True, port=8000)
