@@ -357,15 +357,17 @@ def lestvica():
             leto_rojstva=element[3]
             klub=element[4]
             zacasna = [ime, spol, leto_rojstva, klub]
-        vsota=0
+        vsota_zacasna=[]
         for regata in jadralec:
             pike=regata[3]
             koef=regata[4]
             prvi=regata[5]
             zadnji=regata[6]
             # zacasna.append(tocke(koef, zadnji, prvi, tocke))
-            vsota+=tocke(koef, zadnji, prvi, pike)
-        zacasna.append(round(vsota,2))
+            vsota_zacasna.append(tocke(koef, zadnji, prvi, pike))
+            vsota_zacasna.sort()
+        vsota = vsota_zacasna[-4:]
+        zacasna.append(round(sum(vsota),2))
         data.append(zacasna)
 
     # uredi po vrstici v seznamu
