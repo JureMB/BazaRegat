@@ -311,9 +311,25 @@ def jadralci_view(jadralec_id):
         klub = element[4]
 
     tekmovalci_dict = all_data()
-    print("tekmovalci_dict: ", tekmovalci_dict)
+    rezultati_tekmovalec = tekmovalci_dict[sail_no]
+    cur.execute("SELECT idregata, ime FROM regata")
+    regate_dict = {}
+    for element in cur:
+        regate_dict[element[0]]=element[1]
+    rezultat = []
+    values=[]
+    labels=[]
+    values2=[]
+    for element in rezultati_tekmovalec:
+        values.append(element[2])
+        values2.append(element[3])
+        labels.append(regate_dict[element[1]])
+        rezultat.append([regate_dict[element[1]],element[2],element[3]])
+
+    #print("rezultati_tekmovalec: ", rezultat)
+    #print("tekmovalci_dict: ", tekmovalci_dict)
     data=[] # tabela ki se jo na koncu prikaže na strani
-    return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva, data= data)
+    return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva,labels=labels, values =values,values2=values2 )
 
 @app.route('/lestvica')
 def lestvica():
@@ -356,4 +372,4 @@ def lestvica():
 ############################################
 # Program
 #if __name__ == '__main__': app.run(debug=True,host='0.0.0.0', port=5000)
-if __name__ == '__main__': app.run(debug=True, port=5000)
+if __name__ == '__main__': app.run(debug=True, port=8000)
