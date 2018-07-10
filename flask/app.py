@@ -290,10 +290,17 @@ def jadralci():
     form = JadralecForm()
     if form.validate_on_submit():
         jadralec_name = form.insert_jadralec.data
-        cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(jadralec_name))
-        for element in cur:
-            jadralec_id = element[0]
-        session['jadralec_id'] = jadralec_id
+        try:
+            cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(jadralec_name.title()))
+            for element in cur:
+                jadralec_id = element[0]
+            session['jadralec_id'] = jadralec_id
+        except Exception:
+            cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(jadralec_name.upper()))
+            for element in cur:
+                jadralec_id = element[0]
+            session['jadralec_id'] = jadralec_id
+
         return redirect(url_for('jadralci_view', jadralec_id=session.get('jadralec_id')))
     return render_template('jadralci.html', form=form, form_type="inline")
 
