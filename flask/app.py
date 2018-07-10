@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from flask import Flask, render_template,  session, redirect, url_for
+from flask import Flask, render_template,  session, redirect, url_for, flash
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import SelectMultipleField, SelectField, SubmitField, StringField
@@ -288,7 +288,11 @@ def regate_view(regata_id):
 def jadralci():
     jadralec_name = None
     form = JadralecForm()
+    prikazi_opozorilo = False
     if form.validate_on_submit():
+        old_id = session.get('jadralec_id')
+        if old_id is not None:
+            prikazi_opozorilo = True
         jadralec_name = form.insert_jadralec.data
         try:
             cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(jadralec_name.title()))
@@ -296,13 +300,18 @@ def jadralci():
                 jadralec_id = element[0]
             session['jadralec_id'] = jadralec_id
         except Exception:
-            cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(jadralec_name.upper()))
-            for element in cur:
-                jadralec_id = element[0]
-            session['jadralec_id'] = jadralec_id
-
+            try:
+                cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(jadralec_name.upper()))
+                for element in cur:
+                    jadralec_id = element[0]
+                session['jadralec_id'] = jadralec_id
+            except Exception:
+                print(prikazi_opozorilo)
+                return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo)
+        print(prikazi_opozorilo)
         return redirect(url_for('jadralci_view', jadralec_id=session.get('jadralec_id')))
-    return render_template('jadralci.html', form=form, form_type="inline")
+    print(prikazi_opozorilo)
+    return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo)
 
 @app.route('/jadralci/<jadralec_id>')
 def jadralci_view(jadralec_id):

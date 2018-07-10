@@ -7,6 +7,16 @@
 <div class="page-header">
     <h1 class="my-primary-heading">Jadralci</h1>
 </div>
+{% if prikazi_opozorilo %}
+    <div class="row ">
+        <div class="col-xs-12 ">
+            <div class="panel panel-danger">
+                <div class="panel-heading "><h4 class="panel-title">Tekmovalca ni v bazi!</h4></div>
+                <div class="panel-body">Morda ste se zatipkali. Poskusite ponovno.</div>
+            </div>
+        </div>
+    </div>
+{% endif %}
 <p>V spodnje polje vnesite ime jadralce in potrdite z gumbom "Išči".</p>
 {{ wtf.quick_form(form, form_type=form_type) }}
 {% endblock %}
