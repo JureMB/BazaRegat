@@ -336,7 +336,7 @@ def jadralci_view(jadralec_id):
     #print("rezultati_tekmovalec: ", rezultat)
     #print("tekmovalci_dict: ", tekmovalci_dict)
     data=[] # tabela ki se jo na koncu prikaže na strani
-    return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva,labels=labels, values =values,values2=values2 )
+    return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva,labels=labels, values =values,values2=values2, n=len(labels) )
 
 @app.route('/lestvica')
 def lestvica():
@@ -372,9 +372,14 @@ def lestvica():
     data.sort(key=lambda x: x[-1])
     data_sorted= list(reversed(data))
     data_final=[]
+    id_list=[]
     for i in range(len(data_sorted)):
         data_final.append([i+1]+data_sorted[i])
-    return render_template('lestvica.html', data=data_final)
+        cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(data_sorted[i][0]))
+        for element in cur:
+            id_list.append(element[0])
+    print(id_list)
+    return render_template('lestvica.html', data=data_final, id_list=id_list)
 
 ############################################
 # Program

@@ -116,37 +116,26 @@ new Chart(mychart, {
 
 </script>
     </div>
-        <div class="col-xs-6">
-            <h1>Rezultati končni</h1>
+        <div class="col-xs-12">
             <div class="panel panel-my-primary">
             <!-- Default panel contents -->
-            <div class="panel-heading"><h4 class="panel-title">Rezultati - končni</h4></div>
-            <div class="panel-body">Skupni rezultati regate {{ title }}.</div>
+            <div class="panel-heading"><h4 class="panel-title">Rezultati</h4></div>
                 <!-- Table -->
                 <div class="table-responsive">
                     <table class = "table">
                     <thead>
                     <tr>
+                        <th>Regata</th>
                         <th>Mesto</th>
-                        <th>Št. jadra </th>
-                        <th>Ime </th>
-                        <th>Spol </th>
-                        <th>Leto rojstva </th>
-                        <th>Klub </th>
-                        <th>Prvi plov </th>
-                        <th>Drugi plov </th>
-                        <th>Tretji plov </th>
-                        <th>Četrti plov </th>
-                        <th>Neto točke</th>
-                        <th>Skupne točke </th>
+                        <th>Točke </th>
                     </tr>
                     </thead>
                     <tbody id="myTable">
-                    {% for element in data_regata %}
+                    {% for i in range(n) %}
                         <tr>
-                            {% for elementek in element %}
-                            <td>{{ elementek}}</td>
-                            {% endfor %}
+                            <td>{{ labels[i]}}</td>
+                            <td>{{ values[i]}}</td>
+                            <td>{{ values2[i]}}</td>
                         </tr>
                     {% endfor %}
                     </tbody>
@@ -154,52 +143,9 @@ new Chart(mychart, {
                 </div>
             </div>
         </div>
-        <div class="col-xs-6">
-            <img class="img-responsive" src="{{ url_for('static', filename = 'image_tekmovalci.png') }}">
-        </div>
     </div>
 </div>
 
-
-{% for nPlov in nPlovov %}
-<div id="section{{ (nPlov + 1)|string }}" class="container-fluid">
-    <h1>Rezultati {{ nPlov|string }}. plov</h1>
-    <div class="panel panel-my-primary">
-        <!-- Default panel contents -->
-        <div class="panel-heading">Rezultati - {{ nPlov|string }}. plov</div>
-  <!-- Table -->
-        <div class="table-responsive">
-            <table class = "table">
-                <thead>
-                <tr>
-                    <th>Mesto</th>
-                    <th>Št. jadra </th>
-                    <th>Ime </th>
-                    <th>Spol </th>
-                    <th>Leto rojstva </th>
-                    <th>Klub </th>
-                    <th>Točke plov </th>
-                </tr>
-                </thead>
-                <tbody id="myTable">
-                {% for element in data_plovi[nPlov - 1] %}
-                    <tr>
-                        <td>{{ element.mesto|e }}</td>
-                        <td>{{ element.salino|e }}</td>
-                        <td>{{ element.ime|e }}</td>
-                        <td>{{ element.spol|e }}</td>
-                        <td>{{ element.leto_rojstva|e }}</td>
-                        <td>{{ element.klub|e }} </td>
-                        <td>{{ element.tocke|e }}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-    </div>
-{% endfor %}
 {% endblock %}
 
 {% block scripts %}
