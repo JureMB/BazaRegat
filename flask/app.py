@@ -282,7 +282,7 @@ def regate_view(regata_id):
     conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT) # onemogocimo transakcije
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     return render_template('regate_view.html', title=title, klub=klub, startDate=startDate,
-                           endDate=endDate, nPlovov = [i+1 for i in range(nPlovov)] ,data_regata=data_regata, data_plovi = data_plovi)
+                           endDate=endDate, nPlovov = [i+1 for i in range(nPlovov)] ,data_regata=data_regata, data_plovi = data_plovi, id=id)
 
 @app.route('/jadralci', methods=['GET', 'POST'])
 def jadralci():
