@@ -250,30 +250,46 @@ def regate_view(regata_id):
         idPlovi.append(element[0])
 
     data_plovi = []
-    # cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
-    #             " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
-    #             " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
-    #             " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
-    for i in range(nPlovov):
-        cur.execute("CREATE TEMPORARY TABLE plov_{0} AS SELECT sailno, ime, spol, leto_rojstva, ime_kluba,"
-                    " COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi JOIN tekmovalec"
-                    " ON tekmovalec_idtekmovalec = idtekmovalec JOIN klubi_plovi ON"
-                    " klubi_plovi.idtekmovalec = tekmovalec.idtekmovalec AND klubi_plovi.plov_idplov = {1}"
-                    " WHERE tocke_plovi.plov_idplov = {1} ORDER BY tocke;"
-                    "SELECT * FROM plov_{0};".format(i+1, idPlovi[i]))
-        data_plov=[]
-        j=1
-        for element in cur:
-            data_plov.append(Plov(j, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
-            j+=1
-        data_plovi.append(data_plov)
-    cur.execute(poizvedba1(nPlovov))
+    # # cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
+    # #             " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
+    # #             " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
+    # #             " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
+    # for i in range(nPlovov):
+    #     cur.execute("CREATE TEMPORARY TABLE plov_{0} AS SELECT sailno, ime, spol, leto_rojstva, ime_kluba,"
+    #                 " COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi JOIN tekmovalec"
+    #                 " ON tekmovalec_idtekmovalec = idtekmovalec JOIN klubi_plovi ON"
+    #                 " klubi_plovi.idtekmovalec = tekmovalec.idtekmovalec AND klubi_plovi.plov_idplov = {1}"
+    #                 " WHERE tocke_plovi.plov_idplov = {1} ORDER BY tocke;"
+    #                 "SELECT * FROM plov_{0};".format(i+1, idPlovi[i]))
+    #     data_plov=[]
+    #     j=1
+    #     for element in cur:
+    #         data_plov.append(Plov(j, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
+    #         j+=1
+    #     data_plovi.append(data_plov)
+    # cur.execute(poizvedba1(nPlovov))
+
+    ########## JANOŠEV NAČIN #############
+    cur.execute("SELECT tekmovalec.sailno, tekmovalec.ime, tekmovalec.spol, tekmovalec.leto_rojstva, ime_kluba, "
+                "array_to_string(array_agg(coalesce(tocke::text, posebnosti) ORDER BY st_plova ASC), ',') AS tocke_plovi, "
+                "(sum(efektivne_tocke) - max(efektivne_tocke))::int AS net, "
+                "sum(efektivne_tocke)::int AS tot "
+                "FROM efektivne_tocke JOIN plov ON plov_idplov = plov.idplov "
+                "JOIN tekmovalec ON tekmovalec_idtekmovalec = idtekmovalec "
+                "JOIN klubi_plovi ON klubi_plovi.idtekmovalec = tekmovalec_idtekmovalec AND klubi_plovi.plov_idplov = plov.idplov "
+                "WHERE regata_idregata = %s "
+                "GROUP BY tekmovalec_idtekmovalec, ime_kluba, tekmovalec.sailno, tekmovalec.ime, tekmovalec.spol, tekmovalec.leto_rojstva "
+                "ORDER BY net ASC, tot ASC,"
+                "array_agg(efektivne_tocke ORDER BY st_plova ASC) ASC, array_agg(coalesce(tocke::text, posebnosti) ORDER BY st_plova ASC) ASC ", [id])
+    ######################
+
     data_regata = []
     i = 1
     for element in cur:
-        data_regata.append([i, element[0], element[1].title(), element[2], element[3], element[4], element[5], element[6]])
-        for j in range(nPlovov):
-            data_regata[-1].append(element[7+j])
+        data_regata.append([i, element[0], element[1].title(), element[2], element[3], element[4]] + list(element[5].split(',')) + [element[6], element[7]])
+        #print(data_regata)
+        # for j in range(nPlovov):
+        #     data_regata[-1].append(element[7+j])
         i += 1
 
     global conn
