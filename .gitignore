@@ -16,6 +16,7 @@ auth.R
 Thumbs.db
 .idea/
 flask/venv
+flask/zalaenv
 
 flask/chosen_v1/
 
