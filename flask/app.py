@@ -4,11 +4,10 @@
 from flask import Flask, render_template,  session, redirect, url_for, flash
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
-from wtforms import SelectMultipleField, SelectField, SubmitField, StringField
+from wtforms import SelectField, SubmitField, StringField
 from wtforms.validators import DataRequired
 import auth_public
 import psycopg2, psycopg2.extensions, psycopg2.extras
-from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
 psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo problemov s šumniki
@@ -19,11 +18,10 @@ app.config['SECRET_KEY'] = 'hard to guess string'
 
 bootstrap = Bootstrap(app)
 # manager = Manager(app)
-# moment = Moment(app)
 
-conn = psycopg2.connect(database=auth_public.db, host=auth_public.host, user=auth_public.user, password=auth_public.password)
+conn = psycopg2.connect(database = auth_public.db, host = auth_public.host, user = auth_public.user, password = auth_public.password)
 conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT) # onemogocimo transakcije
-cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
 
 def intToStr(list):
@@ -32,8 +30,6 @@ def intToStr(list):
     for number in list:
         string_list.append((str(number), str(number)))
     return string_list
-
-# years=[('2017', '2017'), ('2018', '2018')]
 
 def all_data():
     '''Funkcija ki izvede poizvedbe po vseh regatah in podate uredi v slovar s ključi jader(ker je bilo tako najenostavneje)
@@ -76,14 +72,14 @@ def all_data():
         # konec
         global conn
         global cur
-        conn = psycopg2.connect(database=auth_public.db, host=auth_public.host, user=auth_public.user, password=auth_public.password)
+        conn = psycopg2.connect(database = auth_public.db, host = auth_public.host, user = auth_public.user, password = auth_public.password)
         conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)  # onemogocimo transakcije
-        cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+        cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
     return sort_tekmovalci(data)
 
 def sort_tekmovalci(data):
     "pomožna funkcija ki vrne končno obliko opisano pri funkciji all_data()"
-    tekmovalci_dict={}
+    tekmovalci_dict = {}
     for (id_reg, data_regata) in data.items():
         cur.execute("SELECT koeficient FROM regata WHERE  idregata = %s", [id_reg])
         for element in cur: # to je redundant!
@@ -104,31 +100,31 @@ def nameToId():
     name_id_dict = {}
     cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec")
     for element in cur:
-        name_id_dict[element[1].title()]=element[0]
+        name_id_dict[element[1].title()] = element[0]
     return name_id_dict
 
 class RegateForm(FlaskForm):
     cur.execute("SELECT ime, zacetek, idregata FROM regata")
-    regate=[]
+    regate = []
     for regata in cur:
         zacasna = str(regata[0]) + ' ' + str(regata[1].day) + '.' + str(regata[1].month) + '.' + str(regata[1].year)
         regate.append((str(regata[2]), zacasna))
-    select_regata = SelectField('regata', choices=regate, validators=[DataRequired()])
+    select_regata = SelectField('regata', choices = regate, validators = [DataRequired()])
     submit = SubmitField('Izberi')
 
 class JadralecForm(FlaskForm):
-    insert_jadralec = StringField('Vnesite ime jadralca', validators=[DataRequired()])
+    insert_jadralec = StringField('Vnesite ime jadralca', validators = [DataRequired()])
     submit = SubmitField('Išči')
 
 class Plov(object):
     def __init__(self, mesto, salino, ime, spol, leto_rojstva, klub, tocke):
-        self.mesto=mesto
-        self.salino=salino
-        self.ime=ime
-        self.spol=spol
-        self.leto_rojstva=leto_rojstva
+        self.mesto = mesto
+        self.salino = salino
+        self.ime = ime
+        self.spol = spol
+        self.leto_rojstva = leto_rojstva
         self.klub = klub
-        self.tocke=tocke
+        self.tocke = tocke
 
 
 @app.errorhandler(404)
@@ -140,9 +136,9 @@ def page_not_found(e):
 def internal_server_error(e):
     global conn
     global cur
-    conn = psycopg2.connect(database=auth_public.db, host=auth_public.host, user=auth_public.user, password=auth_public.password)
+    conn = psycopg2.connect(database = auth_public.db, host = auth_public.host, user = auth_public.user, password = auth_public.password)
     conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)  # onemogocimo transakcije
-    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
     return render_template('500.html'), 500
 
 
@@ -150,14 +146,14 @@ def internal_server_error(e):
 def index():
     return render_template('index.html')
 
-@app.route('/regate', methods=['GET', 'POST'])
+@app.route('/regate', methods = ['GET', 'POST'])
 def regate():
     form = RegateForm()
     if form.validate_on_submit():
         regata_id = form.select_regata.data
         session['regata_id'] = regata_id
-        return redirect(url_for('regate_view', regata_id=session.get('regata_id')))
-    return render_template('regate.html', form=form, form_type="inline")
+        return redirect(url_for('regate_view', regata_id = session.get('regata_id')))
+    return render_template('regate.html', form = form, form_type = "inline")
 
 @app.route('/regate/<regata_id>')
 def regate_view(regata_id):
@@ -165,17 +161,15 @@ def regate_view(regata_id):
     cur.execute("SELECT *, (SELECT ime FROM KLUB WHERE idklub = klub_idklub) FROM regata WHERE idregata = %s", [id])
     for element in cur: # to je redundant!
         title = element[1]
-        # isKriterijska = element[2]
         startDate = '{}.{}.{}'.format(element[3].day, element[3].month, element[3].year)
         endDate = '{}.{}.{}'.format(element[4].day, element[4].month, element[4].year)
-        # koeficient = element[5]
         klub = element[7]
 
     cur.execute("SELECT idplov FROM plov WHERE regata_idregata = %s", [id])
     nPlovov = 0
-    idPlovi=[]
+    idPlovi = []
     for element in cur:
-        nPlovov+=1
+        nPlovov += 1
         idPlovi.append(element[0])
 
     data_plovi = []
@@ -188,11 +182,11 @@ def regate_view(regata_id):
                     " klubi_plovi.idtekmovalec = tekmovalec.idtekmovalec AND klubi_plovi.plov_idplov = %s"
                     " WHERE tocke_plovi.plov_idplov = %s ORDER BY tocke;"
                     "", (idPlov, idPlov))
-        data_plov=[]
-        j=1
+        data_plov = []
+        j = 1
         for element in cur:
-            data_plov.append(Plov(j, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
-            j+=1
+            data_plov.append(Plov(j, element[0], element[1].title(), element[2], element[3], element[4], element[5]))
+            j += 1
         data_plovi.append(data_plov)
 
     cur.execute("SELECT tekmovalec.sailno, tekmovalec.ime, tekmovalec.spol, tekmovalec.leto_rojstva, ime_kluba, "
@@ -215,67 +209,45 @@ def regate_view(regata_id):
 
     global conn
     global cur
-    conn = psycopg2.connect(database=auth_public.db, host=auth_public.host, user=auth_public.user, password=auth_public.password)
+    conn = psycopg2.connect(database = auth_public.db, host = auth_public.host, user = auth_public.user, password = auth_public.password)
     conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT) # onemogocimo transakcije
-    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    return render_template('regate_view.html', title=title, klub=klub, startDate=startDate,
-                           endDate=endDate, nPlovov = [i+1 for i in range(nPlovov)] ,data_regata=data_regata, data_plovi = data_plovi, id=id, dict=nameToId())
+    cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+    return render_template('regate_view.html', title = title, klub = klub, startDate = startDate,
+                           endDate = endDate, nPlovov = [i+1 for i in range(nPlovov)], data_regata = data_regata, data_plovi = data_plovi, id = id, dict = nameToId())
 
-@app.route('/jadralci', methods=['GET', 'POST'])
+@app.route('/jadralci', methods = ['GET', 'POST'])
 def jadralci():
     jadralec_name = None
     form = JadralecForm()
     prikazi_opozorilo = False
     show_suggestions = False
-    choices=[]
-    nameToIdDict={}
+    choices = []
+    nameToIdDict = {}
     cur.execute("SELECT idtekmovalec, ime FROM tekmovalec")
-    sez_imen=[]
+    sez_imen = []
     for element in cur:
         choices.append(element[1])#ime
         nameToIdDict[element[1]] = element[0]
-    # print(choices)
     if form.validate_on_submit():
-        # old_id = session.get('jadralec_id')
-        # if old_id is not None:
-        #     prikazi_opozorilo = True
         jadralec_name = form.insert_jadralec.data
-        similar = process.extract(jadralec_name, choices, limit=5)
+        similar = process.extract(jadralec_name, choices, limit = 5)
         meja = 60
-        if similar[0][1]<=meja:
+        if similar[0][1] <= meja:
             prikazi_opozorilo = True
-            return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo, show_suggestions=show_suggestions)
+            return render_template('jadralci.html', form = form, form_type = "inline", prikazi_opozorilo = prikazi_opozorilo, show_suggestions = show_suggestions)
         elif similar[0][1] == 100 and similar[1][1] < 100:
             cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime = %s", [similar[0][0]])
             for element in cur:
                 jadralec_id = element[0]
             session['jadralec_id'] = jadralec_id
-            return redirect(url_for('jadralci_view', jadralec_id=session.get('jadralec_id')))
+            return redirect(url_for('jadralci_view', jadralec_id = session.get('jadralec_id')))
         else:
-            # print(similar)
-            show_suggestions=True
+            show_suggestions = True
             for element in similar:
-                if element[1]>=meja:
+                if element[1] >= meja:
                     sez_imen.append(element[0])
-            return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo, show_suggestions=show_suggestions, sez_imen=sez_imen, dict = nameToIdDict)
-        # try:
-        #     cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime = %s", [jadralec_name.title()])
-        #     for element in cur:
-        #         jadralec_id = element[0]
-        #     session['jadralec_id'] = jadralec_id
-        # except Exception:
-        #     try:
-        #         cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime = %s", [jadralec_name.upper()])
-        #         for element in cur:
-        #             jadralec_id = element[0]
-        #         session['jadralec_id'] = jadralec_id
-        #     except Exception:
-        #         print(prikazi_opozorilo)
-        #         return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo)
-        # print(prikazi_opozorilo)
-        # return redirect(url_for('jadralci_view', jadralec_id=session.get('jadralec_id')))
-    print(prikazi_opozorilo)
-    return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo, show_suggestions=show_suggestions)
+            return render_template('jadralci.html', form = form, form_type = "inline", prikazi_opozorilo = prikazi_opozorilo, show_suggestions = show_suggestions, sez_imen = sez_imen, dict = nameToIdDict)
+    return render_template('jadralci.html', form = form, form_type = "inline", prikazi_opozorilo = prikazi_opozorilo, show_suggestions = show_suggestions)
 
 @app.route('/jadralci/<jadralec_id>')
 def jadralci_view(jadralec_id):
@@ -297,39 +269,37 @@ def jadralci_view(jadralec_id):
     for element in cur:
         regate_dict[element[0]]=element[1]
     rezultat = []
-    values=[]
-    labels=[]
-    values2=[]
+    values = []
+    labels = []
+    values2 = []
     for element in rezultati_tekmovalec:
         values.append(element[2])
         values2.append(element[3])
         labels.append(regate_dict[element[1]])
         rezultat.append([regate_dict[element[1]],element[2],element[3]])
-
-    data=[] # tabela ki se jo na koncu prikaže na strani
-    return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva,labels=labels, values =values,values2=values2, n=len(labels) )
+    return render_template('jadralci_view.html', ime = ime, sail_no = sail_no, klub = klub, spol = spol, leto_rojstva = leto_rojstva, labels = labels, values = values, values2 = values2, n = len(labels) )
 
 @app.route('/lestvica')
 def lestvica():
     tekmovalci_dict = all_data()
-    data=[]
+    data = []
     cur.execute("SELECT sailno, tekmovalec.ime, spol, leto_rojstva, klub.ime AS ime_kluba FROM klub JOIN clanstvo"
                 " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = "
                 "tekmovalec.idtekmovalec WHERE sailno LIKE 'SLO%'")
     for element in cur:
         sailno = element[0]
-        ime=element[1].title()
-        spol=element[2]
-        leto_rojstva=element[3]
-        klub=element[4]
+        ime = element[1].title()
+        spol = element[2]
+        leto_rojstva = element[3]
+        klub = element[4]
         zacasna = [ime, spol, leto_rojstva, klub]
-        vsota_zacasna=[]
+        vsota_zacasna = []
 
         for regata in tekmovalci_dict[sailno]:
-            pike=regata[3]
-            koef=regata[4]
-            prvi=regata[5]
-            zadnji=regata[6]
+            pike = regata[3]
+            koef = regata[4]
+            prvi = regata[5]
+            zadnji = regata[6]
             vsota_zacasna.append(tocke(koef, zadnji, prvi, pike))
             vsota_zacasna.sort()
         vsota = vsota_zacasna[-4:]
@@ -337,13 +307,12 @@ def lestvica():
         data.append(zacasna)
 
     # uredi po vrstici v seznamu
-    data.sort(key=lambda x: x[-1])
-    data_sorted= list(reversed(data))
-    data_final=[]
+    data.sort(key = lambda x: x[-1])
+    data_sorted = list(reversed(data))
+    data_final = []
     for i in range(len(data_sorted)):
         data_final.append([i+1]+data_sorted[i])
-    # name_id_dict = nameToId()
-    return render_template('lestvica.html', data=data_final, dict=nameToId())
+    return render_template('lestvica.html', data = data_final, dict = nameToId())
 
 ############################################
 
