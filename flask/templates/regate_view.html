@@ -109,10 +109,14 @@ data-spy="scroll" data-target=".navbar" data-offset="50"
             </tr>
             </thead>
             <tbody id="myTable">
-            {% for element in data_regata %}
+            {% for i in range(data_regata|length) %}
                 <tr>
-                    {% for elementek in element %}
-                    <td>{{ elementek}}</td>
+                    {% for j in range(data_regata[i]|length) %}
+                        {% if j == 2 %}
+                            <td><a href="{{ url_for('jadralci_view', jadralec_id=dict[data_regata[i][2]]) }}">{{ data_regata[i][j]}}</a></td>
+                        {% else %}
+                            <td>{{ data_regata[i][j]}}</td>
+                        {% endif %}
                     {% endfor %}
                 </tr>
             {% endfor %}
@@ -146,7 +150,7 @@ data-spy="scroll" data-target=".navbar" data-offset="50"
                     <tr>
                         <td>{{ element.mesto|e }}</td>
                         <td>{{ element.salino|e }}</td>
-                        <td>{{ element.ime|e }}</td>
+                        <td><a href="{{ url_for('jadralci_view', jadralec_id=dict[element.ime]) }}">{{ element.ime|e }}</a></td>
                         <td>{{ element.spol|e }}</td>
                         <td>{{ element.leto_rojstva|e }}</td>
                         <td>{{ element.klub|e }} </td>

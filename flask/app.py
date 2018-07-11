@@ -8,6 +8,7 @@ from wtforms import SelectMultipleField, SelectField, SubmitField, StringField
 from wtforms.validators import DataRequired
 import auth_public
 import psycopg2, psycopg2.extensions, psycopg2.extras
+import functools
 
 psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo problemov s šumniki
 
@@ -97,6 +98,13 @@ def sort_tekmovalci(data):
 
 def tocke(koef, zadnji, prvi, tocke):
     return koef*(50 +50*(zadnji-tocke)/(zadnji-prvi))
+
+def nameToId():
+    name_id_dict = {}
+    cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec")
+    for element in cur:
+        name_id_dict[element[1].title()]=element[0]
+    return name_id_dict
 
 class RegateForm(FlaskForm):
     cur.execute("SELECT ime, zacetek, idregata FROM regata")
@@ -210,7 +218,7 @@ def regate_view(regata_id):
     conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT) # onemogocimo transakcije
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     return render_template('regate_view.html', title=title, klub=klub, startDate=startDate,
-                           endDate=endDate, nPlovov = [i+1 for i in range(nPlovov)] ,data_regata=data_regata, data_plovi = data_plovi, id=id)
+                           endDate=endDate, nPlovov = [i+1 for i in range(nPlovov)] ,data_regata=data_regata, data_plovi = data_plovi, id=id, dict=nameToId())
 
 @app.route('/jadralci', methods=['GET', 'POST'])
 def jadralci():
@@ -272,7 +280,7 @@ def jadralci_view(jadralec_id):
 
     data=[] # tabela ki se jo na koncu prikaže na strani
     return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva,labels=labels, values =values,values2=values2, n=len(labels) )
-
+@functools.lru_cache(5)
 @app.route('/lestvica')
 def lestvica():
     tekmovalci_dict = all_data()
@@ -304,14 +312,10 @@ def lestvica():
     data.sort(key=lambda x: x[-1])
     data_sorted= list(reversed(data))
     data_final=[]
-    id_list=[]
     for i in range(len(data_sorted)):
         data_final.append([i+1]+data_sorted[i])
-        cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime=%s", [data_sorted[i][0]])
-        for element in cur:
-            id_list.append(element[0])
-    #print(id_list)
-    return render_template('lestvica.html', data=data_final, id_list=id_list)
+    # name_id_dict = nameToId()
+    return render_template('lestvica.html', data=data_final, dict=nameToId())
 
 ############################################
 # Program

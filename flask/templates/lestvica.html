@@ -29,7 +29,7 @@
                         <tr>
                             {% for j in range(data[i]|length) %}
                                 {% if j == 1 %}
-                                    <td><a href="{{ url_for('jadralci_view', jadralec_id=id_list[i]) }}">{{ data[i][j]}}</a></td>
+                                    <td><a href="{{ url_for('jadralci_view', jadralec_id=dict[data[i][1]]) }}">{{ data[i][j]}}</a></td>
                                 {% else %}
                                 <td>{{ data[i][j]}}</td>
                                 {% endif %}
