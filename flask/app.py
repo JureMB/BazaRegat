@@ -8,7 +8,8 @@ from wtforms import SelectMultipleField, SelectField, SubmitField, StringField
 from wtforms.validators import DataRequired
 import auth_public
 import psycopg2, psycopg2.extensions, psycopg2.extras
-import functools
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
 
 psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo problemov s šumniki
 
@@ -225,29 +226,56 @@ def jadralci():
     jadralec_name = None
     form = JadralecForm()
     prikazi_opozorilo = False
+    show_suggestions = False
+    choices=[]
+    nameToIdDict={}
+    cur.execute("SELECT idtekmovalec, ime FROM tekmovalec")
+    sez_imen=[]
+    for element in cur:
+        choices.append(element[1])#ime
+        nameToIdDict[element[1]] = element[0]
+    # print(choices)
     if form.validate_on_submit():
-        old_id = session.get('jadralec_id')
-        if old_id is not None:
-            prikazi_opozorilo = True
+        # old_id = session.get('jadralec_id')
+        # if old_id is not None:
+        #     prikazi_opozorilo = True
         jadralec_name = form.insert_jadralec.data
-        try:
-            cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime = %s", [jadralec_name.title()])
+        similar = process.extract(jadralec_name, choices, limit=5)
+        meja = 60
+        if similar[0][1]<=meja:
+            prikazi_opozorilo = True
+            return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo, show_suggestions=show_suggestions)
+        elif similar[0][1] == 100 and similar[1][1] < 100:
+            cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime = %s", [similar[0][0]])
             for element in cur:
                 jadralec_id = element[0]
             session['jadralec_id'] = jadralec_id
-        except Exception:
-            try:
-                cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime = %s", [jadralec_name.upper()])
-                for element in cur:
-                    jadralec_id = element[0]
-                session['jadralec_id'] = jadralec_id
-            except Exception:
-                print(prikazi_opozorilo)
-                return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo)
-        print(prikazi_opozorilo)
-        return redirect(url_for('jadralci_view', jadralec_id=session.get('jadralec_id')))
+            return redirect(url_for('jadralci_view', jadralec_id=session.get('jadralec_id')))
+        else:
+            # print(similar)
+            show_suggestions=True
+            for element in similar:
+                if element[1]>=meja:
+                    sez_imen.append(element[0])
+            return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo, show_suggestions=show_suggestions, sez_imen=sez_imen, dict = nameToIdDict)
+        # try:
+        #     cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime = %s", [jadralec_name.title()])
+        #     for element in cur:
+        #         jadralec_id = element[0]
+        #     session['jadralec_id'] = jadralec_id
+        # except Exception:
+        #     try:
+        #         cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime = %s", [jadralec_name.upper()])
+        #         for element in cur:
+        #             jadralec_id = element[0]
+        #         session['jadralec_id'] = jadralec_id
+        #     except Exception:
+        #         print(prikazi_opozorilo)
+        #         return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo)
+        # print(prikazi_opozorilo)
+        # return redirect(url_for('jadralci_view', jadralec_id=session.get('jadralec_id')))
     print(prikazi_opozorilo)
-    return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo)
+    return render_template('jadralci.html', form=form, form_type="inline", prikazi_opozorilo=prikazi_opozorilo, show_suggestions=show_suggestions)
 
 @app.route('/jadralci/<jadralec_id>')
 def jadralci_view(jadralec_id):
@@ -280,7 +308,7 @@ def jadralci_view(jadralec_id):
 
     data=[] # tabela ki se jo na koncu prikaže na strani
     return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva,labels=labels, values =values,values2=values2, n=len(labels) )
-@functools.lru_cache(5)
+
 @app.route('/lestvica')
 def lestvica():
     tekmovalci_dict = all_data()
@@ -318,6 +346,5 @@ def lestvica():
     return render_template('lestvica.html', data=data_final, dict=nameToId())
 
 ############################################
-# Program
-#if __name__ == '__main__': app.run(debug=True,host='0.0.0.0', port=5000)
+
 if __name__ == '__main__': app.run(debug=True, port=8000)

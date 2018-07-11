@@ -19,4 +19,21 @@
 {% endif %}
 <p>V spodnje polje vnesite ime jadralce in potrdite z gumbom "Išči".</p>
 {{ wtf.quick_form(form, form_type=form_type) }}
+{% if show_suggestions %}
+    <div class="row">
+        <div class="col-xs-12" style="height:30px;"></div>
+    </div>
+    <div class="row ">
+        <div class="col-xs-6 ">
+            <div class="panel panel-info">
+                <div class="panel-heading "><h4 class="panel-title">Ste morda mislili...</h4></div>
+                <div class="panel-body">
+                    {% for i in range(sez_imen|length) %}
+                        <p><a href="{{ url_for('jadralci_view', jadralec_id=dict[sez_imen[i]]) }}">{{ sez_imen[i] }}</a></p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
 {% endblock %}
