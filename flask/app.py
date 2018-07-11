@@ -33,57 +33,6 @@ def intToStr(list):
 
 # years=[('2017', '2017'), ('2018', '2018')]
 
-def poizvedba1(nPlovov):
-    str = "CREATE TEMPORARY TABLE delni2 AS SELECT DISTINCT plov_1.sailno, plov_1.ime," \
-          " plov_1.spol, plov_1.leto_rojstva, klubi_plovi2.ime_kluba, plov_1.tocke_plov AS tocke_plov1"
-    for i in range(nPlovov):
-        if (i+1)>=2: str+=", plov_{0}.tocke_plov AS tocke_plov{0} ".format(i+1)
-    str+="from plov_1 JOIN (SELECT klub.ime AS ime_kluba," \
-         " idtekmovalec, plov_idplov, sailno FROM klub JOIN clanstvo" \
-         " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec" \
-         " ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec" \
-         " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec" \
-         " = tekmovalec.idtekmovalec) AS klubi_plovi2 ON klubi_plovi2.sailno" \
-         " = plov_1.sailno "
-    for i in range(nPlovov):
-        if (i + 1) >= 2: str += "JOIN plov_{0} ON plov_1.sailno = plov_{0}.sailno ".format(i + 1)
-    str+="; " + poizvedba2(nPlovov)
-    # print("str: ", str)
-    return str
-
-def poizvedba2(nPlovov):
-    uvrsceni_data = uvrsceni(nPlovov)
-    str2 = r"SELECT DISTINCT *, ( 0"
-    for i in range(nPlovov):
-        str2 += r"+ CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END".format(i + 1, uvrsceni_data[i])
-    str2 += r") - greatest("
-
-    for i in range(nPlovov):
-        str2 += r"CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END,".format(i + 1,
-                                                                                                      uvrsceni_data[i])
-
-    str2 += r"0) AS net, ( 0"
-
-    for i in range(nPlovov):
-        str2 += r"+ CASE WHEN tocke_plov{0}~E'^\\d+$' THEN tocke_plov{0}::integer ELSE {1} END".format(i + 1,
-                                                                                                       uvrsceni_data[i])
-
-    str2 += r") AS tot FROM delni2 ORDER BY net ASC, tot ASC"
-
-    for i in range(nPlovov):
-        str2 += r", tocke_plov{} ASC".format(i + 1)
-    str2 += r";"
-    return str2
-
-def uvrsceni(nPlovov):
-    uvrsceni = []
-    for i in range(nPlovov):
-        cur.execute(r"SELECT count(DISTINCT tocke_plov)+1 FROM plov_{0} WHERE tocke_plov~E'^\\d+$'".format(i + 1))
-        for element in cur:  # SAMO 1 popravi!
-            # print('uvrsceni: ', element)
-            uvrsceni.append(element[0])
-    return uvrsceni
-
 def all_data():
     '''Funkcija ki izvede poizvedbe po vseh regatah in podate uredi v slovar s ključi jader(ker je bilo tako najenostavneje)
      vrednosti pa so seznami seznamov podatkov po regatah kot je naveedeno spodaj.
@@ -101,35 +50,27 @@ def all_data():
     data = {}
     for id_reg in id_regate:
         # ------------------------------------------------------------------------------------------
-        cur.execute("SELECT idplov FROM plov WHERE regata_idregata = {}".format(id_reg))
-        nPlovov = 0
-        idPlovi = []
-        for element in cur:
-            nPlovov += 1
-            idPlovi.append(element[0])
 
-        # cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
-        #             " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
-        #             " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
-        #             " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
-        for i in range(nPlovov):
-            cur.execute("CREATE TEMPORARY TABLE plov_{0} AS SELECT sailno, ime, spol, leto_rojstva, ime_kluba,"
-                        " COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi JOIN tekmovalec"
-                        " ON tekmovalec_idtekmovalec = idtekmovalec JOIN klubi_plovi ON"
-                        " klubi_plovi.idtekmovalec = tekmovalec.idtekmovalec AND klubi_plovi.plov_idplov = {1}"
-                        " WHERE tocke_plovi.plov_idplov = {1} ORDER BY tocke;"
-                        "SELECT * FROM plov_{0};".format(i + 1, idPlovi[i]))
-
-        cur.execute(poizvedba1(nPlovov))
+        cur.execute("SELECT tekmovalec.sailno, tekmovalec.ime, tekmovalec.spol, tekmovalec.leto_rojstva, ime_kluba, "
+                    "array_to_string(array_agg(coalesce(tocke::text, posebnosti) ORDER BY st_plova ASC), ',') AS tocke_plovi, "
+                    "(sum(efektivne_tocke) - max(efektivne_tocke))::int AS net, "
+                    "sum(efektivne_tocke)::int AS tot "
+                    "FROM efektivne_tocke JOIN plov ON plov_idplov = plov.idplov "
+                    "JOIN tekmovalec ON tekmovalec_idtekmovalec = idtekmovalec "
+                    "JOIN klubi_plovi ON klubi_plovi.idtekmovalec = tekmovalec_idtekmovalec AND klubi_plovi.plov_idplov = plov.idplov "
+                    "WHERE regata_idregata = %s "
+                    "GROUP BY tekmovalec_idtekmovalec, ime_kluba, tekmovalec.sailno, tekmovalec.ime, tekmovalec.spol, tekmovalec.leto_rojstva "
+                    "ORDER BY net ASC, tot ASC,"
+                    "array_agg(efektivne_tocke ORDER BY st_plova ASC) ASC, array_agg(coalesce(tocke::text, posebnosti) ORDER BY st_plova ASC) ASC ",
+                    [id_reg])
         data_regata = []
         i = 1
         for element in cur:
-            data_regata.append(
-                [i, element[0], element[1].title(), element[2], element[3], element[4], element[5], element[6]])
-            for j in range(nPlovov):
-                data_regata[-1].append(element[7 + j])
+            data_regata.append([i, element[0], element[1].title(), element[2], element[3], element[4]] + list(
+                element[5].split(',')) + [element[6], element[7]])
             i += 1
         data[id_reg] = data_regata
+
         # konec
         global conn
         global cur
@@ -142,7 +83,7 @@ def sort_tekmovalci(data):
     "pomožna funkcija ki vrne končno obliko opisano pri funkciji all_data()"
     tekmovalci_dict={}
     for (id_reg, data_regata) in data.items():
-        cur.execute("SELECT koeficient FROM regata WHERE  idregata = {}".format(id_reg))
+        cur.execute("SELECT koeficient FROM regata WHERE  idregata = %s", [id_reg])
         for element in cur: # to je redundant!
             koef_regate = element[0]
         tocke_prvega = data_regata[0][-2]
@@ -150,24 +91,12 @@ def sort_tekmovalci(data):
         tocke_zadnjega = data_regata[-1][-2]
         for list in data_regata:
             zacasna = tekmovalci_dict.get(list[1], []) # id je jadro!!!
-            zacasna.append([list[1], id_reg, list[0], list[-2], koef_regate, tocke_prvega, tocke_zadnjega]) #TU SE LAHKO DODa se podatke plovov! #jadro id regate, mesto tekmovalca, točke tekmovalca, ...
+            zacasna.append([list[1], id_reg, list[0], list[-2], koef_regate, tocke_prvega, tocke_zadnjega])
             tekmovalci_dict[list[1]] = zacasna
     return tekmovalci_dict
 
 def tocke(koef, zadnji, prvi, tocke):
     return koef*(50 +50*(zadnji-tocke)/(zadnji-prvi))
-
-# class RegateForm(FlaskForm):
-#     cur.execute("SELECT zacetek FROM regata")
-#     years = []
-#     for date in cur:
-#         years.append(date[0].year)
-#     years=sorted(set(years))
-#     years=intToStr(years)
-#     select_years = SelectField('leto',choices=years, validators=[DataRequired()])
-#     # regate=[] # podatki iz baze
-#     # select_regata = SelectField('regata', choices=regate, validators=[DataRequired()])
-#     submit = SubmitField('Izberi')
 
 class RegateForm(FlaskForm):
     cur.execute("SELECT ime, zacetek, idregata FROM regata")
@@ -202,7 +131,7 @@ def page_not_found(e):
 def internal_server_error(e):
     global conn
     global cur
-    conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
+    conn = psycopg2.connect(database=auth_public.db, host=auth_public.host, user=auth_public.user, password=auth_public.password)
     conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)  # onemogocimo transakcije
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     return render_template('500.html'), 500
@@ -217,23 +146,14 @@ def regate():
     form = RegateForm()
     if form.validate_on_submit():
         regata_id = form.select_regata.data
-        # regata_no_spaces =""
-        # for char in regata:
-        #     if (char == " " or char == "."):
-        #         if not (regata_no_spaces[-1]=="_"):
-        #             regata_no_spaces += "_"
-        #     else: regata_no_spaces += char
-        # session['regata'] = regata_no_spaces
-        # session['regata_long'] = regata
         session['regata_id'] = regata_id
-        # print(session['regata'])
         return redirect(url_for('regate_view', regata_id=session.get('regata_id')))
     return render_template('regate.html', form=form, form_type="inline")
 
 @app.route('/regate/<regata_id>')
 def regate_view(regata_id):
     id = int(regata_id)
-    cur.execute("SELECT *, (SELECT ime FROM KLUB WHERE idklub = klub_idklub) FROM regata WHERE idregata = {}".format(id))
+    cur.execute("SELECT *, (SELECT ime FROM KLUB WHERE idklub = klub_idklub) FROM regata WHERE idregata = %s", [id])
     for element in cur: # to je redundant!
         title = element[1]
         # isKriterijska = element[2]
@@ -242,7 +162,7 @@ def regate_view(regata_id):
         # koeficient = element[5]
         klub = element[7]
 
-    cur.execute("SELECT idplov FROM plov WHERE regata_idregata = {}".format(id))
+    cur.execute("SELECT idplov FROM plov WHERE regata_idregata = %s", [id])
     nPlovov = 0
     idPlovi=[]
     for element in cur:
@@ -250,26 +170,22 @@ def regate_view(regata_id):
         idPlovi.append(element[0])
 
     data_plovi = []
-    # # cur.execute("CREATE TEMPORARY TABLE klubi_plovi AS SELECT klub.ime AS ime_kluba, idtekmovalec,"
-    # #             " plov_idplov FROM klub JOIN clanstvo ON klub.idklub = clanstvo.klub_idklub"
-    # #             " JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec"
-    # #             " JOIN tocke_plovi ON tocke_plovi.tekmovalec_idtekmovalec = tekmovalec.idtekmovalec;")
-    # for i in range(nPlovov):
-    #     cur.execute("CREATE TEMPORARY TABLE plov_{0} AS SELECT sailno, ime, spol, leto_rojstva, ime_kluba,"
-    #                 " COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi JOIN tekmovalec"
-    #                 " ON tekmovalec_idtekmovalec = idtekmovalec JOIN klubi_plovi ON"
-    #                 " klubi_plovi.idtekmovalec = tekmovalec.idtekmovalec AND klubi_plovi.plov_idplov = {1}"
-    #                 " WHERE tocke_plovi.plov_idplov = {1} ORDER BY tocke;"
-    #                 "SELECT * FROM plov_{0};".format(i+1, idPlovi[i]))
-    #     data_plov=[]
-    #     j=1
-    #     for element in cur:
-    #         data_plov.append(Plov(j, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
-    #         j+=1
-    #     data_plovi.append(data_plov)
-    # cur.execute(poizvedba1(nPlovov))
 
-    ########## JANOŠEV NAČIN #############
+    for i in range(nPlovov):
+        idPlov = idPlovi[i]
+        cur.execute("SELECT sailno, ime, spol, leto_rojstva, ime_kluba,"
+                    " COALESCE(tocke::text, posebnosti) AS tocke_plov FROM tocke_plovi JOIN tekmovalec"
+                    " ON tekmovalec_idtekmovalec = idtekmovalec JOIN klubi_plovi ON"
+                    " klubi_plovi.idtekmovalec = tekmovalec.idtekmovalec AND klubi_plovi.plov_idplov = %s"
+                    " WHERE tocke_plovi.plov_idplov = %s ORDER BY tocke;"
+                    "", (idPlov, idPlov))
+        data_plov=[]
+        j=1
+        for element in cur:
+            data_plov.append(Plov(j, element[0],element[1].title(),element[2],element[3],element[4],element[5]))
+            j+=1
+        data_plovi.append(data_plov)
+
     cur.execute("SELECT tekmovalec.sailno, tekmovalec.ime, tekmovalec.spol, tekmovalec.leto_rojstva, ime_kluba, "
                 "array_to_string(array_agg(coalesce(tocke::text, posebnosti) ORDER BY st_plova ASC), ',') AS tocke_plovi, "
                 "(sum(efektivne_tocke) - max(efektivne_tocke))::int AS net, "
@@ -281,15 +197,11 @@ def regate_view(regata_id):
                 "GROUP BY tekmovalec_idtekmovalec, ime_kluba, tekmovalec.sailno, tekmovalec.ime, tekmovalec.spol, tekmovalec.leto_rojstva "
                 "ORDER BY net ASC, tot ASC,"
                 "array_agg(efektivne_tocke ORDER BY st_plova ASC) ASC, array_agg(coalesce(tocke::text, posebnosti) ORDER BY st_plova ASC) ASC ", [id])
-    ######################
 
     data_regata = []
     i = 1
     for element in cur:
         data_regata.append([i, element[0], element[1].title(), element[2], element[3], element[4]] + list(element[5].split(',')) + [element[6], element[7]])
-        #print(data_regata)
-        # for j in range(nPlovov):
-        #     data_regata[-1].append(element[7+j])
         i += 1
 
     global conn
@@ -311,13 +223,13 @@ def jadralci():
             prikazi_opozorilo = True
         jadralec_name = form.insert_jadralec.data
         try:
-            cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(jadralec_name.title()))
+            cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime = %s", [jadralec_name.title()])
             for element in cur:
                 jadralec_id = element[0]
             session['jadralec_id'] = jadralec_id
         except Exception:
             try:
-                cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(jadralec_name.upper()))
+                cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime = %s", [jadralec_name.upper()])
                 for element in cur:
                     jadralec_id = element[0]
                 session['jadralec_id'] = jadralec_id
@@ -334,7 +246,7 @@ def jadralci_view(jadralec_id):
     id = int(jadralec_id)
     cur.execute("SELECT sailno, tekmovalec.ime, spol, leto_rojstva, klub.ime AS ime_kluba FROM klub JOIN clanstvo"
                 " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = "
-                "tekmovalec.idtekmovalec WHERE tekmovalec_idtekmovalec = {}".format(id))
+                "tekmovalec.idtekmovalec WHERE tekmovalec_idtekmovalec = %s", [id])
     for element in cur:  # to je redundant!
         sail_no = element[0]
         ime = element[1]
@@ -358,8 +270,6 @@ def jadralci_view(jadralec_id):
         labels.append(regate_dict[element[1]])
         rezultat.append([regate_dict[element[1]],element[2],element[3]])
 
-    #print("rezultati_tekmovalec: ", rezultat)
-    #print("tekmovalci_dict: ", tekmovalci_dict)
     data=[] # tabela ki se jo na koncu prikaže na strani
     return render_template('jadralci_view.html', ime=ime, sail_no = sail_no ,klub=klub, spol = spol, leto_rojstva =leto_rojstva,labels=labels, values =values,values2=values2, n=len(labels) )
 
@@ -375,7 +285,7 @@ def lestvica():
         sailno = jadralec[0][0]
         cur.execute("SELECT sailno, tekmovalec.ime, spol, leto_rojstva, klub.ime AS ime_kluba FROM klub JOIN clanstvo"
                     " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = "
-                    "tekmovalec.idtekmovalec WHERE sailno = '{}'".format(sailno))
+                    "tekmovalec.idtekmovalec WHERE sailno = %s", [sailno])
         for element in cur:
             ime=element[1]
             spol=element[2]
@@ -402,7 +312,7 @@ def lestvica():
     id_list=[]
     for i in range(len(data_sorted)):
         data_final.append([i+1]+data_sorted[i])
-        cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime='{}'".format(data_sorted[i][0]))
+        cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime=%s", [data_sorted[i][0]])
         for element in cur:
             id_list.append(element[0])
     print(id_list)
