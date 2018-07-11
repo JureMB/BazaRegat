@@ -277,28 +277,23 @@ def jadralci_view(jadralec_id):
 def lestvica():
     tekmovalci_dict = all_data()
     data=[]
-    slovenci=[]
-    for jadro in tekmovalci_dict:
-        if jadro[:3] == "SLO":
-            slovenci.append(tekmovalci_dict[jadro])
-    for jadralec in slovenci:
-        sailno = jadralec[0][0]
-        cur.execute("SELECT sailno, tekmovalec.ime, spol, leto_rojstva, klub.ime AS ime_kluba FROM klub JOIN clanstvo"
-                    " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = "
-                    "tekmovalec.idtekmovalec WHERE sailno = %s", [sailno])
-        for element in cur:
-            ime=element[1]
-            spol=element[2]
-            leto_rojstva=element[3]
-            klub=element[4]
-            zacasna = [ime, spol, leto_rojstva, klub]
+    cur.execute("SELECT sailno, tekmovalec.ime, spol, leto_rojstva, klub.ime AS ime_kluba FROM klub JOIN clanstvo"
+                " ON klub.idklub = clanstvo.klub_idklub JOIN tekmovalec ON clanstvo.tekmovalec_idtekmovalec = "
+                "tekmovalec.idtekmovalec WHERE sailno LIKE 'SLO%'")
+    for element in cur:
+        sailno = element[0]
+        ime=element[1].title()
+        spol=element[2]
+        leto_rojstva=element[3]
+        klub=element[4]
+        zacasna = [ime, spol, leto_rojstva, klub]
         vsota_zacasna=[]
-        for regata in jadralec:
+
+        for regata in tekmovalci_dict[sailno]:
             pike=regata[3]
             koef=regata[4]
             prvi=regata[5]
             zadnji=regata[6]
-            # zacasna.append(tocke(koef, zadnji, prvi, tocke))
             vsota_zacasna.append(tocke(koef, zadnji, prvi, pike))
             vsota_zacasna.sort()
         vsota = vsota_zacasna[-4:]
@@ -315,7 +310,7 @@ def lestvica():
         cur.execute("SELECT idtekmovalec, ime  FROM tekmovalec WHERE ime=%s", [data_sorted[i][0]])
         for element in cur:
             id_list.append(element[0])
-    print(id_list)
+    #print(id_list)
     return render_template('lestvica.html', data=data_final, id_list=id_list)
 
 ############################################
